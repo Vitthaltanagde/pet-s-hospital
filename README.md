@@ -27,8 +27,8 @@ Deployment Ready: Compatible with Gunicorn + Nginx (AWS / VPS hosting)
 
 🚀 Getting Started
 1️⃣ Clone the Repository
-git clone https://github.com/yourusername/doctor-appointment-site.git
-cd doctor-appointment-site
+git clone https://github.com/Vitthaltanagde/pet-s-hospital.git
+cd doctor-appointment-sit
 
 2️⃣ Install Dependencies
 pip install -r requirements.txt
