@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}MrigaAayuvets{% endblock %}</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    {% block head %}{% endblock %}
+</head>
+<body class="bg-gray-50">
+
+<!-- Header -->
+<header class="bg-green-500 text-white shadow-md">
+    <div class="container mx-auto flex items-center justify-between p-4">
+        <div class="flex items-center space-x-3">
+            <img src="{{ url_for('static', filename='/images/dogtor.png') }}" alt="Logo" class="h-12 w-12 rounded-full">
+            <h1 class="text-xl font-bold">Veterinary Home Services</h1>
+        </div>
+        <nav>
+            <ul class="hidden md:flex space-x-6 font-semibold">
+                <li><a href="{{ url_for('index') }}" class="hover:text-yellow-300">Home</a></li>
+                <li><a href="{{ url_for('gallery') }}" class="hover:text-yellow-300">Gallery</a></li>
+                <li><a href="{{ url_for('blogs') }}" class="hover:text-yellow-300">Blogs</a></li>
+                <li><a href="{{ url_for('services') }}" class="hover:text-yellow-300">Services</a></li>
+                <li><a href="{{ url_for('about') }}" class="hover:text-yellow-300">About</a></li>
+                <li><a href="{{ url_for('contact') }}" class="hover:text-yellow-300">Contact</a></li>
+            </ul>
+            <!-- Mobile menu toggle -->
+            <div id="menu-toggle" class="md:hidden text-2xl cursor-pointer">☰</div>
+        </nav>
+    </div>
+    <ul id="navbar" class="md:hidden hidden flex-col space-y-2 text-center bg-green-400 font-semibold">
+        <li><a href="{{ url_for('index') }}" class="block p-2 hover:bg-green-600">Home</a></li>
+        <li><a href="{{ url_for('gallery') }}" class="block p-2 hover:bg-green-600">Gallery</a></li>
+        <li><a href="{{ url_for('blogs') }}" class="block p-2 hover:bg-green-600">Blogs</a></li>
+        <li><a href="{{ url_for('services') }}" class="block p-2 hover:bg-green-600">Services</a></li>
+        <li><a href="{{ url_for('about') }}" class="block p-2 hover:bg-green-600">About</a></li>
+        <li><a href="{{ url_for('contact') }}" class="block p-2 hover:bg-green-600">Contact</a></li>
+    </ul>
+</header>
+<!-- Desktop Call Bar (hidden on mobile) -->
+<div class="hidden md:block sticky top-0 z-40">
+  <div class="backdrop-blur-md bg-gradient-to-r from-green-500/90 to-blue-600/90 text-white 
+              flex items-center justify-between px-6 py-3 shadow-lg">
+    
+    <!-- Left Text -->
+    <div class="flex items-center gap-3">
+      <div class="bg-white/20 p-2 rounded-full">
+        <i class="fas fa-phone-alt text-xl animate-pulse"></i>
+      </div>
+      <div>
+        <p class="text-sm text-white/80">Emergency? Call our Doctor</p>
+        <p class="text-lg font-bold">Available 24/7</p>
+      </div>
+    </div>
+    
+    <!-- Call Button -->
+    <a href="tel:+919876543210" 
+       class="bg-white text-green-600 font-bold px-6 py-2 rounded-full shadow-lg 
+              hover:bg-gray-100 hover:scale-105 transition transform duration-300">
+      📞 +91 98765 43210
+    </a>
+  </div>
+</div>
+
+<!-- Floating Call Button (mobile only) -->
+<!-- <a href="tel:+919876543210" 
+   class="md:hidden fixed bottom-6 right-6 bg-green-600 text-white rounded-full shadow-lg 
+          p-4 animate-bounce hover:bg-green-700 transition duration-300 z-50">
+  <i class="fas fa-phone-alt text-2xl"></i>
+</a> -->
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<!-- Floating WhatsApp -->
+<div class="fixed bottom-5 right-5 z-50">
+    <a href="https://wa.me/918208657969" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" 
+        alt="WhatsApp Icon" class="w-12 h-12 animate-bounce"/>
+    </a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1000, once: true, easing: 'ease-out-cubic' });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+    menuToggle.addEventListener('click', () => {
+        navbar.classList.toggle('hidden');
+    });
+</script>
+{% block scripts %}{% endblock %}
+<footer class="bg-blue-900 text-gray-200 py-10">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    
+    <!-- Logo & About -->
+    <div>
+      <h2 class="text-2xl font-bold text-white">VetCare+</h2>
+      <p class="mt-4 text-sm leading-relaxed">
+        Providing trusted veterinary & medical services with care, compassion, and professionalism.  
+        Your pets’ health and happiness are our priority.
+      </p>
+      <div class="flex gap-3 mt-4">
+        <a href="#" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-xl font-semibold text-white">Quick Links</h3>
+      <ul class="mt-4 space-y-2">
+        <li><a href="/" class="hover:text-white">Home</a></li>
+        <li><a href="/about" class="hover:text-white">About Us</a></li>
+        <li><a href="/services" class="hover:text-white">Our Services</a></li>
+        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+        <li><a href="/appointment" class="hover:text-white">Book Appointment</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div>
+      <h3 class="text-xl font-semibold text-white">Our Services</h3>
+      <ul class="mt-4 space-y-2">
+        <li>Pet Vaccination</li>
+        <li>Surgery & Treatment</li>
+        <li>Pet Nutrition</li>
+        <li>Emergency Care</li>
+        <li>Wellness Checkups</li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="text-xl font-semibold text-white">Contact Us</h3>
+      <ul class="mt-4 space-y-3 text-sm">
+        <li><i class="fas fa-map-marker-alt mr-2"></i> Wagholi, Pune, India</li>
+        <li><i class="fas fa-phone-alt mr-2"></i> +91 98765 43210</li>
+        <li><i class="fas fa-envelope mr-2"></i> support@vetcareplus.com</li>
+        <li><i class="fas fa-clock mr-2"></i> Mon - Sat: 9am - 8pm</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+    <p>&copy; 2025 VetCare+. All rights reserved. | Made by Tulipspot Marketing & Sales PVT. LTD.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>

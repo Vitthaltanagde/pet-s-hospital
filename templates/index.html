@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- Hero Section -->
+<section id="hero" class="relative h-[90vh] md:h-[80vh] overflow-hidden ">
+    <div class="absolute inset-0">
+        <div class="hero-slider relative w-full h-full">
+            <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100" style="background-image: url('{{ url_for('static', filename='images/slid1.jpg') }}')"></div>
+            <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('{{ url_for('static', filename='images/slid2.jpg') }}')"></div>
+            <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('{{ url_for('static', filename='images/slid3.jpg') }}')"></div>
+            <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('{{ url_for('static', filename='images/slid4.jpg') }}')"></div>
+        </div>
+        <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4 animate-fadeInDown">Care for your pets, like family.</h1>
+        <p class="text-lg md:text-2xl mb-6 animate-fadeInUp">Providing high-quality care for your furry friends.</p>
+       <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20would%20like%20to%20book%20an%20appointment.%20Please%20let%20me%20know%20the%20available%20time."
+   target="_blank"
+   class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg animate-bounce">
+   📅 Book Appointment
+</a>
+
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-4 text-blue-700">Our Services</h2>
+        <p class="text-center text-gray-600 mb-12">We provide all types of veterinary treatment at home</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for service in services %}
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl p-6 text-center transform hover:-translate-y-2 transition duration-300">
+                <img src="{{ url_for('static', filename='images/' + service.image) }}" alt="{{ service.title }}" class="mx-auto h-32 w-32 mb-4 rounded-full object-cover">
+                <h3 class="text-xl font-semibold mb-2">{{ service.title }}</h3>
+                <p class="text-gray-600 mb-4">{{ service.description }}</p>
+                <a href="{{ service.link }}" class="text-blue-600 hover:text-blue-800 font-medium">Read More →</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+            <h2 class="text-4xl font-bold mb-4 text-blue-700">About Us</h2>
+            <p class="text-gray-700 mb-4">At MrigaAayuvets, we are dedicated to offering high-quality veterinary services with compassion. Our team consists of experienced professionals passionate about animal health.</p>
+            <p class="text-gray-700">From preventative care to emergency treatments, we ensure your pet gets the best care possible.</p>
+        </div>
+        <div class="md:w-1/2">
+            <img src="{{ url_for('static', filename='images/slide6.jpeg') }}" alt="Veterinary Clinic" class="rounded-xl shadow-lg">
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-12 text-blue-700">How In-Home Veterinary Doctor Service Works?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300">
+                <img src="{{ url_for('static', filename='images/home.jpeg') }}" alt="Home Visit Icon" class="h-20 w-20 mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Stress-Free Home Visits</h3>
+                <p class="text-gray-600">Keep your furry friends feeling safe and relaxed with our stress-free home vet visits.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300">
+                <img src="{{ url_for('static', filename='images/multi.jpeg') }}" alt="Multi-Pet Icon" class="h-20 w-20 mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Multi-Pet Appointments</h3>
+                <p class="text-gray-600">One visit, whole pack care! Ensuring all your pets get attention they need.</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300">
+                <img src="{{ url_for('static', filename='images/book1.png') }}" alt="Booking Icon" class="h-20 w-20 mx-auto mb-4">
+                <h3 class="text-xl font-semibold mb-2">Easy Online Booking</h3>
+                <p class="text-gray-600">Pick a slot that suits your schedule and get expert care at your doorstep.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-12 text-blue-700">Meet Our Doctor</h2>
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="bg-gray-50 rounded-xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 w-64">
+                <img src="{{ url_for('static', filename='images/siddhu.png') }}" alt="Dr. Siddheshwar Khonde" class="rounded-full h-40 w-40 mx-auto mb-4 object-cover">
+                <h3 class="text-xl font-semibold mb-1">Dr. Siddheshwar Khonde</h3>
+                <p class="text-gray-600">Veterinary Surgeon</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-8 text-center text-blue-700">Contact Us</h2>
+        <form id="whatsappForm" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="text" name="full_name" placeholder="Full Name" required class="p-3 rounded-lg border border-gray-300 w-full">
+                <input type="email" name="email" placeholder="Email Address" required class="p-3 rounded-lg border border-gray-300 w-full">
+                <input type="tel" name="mobile_number" placeholder="Mobile Number" required class="p-3 rounded-lg border border-gray-300 w-full">
+                <input type="text" name="subject" placeholder="Subject" required class="p-3 rounded-lg border border-gray-300 w-full">
+            </div>
+            <textarea name="message" rows="5" placeholder="Your Message" required class="p-3 rounded-lg border border-gray-300 w-full"></textarea>
+            <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white py-3 px-6 rounded-lg shadow-lg w-full md:w-auto">Send Message</button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".hero-slide");
+    let currentSlide = 0;
+
+    function changeSlide() {
+        slides.forEach(slide => slide.classList.remove("opacity-100", "z-10"));
+        slides.forEach(slide => slide.classList.add("opacity-0", "z-0"));
+
+        slides[currentSlide].classList.add("opacity-100", "z-10");
+        currentSlide = (currentSlide + 1) % slides.length;
+    }
+
+    setInterval(changeSlide, 3000);
+});
+</script>

@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+{% block title %}Blogs | MrigaAayuvets{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="relative h-72 md:h-[28rem] flex items-center justify-center text-center bg-gradient-to-r from-blue-500 via-blue-600 to-teal-500">
+  
+  <!-- Background overlay for readability -->
+  <div class="absolute inset-0 bg-black/30"></div>
+  
+  <!-- Content -->
+  <div class="relative z-10 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg animate-fade-in">
+      🐾 Blogs & Tips for Healthy, Happy Pets
+    </h1>
+    <p class="mt-4 text-sm sm:text-lg md:text-xl text-gray-100 max-w-2xl mx-auto animate-fade-in-up">
+      Expert veterinary advice, pet care tips, and wellness guides to keep tails wagging and purrs going.
+    </p>
+   
+  </div>
+</section>
+
+<!-- Animations -->
+<style>
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in { animation: fade-in 1.2s ease-out forwards; }
+.animate-fade-in-up { animation: fade-in-up 1.5s ease-out forwards; }
+</style>
+
+
+<!-- Blog Posts -->
+<main class="max-w-7xl mx-auto px-4 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+         <article class="bg-white rounded-3xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 animate-fade-in" style="animation-delay: 0.1s;">
+        <img src="/static/images/puppy.jpeg" alt="Blog Post Image" class="w-full h-56 object-cover transition-transform duration-700 hover:scale-110 hover:brightness-90">
+        <div class="p-6">
+            <h3 class="text-xl font-semibold mb-3 hover:text-green-500 transition duration-300">10 Essential Puppy Proofing Tips from SKvets</h3>
+            <p class="text-gray-600 mb-4">Create a safe and friendly environment for your new best friend...</p>
+            <a href="#" class="text-green-500 font-semibold hover:underline">Read More</a>
+        </div>
+    </article>
+
+    <!-- Blog 2 -->
+    <article class="bg-white rounded-3xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 animate-fade-in" style="animation-delay: 0.2s;">
+        <img src="/static/images/Maltese Dog 1.png" alt="How to take care of your Puppy" class="w-full h-56 object-cover transition-transform duration-700 hover:scale-110 hover:brightness-90">
+        <div class="p-6">
+            <h3 class="text-xl font-semibold mb-3 hover:text-green-500 transition duration-300">How to take care of your Puppy and feed them?</h3>
+            <p class="text-gray-600 mb-4">The first week of the puppies' lives is the most critical to their survival...</p>
+            <a href="#" class="text-green-500 font-semibold hover:underline">Read More</a>
+        </div>
+    </article>
+
+    <!-- Blog 3 -->
+    <article class="bg-white rounded-3xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 animate-fade-in" style="animation-delay: 0.3s;">
+        <img src="/static/images/img2.jpg" alt="Veterinary Checkups" class="w-full h-56 object-cover transition-transform duration-700 hover:scale-110 hover:brightness-90">
+        <div class="p-6">
+            <h3 class="text-xl font-semibold mb-3 hover:text-green-500 transition duration-300">Why Regular Veterinary Checkups are Important</h3>
+            <p class="text-gray-600 mb-4">Routine vet visits ensure your pet’s long-term health and well-being...</p>
+            <a href="#" class="text-green-500 font-semibold hover:underline">Read More</a>
+        </div>
+    </article>
+
+    <!-- Blog 4 -->
+    <article class="bg-white rounded-3xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 animate-fade-in" style="animation-delay: 0.4s;">
+        <img src="/static/images/img4.jpg" alt="Pet Nutrition Guide" class="w-full h-56 object-cover transition-transform duration-700 hover:scale-110 hover:brightness-90">
+        <div class="p-6">
+            <h3 class="text-xl font-semibold mb-3 hover:text-green-500 transition duration-300">The Ultimate Pet Nutrition Guide</h3>
+            <p class="text-gray-600 mb-4">Learn how to provide a balanced diet for your pet to keep them healthy...</p>
+            <a href="#" class="text-green-500 font-semibold hover:underline">Read More</a>
+        </div>
+    </article>
+
+    <!-- Blog 5 -->
+    <article class="bg-white rounded-3xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 animate-fade-in" style="animation-delay: 0.5s;">
+        <img src="/static/images/img5.jpg" alt="Training Tips" class="w-full h-56 object-cover transition-transform duration-700 hover:scale-110 hover:brightness-90">
+        <div class="p-6">
+            <h3 class="text-xl font-semibold mb-3 hover:text-green-500 transition duration-300">Top 5 Dog Training Tips for Beginners</h3>
+            <p class="text-gray-600 mb-4">Training your dog doesn’t have to be stressful. Follow these expert tips...</p>
+            <a href="#" class="text-green-500 font-semibold hover:underline">Read More</a>
+        </div>
+    </article>
+
+    <!-- Blog 6 -->
+    <article class="bg-white rounded-3xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 animate-fade-in" style="animation-delay: 0.6s;">
+        <img src="/static/images/img10.jpg" alt="Cat Care Tips" class="w-full h-56 object-cover transition-transform duration-700 hover:scale-110 hover:brightness-90">
+        <div class="p-6">
+            <h3 class="text-xl font-semibold mb-3 hover:text-green-500 transition duration-300">Essential Tips for Keeping Your Cat Happy</h3>
+            <p class="text-gray-600 mb-4">Cats require specific care and attention. Learn the best ways to care for them...</p>
+            <a href="#" class="text-green-500 font-semibold hover:underline">Read More</a>
+        </div>
+    </article>
+
+    <!-- Blog 7 -->
+    <article class="bg-white rounded-3xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 animate-fade-in" style="animation-delay: 0.7s;">
+        <img src="/static/images/img6.jpg" alt="Senior Pet Care" class="w-full h-56 object-cover transition-transform duration-700 hover:scale-110 hover:brightness-90">
+        <div class="p-6">
+            <h3 class="text-xl font-semibold mb-3 hover:text-green-500 transition duration-300">Caring for Senior Pets: What You Need to Know</h3>
+            <p class="text-gray-600 mb-4">Older pets need special care. Here are tips to keep them comfortable...</p>
+            <a href="#" class="text-green-500 font-semibold hover:underline">Read More</a>
+        </div>
+    </article>
+
+    <!-- Blog 8 -->
+    <article class="bg-white rounded-3xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 animate-fade-in" style="animation-delay: 0.8s;">
+        <img src="/static/images/img8.jpg" alt="Dog Breeds Guide" class="w-full h-56 object-cover transition-transform duration-700 hover:scale-110 hover:brightness-90">
+        <div class="p-6">
+            <h3 class="text-xl font-semibold mb-3 hover:text-green-500 transition duration-300">Choosing the Right Dog Breed for Your Lifestyle</h3>
+            <p class="text-gray-600 mb-4">Discover which dog breed suits your lifestyle the best...</p>
+            <a href="#" class="text-green-500 font-semibold hover:underline">Read More</a>
+        </div>
+    </article>
+
+    <!-- Blog 9 -->
+    <article class="bg-white rounded-3xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 animate-fade-in" style="animation-delay: 0.9s;">
+        <img src="/static/images/img11.jpg" alt="Pet Emergency Care" class="w-full h-56 object-cover transition-transform duration-700 hover:scale-110 hover:brightness-90">
+        <div class="p-6">
+            <h3 class="text-xl font-semibold mb-3 hover:text-green-500 transition duration-300">How to Handle Pet Emergencies</h3>
+            <p class="text-gray-600 mb-4">Knowing how to act in an emergency can save your pet’s life...</p>
+            <a href="#" class="text-green-500 font-semibold hover:underline">Read More</a>
+        </div>
+    </article>
+
+    </div>
+</main>
+
+{% endblock %}

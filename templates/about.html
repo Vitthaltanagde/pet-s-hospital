@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-r from-green-600 to-teal-500 text-white py-20">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">About MrigaAayuvets</h1>
+    <p class="text-lg sm:text-xl max-w-3xl mx-auto">
+      Compassionate, professional, and stress-free veterinary care – right at your doorstep.
+    </p>
+  </div>
+</section>
+
+<!-- About Intro -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">Who We Are</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">
+        At <strong>MrigaAayuvets</strong>, we are dedicated to delivering high-quality veterinary services with
+        compassion. Our team is passionate about animal health and strives to make every pet feel safe,
+        comfortable, and cared for.
+      </p>
+      <p class="text-gray-600 leading-relaxed">
+        From <span class="font-semibold">preventive care</span> to <span class="font-semibold">emergency treatments</span>, 
+        we ensure your beloved pets receive the best care possible – in the comfort of their own home.
+      </p>
+    </div>
+    <div>
+      <img src="{{ url_for('static', filename='images/slide6.jpeg') }}" 
+           alt="Veterinary Service" 
+           class="rounded-2xl shadow-lg">
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-12">How Our Home Veterinary Service Works</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-10">
+      <!-- Feature 1 -->
+      <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
+        <img src="{{ url_for('static', filename='images/home.jpeg') }}" class="h-16 mx-auto mb-4" alt="Home Visit">
+        <h3 class="text-xl font-semibold text-gray-700">Stress-Free Home Visits</h3>
+        <p class="text-gray-600 mt-2">Keep your furry friends safe & relaxed with in-home vet care.</p>
+      </div>
+      <!-- Feature 2 -->
+      <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
+        <img src="{{ url_for('static', filename='images/multi.jpeg') }}" class="h-16 mx-auto mb-4" alt="Multi-Pet">
+        <h3 class="text-xl font-semibold text-gray-700">Multi-Pet Appointments</h3>
+        <p class="text-gray-600 mt-2">One visit for the whole pack – ensuring complete family pet care.</p>
+      </div>
+      <!-- Feature 3 -->
+      <div class="p-6 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
+        <img src="{{ url_for('static', filename='images/book1.png') }}" class="h-16 mx-auto mb-4" alt="Booking">
+        <h3 class="text-xl font-semibold text-gray-700">Easy Online Booking</h3>
+        <p class="text-gray-600 mt-2">Choose a slot that fits your schedule – we bring care to you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission -->
+<section class="py-16 bg-gradient-to-r from-teal-50 to-green-50 text-center">
+  <div class="max-w-3xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Mission</h2>
+    <p class="text-gray-600 text-lg leading-relaxed">
+      We strive to enhance pet health and well-being through advanced treatments and personalized care.
+      Every visit is designed to reduce stress, improve comfort, and deliver the highest standard of veterinary excellence.
+    </p>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-12">Our Services</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+      <div class="service-item">
+        <img src="{{ url_for('static', filename='images/emergancy.png') }}" class="h-14 mx-auto mb-3" alt="Emergency">
+        <p class="font-medium text-gray-700">Emergency Care</p>
+      </div>
+      <div class="service-item">
+        <img src="{{ url_for('static', filename='images/vaccine.png') }}" class="h-14 mx-auto mb-3" alt="Vaccinations">
+        <p class="font-medium text-gray-700">Vaccinations</p>
+      </div>
+      <div class="service-item">
+        <img src="{{ url_for('static', filename='images/surgery.png') }}" class="h-14 mx-auto mb-3" alt="Surgery">
+        <p class="font-medium text-gray-700">Surgical Procedures</p>
+      </div>
+      <div class="service-item">
+        <img src="{{ url_for('static', filename='images/nutrication.png') }}" class="h-14 mx-auto mb-3" alt="Nutrition">
+        <p class="font-medium text-gray-700">Nutrition & Diet</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Doctor -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8">Meet Our Doctor</h2>
+    <div class="flex justify-center">
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="{{ url_for('static', filename='images/siddhu.png') }}" class="w-40 h-40 mx-auto rounded-full mb-4" alt="Dr. Siddheshwar Khonde">
+        <h3 class="text-xl font-semibold text-gray-700">Dr. Siddheshwar Khonde</h3>
+        <p class="text-gray-500">Veterinary Surgeon</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="py-16 bg-gradient-to-r from-green-600 to-teal-500 text-white text-center">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+    <p class="mb-3"><strong>📍 Address:</strong> Mumbai, India</p>
+    <p class="mb-3"><strong>📞 Phone:</strong> +91 8208657969</p>
+    <p><strong>📧 Email:</strong> Mrigaayuvets2025@gmail.com</p>
+  </div>
+</section>
+
+{% endblock %}
