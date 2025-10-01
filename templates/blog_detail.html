@@ -1,0 +1,163 @@
+{% extends "layout.html" %}
+{% block title %}{{ blog.title }} | MrigaAayuvets{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="relative h-72 md:h-[28rem] flex items-center justify-center text-center bg-gradient-to-r from-blue-500 via-blue-600 to-teal-500">
+  
+  <!-- Background overlay for readability -->
+  <div class="absolute inset-0 bg-black/30"></div>
+  
+  <!-- Content -->
+  <div class="relative z-10 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white drop-shadow-lg animate-fade-in">
+      📝 {{ blog.title }}
+    </h1>
+    <p class="mt-4 text-sm sm:text-lg md:text-xl text-gray-100 max-w-2xl mx-auto animate-fade-in-up">
+      Expert veterinary advice and pet care tips
+    </p>
+   
+  </div>
+</section>
+
+<!-- Animations -->
+<style>
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in { animation: fade-in 1.2s ease-out forwards; }
+.animate-fade-in-up { animation: fade-in-up 1.5s ease-out forwards; }
+
+/* Blog content styling */
+.blog-content h2 {
+  @apply text-2xl font-bold text-gray-800 mb-4 mt-8;
+}
+.blog-content h3 {
+  @apply text-xl font-semibold text-gray-700 mb-3 mt-6;
+}
+.blog-content p {
+  @apply text-gray-600 leading-relaxed mb-4;
+}
+.blog-content ul {
+  @apply list-disc list-inside text-gray-600 mb-4 space-y-2;
+}
+.blog-content ol {
+  @apply list-decimal list-inside text-gray-600 mb-4 space-y-2;
+}
+.blog-content li {
+  @apply ml-4;
+}
+.blog-content strong {
+  @apply font-semibold text-gray-800;
+}
+</style>
+
+<!-- Blog Content -->
+<main class="max-w-5xl mx-auto px-6 py-16">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+    <!-- Main Content -->
+    <div class="lg:col-span-2">
+      <article class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img src="{{ url_for('static', filename=blog.image) }}" 
+             alt="{{ blog.title }}" 
+             class="w-full h-64 object-cover">
+        
+        <div class="p-8">
+          <!-- Blog metadata -->
+          <div class="flex items-center text-gray-500 text-sm mb-6">
+            <span class="mr-4">📅 Published: January 2025</span>
+            <span class="mr-4">👤 By: Dr. Siddheshwar Khonde</span>
+            <span>⏱️ 5 min read</span>
+          </div>
+
+          
+          <!-- Share buttons -->
+          <div class="mt-8 pt-6 border-t border-gray-200">
+            <h4 class="text-lg font-semibold mb-4">Share this article:</h4>
+            <div class="flex space-x-4">
+              <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition">
+                📘 Facebook
+              </a>
+              <a href="https://www.instagram.com/mrigaayuvets?igsh=eGYxZ2R4ajNta2hr" 
+   target="_blank" 
+   class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-lg transition">
+   📷 Instagram
+</a>
+              <a href="https://wa.me/?text={{ blog.title }} - {{ request.url }}" 
+                 target="_blank"
+                 class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition">
+                💬 WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="lg:col-span-1">
+      <!-- Ask the Vet Card -->
+      <div class="bg-green-50 rounded-2xl p-6 shadow-lg mb-8 border-2 border-green-200">
+        <h3 class="text-2xl font-bold text-green-700 mb-4 text-center">Ask Our Vet</h3>
+        <p class="text-gray-600 text-center mb-6">Have questions about your pet's health?</p>
+        <div class="text-center">
+          <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20have%20a%20question%20about%20my%20pet's%20health.%20Can%20you%20help?"
+             target="_blank"
+             class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+             💬 Chat with Vet
+          </a>
+        </div>
+      </div>
+
+      <!-- Related Articles -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg mb-8">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
+        <div class="space-y-4">
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Pet Vaccination Guide</h4>
+            <p class="text-sm text-gray-500">Essential vaccines for your pet's health</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Senior Pet Care Tips</h4>
+            <p class="text-sm text-gray-500">Caring for your aging companion</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Emergency Pet Care</h4>
+            <p class="text-sm text-gray-500">What to do in pet emergencies</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="bg-blue-50 rounded-2xl p-6 shadow-lg border-2 border-blue-200">
+        <h3 class="text-xl font-bold text-blue-700 mb-4">Get Pet Care Tips</h3>
+        <p class="text-gray-600 mb-4">Subscribe to our newsletter for expert pet care advice</p>
+        <form class="space-y-3">
+          <input type="email" 
+                 placeholder="Your email address" 
+                 class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+          <button type="submit" 
+                  class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+            📧 Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Blogs -->
+  <div class="text-center mt-12">
+    <a href="{{ url_for('blogs') }}" 
+       class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300">
+      ← Back to All Blogs
+    </a>
+  </div>
+</main>
+
+{% endblock %}

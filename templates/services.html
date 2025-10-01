@@ -1,18 +1,18 @@
 {% extends "layout.html" %}
-{% block title %}Blogs | MrigaAayuvets{% endblock %}
+{% block title %}Services | MrigaAayuvets{% endblock %}
 
 {% block content %}
 <!-- Services Section -->
 <section class="py-20 bg-gradient-to-b from-green-50 via-white to-green-50">
   <div class="max-w-7xl mx-auto px-6 lg:px-12">
-    <!-- Section Title -->
+    
 <!-- Section Heading -->
 <div class="text-center mb-12 px-4">
   <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-green-700 mb-4 animate-pulse">
     🐾 Our Veterinary Services
   </h2>
   <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto animate-fade-in">
-    Comprehensive care for your pets — from regular check-ups to specialized treatments, we’ve got them covered.
+    Comprehensive care for your pets — from regular check-ups to specialized treatments, we've got them covered.
   </p>
 </div>
 
@@ -25,11 +25,10 @@
 .animate-fade-in { animation: fade-in 1.2s ease-out forwards; }
 </style>
 
-
     <!-- Services Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
       
-      <!-- Service Card -->
+      <!-- Service Card 1 - Vaccination -->
       <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-3 hover:scale-105 transition duration-500 ease-in-out"
            data-aos="fade-up">
         <img src="{{ url_for('static', filename='images/imgs1.png') }}" alt="Pet Vaccination"
@@ -37,11 +36,11 @@
         <div class="p-6">
           <h3 class="text-2xl font-semibold mb-2 text-green-600">Vaccination</h3>
           <p class="text-gray-600 mb-4">Have your pets vaccinated at home, with no extra clinic costs or stressful car rides.</p>
-          <a href="vaccination.html" class="text-green-500 font-semibold hover:underline">Read More →</a>
+          <a href="{{ url_for('service_detail', service_id='vaccination') }}" class="text-green-500 font-semibold hover:underline">Read More </a>
         </div>
       </div>
 
-      <!-- Repeat for Other Services -->
+      <!-- Service Card 2 - General Treatment -->
       <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-3 hover:scale-105 transition duration-500 ease-in-out"
            data-aos="fade-up" data-aos-delay="100">
         <img src="{{ url_for('static', filename='images/imgs2.jpg') }}" alt="General treatment"
@@ -49,10 +48,11 @@
         <div class="p-6">
           <h3 class="text-2xl font-semibold mb-2 text-green-600">General Treatment</h3>
           <p class="text-gray-600 mb-4">Experienced veterinarians will treat your pet right at your doorstep. Easy and stress-free!</p>
-          <a href="#" class="text-green-500 font-semibold hover:underline">Read More →</a>
+          <a href="{{ url_for('service_detail', service_id='general_treatment') }}" class="text-green-500 font-semibold hover:underline">Read More </a>
         </div>
       </div>
 
+      <!-- Service Card 3 - Deworming -->
       <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-3 hover:scale-105 transition duration-500 ease-in-out"
            data-aos="fade-up" data-aos-delay="200">
         <img src="{{ url_for('static', filename='images/imgs3.jpg') }}" alt="Deworming"
@@ -60,11 +60,11 @@
         <div class="p-6">
           <h3 class="text-2xl font-semibold mb-2 text-green-600">Deworming</h3>
           <p class="text-gray-600 mb-4">We perform fecal analysis and provide effective medication to keep your pets parasite-free.</p>
-          <a href="#" class="text-green-500 font-semibold hover:underline">Read More →</a>
+          <a href="{{ url_for('service_detail', service_id='deworming') }}" class="text-green-500 font-semibold hover:underline">Read More </a>
         </div>
       </div>
 
-      <!-- Grooming -->
+      <!-- Service Card 4 - Grooming -->
       <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-3 hover:scale-105 transition duration-500 ease-in-out"
            data-aos="fade-up" data-aos-delay="300">
         <img src="{{ url_for('static', filename='images/imgs4.jpg') }}" alt="Pet grooming"
@@ -72,12 +72,81 @@
         <div class="p-6">
           <h3 class="text-2xl font-semibold mb-2 text-green-600">Grooming</h3>
           <p class="text-gray-600 mb-4">Keep your pet looking fabulous with our at-home grooming services. Bath, trim, and style!</p>
-          <a href="#" class="text-green-500 font-semibold hover:underline">Read More →</a>
+          <a href="{{ url_for('service_detail', service_id='grooming') }}" class="text-green-500 font-semibold hover:underline">Read More </a>
         </div>
       </div>
 
-      <!-- Add other service cards in same format... -->
+      <!-- Service Card 5 - Nail Trimming -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-3 hover:scale-105 transition duration-500 ease-in-out"
+           data-aos="fade-up" data-aos-delay="400">
+        <img src="{{ url_for('static', filename='images/nail.jpeg') }}" alt="Nail Trimming"
+             class="w-full h-52 object-cover hover:scale-110 transition duration-700 ease-in-out">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2 text-green-600">Nail Trimming</h3>
+          <p class="text-gray-600 mb-4">Professional nail trimming service to keep your pet's nails healthy and prevent overgrowth.</p>
+          <a href="{{ url_for('service_detail', service_id='nail_trimming') }}" class="text-green-500 font-semibold hover:underline">Read More </a>
+        </div>
+      </div>
+
+      <!-- Service Card 6 - Dental Care -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-3 hover:scale-105 transition duration-500 ease-in-out"
+           data-aos="fade-up" data-aos-delay="500">
+        <img src="{{ url_for('static', filename='images/imgs6.jpg') }}" alt="Dental Care"
+             class="w-full h-52 object-cover hover:scale-110 transition duration-700 ease-in-out">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2 text-green-600">Dental Care</h3>
+          <p class="text-gray-600 mb-4">Complete dental checkups and cleaning services to maintain your pet's oral health.</p>
+          <a href="{{ url_for('service_detail', service_id='dental_care') }}" class="text-green-500 font-semibold hover:underline">Read More </a>
+        </div>
+      </div>
+
+      <!-- Service Card 7 - Pet X-Ray -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-3 hover:scale-105 transition duration-500 ease-in-out"
+           data-aos="fade-up" data-aos-delay="600">
+        <img src="{{ url_for('static', filename='images/imgs7.jpg') }}" alt="Pet X-Ray"
+             class="w-full h-52 object-cover hover:scale-110 transition duration-700 ease-in-out">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2 text-green-600">Pet X-Ray</h3>
+          <p class="text-gray-600 mb-4">Advanced mobile X-ray services at home for accurate diagnosis of internal conditions.</p>
+          <a href="{{ url_for('service_detail', service_id='pet_xray') }}" class="text-green-500 font-semibold hover:underline">Read More </a>
+        </div>
+      </div>
+
+      <!-- Service Card 8 - Emergency Care -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-3 hover:scale-105 transition duration-500 ease-in-out"
+           data-aos="fade-up" data-aos-delay="700">
+        <img src="{{ url_for('static', filename='images/imgs8.jpg') }}" alt="Emergency Care"
+             class="w-full h-52 object-cover hover:scale-110 transition duration-700 ease-in-out">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2 text-green-600">Emergency Care</h3>
+          <p class="text-gray-600 mb-4">24/7 emergency veterinary services for urgent pet health situations.</p>
+          <a href="{{ url_for('service_detail', service_id='emergency_care') }}" class="text-green-500 font-semibold hover:underline">Read More </a>
+        </div>
+      </div>
+
+      <!-- Service Card 9 - Nutrition Guidance -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-3 hover:scale-105 transition duration-500 ease-in-out"
+           data-aos="fade-up" data-aos-delay="800">
+        <img src="{{ url_for('static', filename='images/imgs9.jpg') }}" alt="Nutrition Guidance"
+             class="w-full h-52 object-cover hover:scale-110 transition duration-700 ease-in-out">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2 text-green-600">Nutrition Guidance</h3>
+          <p class="text-gray-600 mb-4">Personalized nutrition plans and dietary advice for optimal pet health and wellness.</p>
+          <a href="{{ url_for('service_detail', service_id='nutrition_guidance') }}" class="text-green-500 font-semibold hover:underline">Read More </a>
+        </div>
+      </div>
       
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-16">
+      <h3 class="text-2xl font-bold text-gray-800 mb-4">Need Immediate Care for Your Pet?</h3>
+      <p class="text-gray-600 mb-8">Contact us now for professional veterinary services at your doorstep</p>
+      <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20need%20veterinary%20services%20for%20my%20pet.%20Please%20help."
+         target="_blank"
+         class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+        📞 Contact Us Now
+      </a>
     </div>
   </div>
 </section>

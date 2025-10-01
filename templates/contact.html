@@ -6,65 +6,416 @@
 <section class="relative h-64 md:h-80 flex items-center justify-center bg-gradient-to-r from-green-500 via-green-400 to-green-600 text-white">
   <div class="text-center">
     <h1 class="text-3xl md:text-5xl font-extrabold drop-shadow-lg">Contact MrigaAayuvets</h1>
-    <p class="mt-3 text-lg font-medium text-green-100">We’re here to care for your pets 24/7 🐾</p>
+    <p class="mt-3 text-lg font-medium text-green-100">We're here to care for your pets 24/7</p>
   </div>
 </section>
 
+<!-- Flash Messages -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="max-w-7xl mx-auto px-6 pt-6">
+      {% for category, message in messages %}
+        <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }} mb-4 p-4 rounded-lg
+                    {{ 'bg-green-100 border border-green-400 text-green-700' if category == 'success' else 'bg-red-100 border border-red-400 text-red-700' }}">
+          <div class="flex items-center">
+            <span class="mr-2">
+              {% if category == 'success' %}✅{% else %}❌{% endif %}
+            </span>
+            {{ message }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
 <!-- Contact Info + Form -->
-<main class="max-w-7xl mx-auto px-6 py-16">
-  <div class="text-center mb-12">
-    <h2 class="text-4xl font-extrabold text-gray-800 mb-4 animate-bounce">We’d Love To Hear From You</h2>
-    <p class="text-lg text-gray-600">Reach out for appointments, questions, or emergencies.</p>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-16">
+  <div class="text-center mb-8 sm:mb-12">
+    <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-800 mb-4">We'd Love To Hear From You</h2>
+    <p class="text-base sm:text-lg text-gray-600">Reach out for appointments, questions, or emergencies.</p>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10">
     <!-- Contact Info -->
-    <div class="bg-white shadow-lg rounded-2xl p-8 space-y-6 hover:shadow-2xl transition duration-500">
-      <h3 class="text-2xl font-bold text-green-600 mb-4">Get In Touch</h3>
-      <p class="text-gray-600">Our veterinary experts are here to provide the best care for your pets.</p>
+    <div class="bg-white shadow-lg rounded-2xl p-6 sm:p-8 space-y-6 hover:shadow-2xl transition duration-500">
+      <h3 class="text-xl sm:text-2xl font-bold text-green-600 mb-4">Get In Touch</h3>
+      <p class="text-gray-600 text-sm sm:text-base">Our veterinary experts are here to provide the best care for your pets.</p>
+      
       <div class="space-y-4">
-        <p class="flex items-center space-x-3">
-          <span class="text-green-500 text-xl">📍</span>
-          <span>Pune, Maharashtra, India</span>
-        </p>
-        <p class="flex items-center space-x-3">
-          <span class="text-green-500 text-xl">📞</span>
-          <a href="tel:+919876543210" class="hover:underline">+91 98765 43210</a>
-        </p>
-        <p class="flex items-center space-x-3">
-          <span class="text-green-500 text-xl">✉️</span>
-          <a href="mailto:info@mrigaayuvets.com" class="hover:underline">info@mrigaayuvets.com</a>
-        </p>
+        <div class="flex items-start space-x-3">
+          <span class="text-green-500 text-xl flex-shrink-0 mt-1">📍</span>
+          <div>
+            <p class="font-semibold text-gray-800">Location</p>
+            <p class="text-gray-600 text-sm sm:text-base">Mumbai, Maharashtra, India</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start space-x-3">
+          <span class="text-green-500 text-xl flex-shrink-0 mt-1">📞</span>
+          <div>
+            <p class="font-semibold text-gray-800">Phone</p>
+            <a href="tel:+918208657969" class="text-green-600 hover:underline text-sm sm:text-base">+91 8208657969</a>
+          </div>
+        </div>
+        
+        <div class="flex items-start space-x-3">
+          <span class="text-green-500 text-xl flex-shrink-0 mt-1">✉️</span>
+          <div>
+            <p class="font-semibold text-gray-800">Email</p>
+            <a href="mailto:mrigaayuvetsgmail.com" class="text-green-600 hover:underline text-sm sm:text-base">info@mrigaayuvets.com</a>
+          </div>
+        </div>
+        
+        <div class="flex items-start space-x-3">
+          <span class="text-green-500 text-xl flex-shrink-0 mt-1">🕒</span>
+          <div>
+            <p class="font-semibold text-gray-800">Working Hours</p>
+            <p class="text-gray-600 text-sm sm:text-base">24/7 Emergency Services Available</p>
+            <p class="text-gray-600 text-xs sm:text-sm">Regular Hours: 9:00 AM - 8:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Emergency Contact -->
+      <div class="bg-red-50 border border-red-200 rounded-lg p-4 mt-6">
+        <h4 class="font-bold text-red-800 mb-2">Emergency Contact</h4>
+        <p class="text-red-700 text-sm mb-3">For immediate veterinary emergencies, contact us directly:</p>
+        <a href="https://wa.me/918208657969?text=🚨%20EMERGENCY%20🚨%0AHello%20Doctor,%20I%20have%20a%20pet%20emergency.%20Please%20help%20immediately!"
+           target="_blank"
+           class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 inline-block text-sm">
+          🚨 Emergency WhatsApp
+        </a>
       </div>
     </div>
 
     <!-- Contact Form -->
-    <div class="bg-white shadow-lg rounded-2xl p-8 hover:shadow-2xl transition duration-500">
-      <form action="#" method="POST" class="space-y-6">
+    <div class="bg-white shadow-lg rounded-2xl p-6 sm:p-8 hover:shadow-2xl transition duration-500">
+      <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6 text-center">Send Us a Message</h3>
+      
+      <form method="POST" action="{{ url_for('contact') }}" id="contactForm" class="space-y-4 sm:space-y-6">
         <div>
-          <label for="name" class="block text-gray-700 font-semibold">Your Name</label>
+          <label for="name" class="block text-gray-700 font-semibold text-sm">Your Name *</label>
           <input type="text" id="name" name="name" required
-            class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500">
+            class="w-full mt-1 sm:mt-2 p-2 sm:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base">
         </div>
 
         <div>
-          <label for="email" class="block text-gray-700 font-semibold">Your Email</label>
+          <label for="email" class="block text-gray-700 font-semibold text-sm">Your Email *</label>
           <input type="email" id="email" name="email" required
-            class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500">
+            class="w-full mt-1 sm:mt-2 p-2 sm:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base">
         </div>
 
         <div>
-          <label for="message" class="block text-gray-700 font-semibold">Message</label>
-          <textarea id="message" name="message" rows="4" required
-            class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"></textarea>
+          <label for="phone" class="block text-gray-700 font-semibold text-sm">Phone Number</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"
+            class="w-full mt-1 sm:mt-2 p-2 sm:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base"
+            placeholder="10-digit mobile number (optional)">
         </div>
 
-        <button type="submit"
-          class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
-          Send Message
-        </button>
+        <div>
+          <label for="subject" class="block text-gray-700 font-semibold text-sm">Subject</label>
+          <select id="subject" name="subject"
+            class="w-full mt-1 sm:mt-2 p-2 sm:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base">
+            <option value="">Select Subject</option>
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Appointment Booking">Appointment Booking</option>
+            <option value="Emergency">Emergency</option>
+            <option value="Service Information">Service Information</option>
+            <option value="Billing Inquiry">Billing Inquiry</option>
+            <option value="Feedback">Feedback</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message" class="block text-gray-700 font-semibold text-sm">Your Message *</label>
+          <textarea id="message" name="message" rows="4" required
+            class="w-full mt-1 sm:mt-2 p-2 sm:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm sm:text-base"
+            placeholder="Tell us how we can help you and your pet..."></textarea>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <button type="submit" name="action" value="database"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 text-sm sm:text-base">
+            📧 Send Message
+          </button>
+          
+          <button type="button" id="whatsappBtn"
+            class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 text-sm sm:text-base">
+            💬 Send via WhatsApp
+          </button>
+        </div>
       </form>
     </div>
   </div>
+
+  <!-- Additional Contact Options -->
+  <div class="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+    <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-2xl text-center hover:shadow-lg transition duration-300">
+      <div class="text-3xl mb-3">📱</div>
+      <h4 class="font-bold mb-2">WhatsApp Chat</h4>
+      <p class="text-sm text-blue-100 mb-4">Quick chat for instant responses</p>
+      <a href="https://wa.me/918208657969" target="_blank" 
+         class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition duration-200 inline-block text-sm">
+        Start Chat
+      </a>
+    </div>
+
+    <div class="bg-gradient-to-r from-green-500 to-green-600 text-white p-6 rounded-2xl text-center hover:shadow-lg transition duration-300">
+      <div class="text-3xl mb-3">📞</div>
+      <h4 class="font-bold mb-2">Direct Call</h4>
+      <p class="text-sm text-green-100 mb-4">Speak directly with our vets</p>
+      <a href="tel:+918208657969" 
+         class="bg-white text-green-600 px-4 py-2 rounded-lg font-semibold hover:bg-green-50 transition duration-200 inline-block text-sm">
+        Call Now
+      </a>
+    </div>
+
+    <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white p-6 rounded-2xl text-center hover:shadow-lg transition duration-300 sm:col-span-2 lg:col-span-1">
+      <div class="text-3xl mb-3">📧</div>
+      <h4 class="font-bold mb-2">Email Support</h4>
+      <p class="text-sm text-purple-100 mb-4">For detailed inquiries</p>
+      <a href="mailto:mrigaayuvets@gmail.com" 
+         class="bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50 transition duration-200 inline-block text-sm">
+        Send Email
+      </a>
+    </div>
+  </div>
 </main>
+
+<!-- Mobile Optimization Styles -->
+<style>
+  /* Mobile-specific optimizations */
+  @media (max-width: 640px) {
+    .max-w-7xl {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .py-16 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    
+    .gap-10 {
+      gap: 1.5rem;
+    }
+    
+    .space-y-6 > * + * {
+      margin-top: 1rem;
+    }
+    
+    .space-y-4 > * + * {
+      margin-top: 0.75rem;
+    }
+    
+    /* Prevent iOS zoom on form inputs */
+    input[type="text"],
+    input[type="email"], 
+    input[type="tel"],
+    select,
+    textarea {
+      font-size: 16px;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    
+    /* Better button spacing */
+    .grid.grid-cols-1.sm\\:grid-cols-2 {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    
+    /* Adjust hero section */
+    .h-64.md\\:h-80 {
+      height: 200px;
+    }
+    
+    /* Remove animation on mobile for performance */
+    .animate-bounce {
+      animation: none;
+    }
+    
+    /* Better spacing for contact info */
+    .space-y-4 .flex {
+      align-items: flex-start;
+    }
+  }
+  
+  /* Loading states */
+  .btn-loading {
+    opacity: 0.7;
+    pointer-events: none;
+    position: relative;
+  }
+  
+  .btn-loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Error state styling */
+  .border-red-500 {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  }
+</style>
+
+<!-- Enhanced JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById("contactForm");
+    const whatsappBtn = document.getElementById("whatsappBtn");
+    const submitBtn = document.querySelector('button[name="action"][value="database"]');
+    
+    // WhatsApp button functionality
+    whatsappBtn.addEventListener("click", function() {
+        if (!validateForm()) {
+            alert('Please fill in all required fields before sending to WhatsApp.');
+            return;
+        }
+        
+        sendToWhatsApp();
+    });
+    
+    // Form submission for database
+    contactForm.addEventListener("submit", function(e) {
+        if (e.submitter && e.submitter.name === 'action' && e.submitter.value === 'database') {
+            if (!validateForm()) {
+                e.preventDefault();
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Add loading state
+            submitBtn.classList.add('btn-loading');
+            submitBtn.textContent = 'Sending...';
+        }
+    });
+    
+    function validateForm() {
+        const requiredFields = ['name', 'email', 'message'];
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+            const input = document.getElementById(field);
+            if (!input.value.trim()) {
+                input.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                input.classList.remove('border-red-500');
+            }
+        });
+        
+        // Validate email format
+        const email = document.getElementById('email').value;
+        if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            document.getElementById('email').classList.add('border-red-500');
+            isValid = false;
+        }
+        
+        // Validate phone number if provided
+        const phone = document.getElementById('phone').value;
+        if (phone && !/^[0-9]{10}$/.test(phone)) {
+            document.getElementById('phone').classList.add('border-red-500');
+            isValid = false;
+        }
+        
+        return isValid;
+    }
+    
+    function sendToWhatsApp() {
+        const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value || "Not provided",
+            subject: document.getElementById("subject").value || "General Inquiry",
+            message: document.getElementById("message").value
+        };
+        
+        let whatsappMessage = `📧 *New Contact Message* 📧%0A%0A
+👤 *Contact Details:*%0A
+Name: ${formData.name}%0A
+Email: ${formData.email}%0A
+Phone: ${formData.phone}%0A%0A
+📋 *Subject:* ${formData.subject}%0A%0A
+💬 *Message:*%0A${formData.message}%0A%0A
+Thank you for contacting MrigaAayuvets!`;
+
+        // Doctor's WhatsApp number
+        const phone = "918208657969";
+        
+        // Add loading state
+        whatsappBtn.classList.add('btn-loading');
+        whatsappBtn.textContent = 'Opening WhatsApp...';
+        
+        // Open WhatsApp
+        window.open(`https://wa.me/${phone}?text=${whatsappMessage}`, "_blank");
+        
+        // Remove loading state
+        setTimeout(() => {
+            whatsappBtn.classList.remove('btn-loading');
+            whatsappBtn.innerHTML = '💬 Send via WhatsApp';
+        }, 2000);
+    }
+    
+    // Remove error styling on input
+    document.querySelectorAll('input, select, textarea').forEach(input => {
+        input.addEventListener('input', function() {
+            this.classList.remove('border-red-500');
+        });
+    });
+    
+    // Auto-format phone number
+    const phoneInput = document.getElementById('phone');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 10) {
+                value = value.slice(0, 10);
+            }
+            e.target.value = value;
+        });
+    }
+    
+    // Character counter for message
+    const messageField = document.getElementById('message');
+    const maxLength = 500;
+    
+    if (messageField) {
+        const charCounter = document.createElement('div');
+        charCounter.className = 'text-xs text-gray-500 mt-1 text-right';
+        charCounter.textContent = `0/${maxLength} characters`;
+        messageField.parentNode.appendChild(charCounter);
+        
+        messageField.addEventListener('input', function() {
+            const length = this.value.length;
+            charCounter.textContent = `${length}/${maxLength} characters`;
+            
+            if (length > maxLength) {
+                charCounter.classList.add('text-red-500');
+                this.value = this.value.substring(0, maxLength);
+            } else {
+                charCounter.classList.remove('text-red-500');
+            }
+        });
+    }
+});
+</script>
 {% endblock %}

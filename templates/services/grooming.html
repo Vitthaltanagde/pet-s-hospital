@@ -1,0 +1,540 @@
+{% extends "layout.html" %}
+{% block title %}{{ service.title }} | MrigaAayuvets{% endblock %}
+
+{% block content %}
+<div class="container max-w-7xl mx-auto py-10 px-6">
+
+  <!-- Breadcrumb -->
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="{{ url_for('services') }}" class="text-green-600 hover:underline">← Back to Services</a> / {{ service.title }}
+  </nav>
+
+  <!-- Main Grid Layout -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+    <!-- Left: Main Content -->
+    <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
+      <!-- Article Header -->
+      <article class="mb-10">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Complete Guide to Pet Grooming: Keeping Your Pet Clean and Healthy</h1>
+        <div class="flex flex-wrap gap-6 text-gray-500 text-sm mb-6">
+          <span>📅 Published: March 20, 2024</span>
+          <span>⏱️ 12 min read</span>
+          <span>🏷️ Grooming, Hygiene, Pet Care</span>
+          <span>👨‍⚕️ Dr. Veterinary Team</span>
+        </div>
+        <img src="{{ url_for('static', filename='images/' + service.image) }}" alt="Pet grooming" class="w-full h-96 object-cover rounded-xl mb-6">
+      </article>
+
+      <div class="prose prose-lg max-w-none">
+      <p class="text-lg mb-6">Regular grooming is essential for your pet's health, comfort, and appearance. Beyond keeping your pet looking beautiful, proper grooming helps prevent skin conditions, reduces shedding, strengthens the bond between you and your pet, and allows for early detection of health issues. This comprehensive guide covers everything you need to know about professional and at-home grooming.</p>
+
+      <!-- Stats Box -->
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 text-center my-8">
+        <div class="text-4xl font-bold text-green-600 mb-3">78%</div>
+        <p class="text-gray-700">of pet owners report their pets are calmer and more comfortable after regular grooming sessions</p>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Why Grooming is Important</h2>
+      <p class="mb-6">Grooming goes far beyond aesthetics. It's a crucial aspect of preventive healthcare that offers numerous benefits for both pets and their owners.</p>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Health Benefits:</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li><strong>Skin health:</strong> Removes dead skin cells and promotes healthy circulation</li>
+        <li><strong>Parasite prevention:</strong> Early detection of fleas, ticks, and mites</li>
+        <li><strong>Infection prevention:</strong> Clean ears and eyes reduce infection risk</li>
+        <li><strong>Temperature regulation:</strong> Proper coat maintenance helps with cooling</li>
+        <li><strong>Injury detection:</strong> Regular handling reveals cuts, lumps, or sore spots</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Comfort Benefits:</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li>Reduces matting and tangling that can cause pain</li>
+        <li>Prevents overgrown nails that affect walking</li>
+        <li>Maintains proper coat density for comfort</li>
+        <li>Reduces excessive shedding in the home</li>
+        <li>Eliminates odors and keeps pets fresh</li>
+      </ul>
+
+      <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Grooming Schedule by Pet Type</h2>
+      <p class="mb-6">Different pets have varying grooming needs based on their coat type, lifestyle, and breed characteristics:</p>
+
+      <!-- Grooming Schedule Table -->
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+        <h4 class="text-lg font-bold text-blue-800 mb-4">📋 Recommended Grooming Frequency</h4>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="border border-gray-300 p-3 text-left font-semibold">Pet Type</th>
+                <th class="border border-gray-300 p-3 text-left font-semibold">Professional Grooming</th>
+                <th class="border border-gray-300 p-3 text-left font-semibold">At-Home Maintenance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 p-3">Short-haired dogs</td>
+                <td class="border border-gray-300 p-3">Every 8-12 weeks</td>
+                <td class="border border-gray-300 p-3">Weekly brushing, monthly baths</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="border border-gray-300 p-3">Long-haired dogs</td>
+                <td class="border border-gray-300 p-3">Every 4-6 weeks</td>
+                <td class="border border-gray-300 p-3">Daily brushing, bi-weekly baths</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-3">Cats (short-hair)</td>
+                <td class="border border-gray-300 p-3">2-3 times per year</td>
+                <td class="border border-gray-300 p-3">Weekly brushing, occasional baths</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="border border-gray-300 p-3">Cats (long-hair)</td>
+                <td class="border border-gray-300 p-3">Every 6-8 weeks</td>
+                <td class="border border-gray-300 p-3">Daily brushing, monthly baths</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-3">Double-coated breeds</td>
+                <td class="border border-gray-300 p-3">Every 6-8 weeks</td>
+                <td class="border border-gray-300 p-3">3-4 times weekly brushing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Essential Grooming Services</h2>
+
+      <!-- Service Cards -->
+      <div class="space-y-4 mb-8">
+        <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+          <h4 class="text-xl font-bold text-yellow-700 mb-3 flex items-center gap-2">✂️ Hair Trimming & Styling <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">Essential</span></h4>
+          <p class="mb-2"><strong>Frequency:</strong> Every 4-12 weeks depending on breed</p>
+          <p class="mb-2"><strong>Benefits:</strong> Prevents matting, improves hygiene, maintains breed standards</p>
+          <p><strong>Special considerations:</strong> Some breeds require specific cuts for health reasons</p>
+        </div>
+
+        <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+          <h4 class="text-xl font-bold text-yellow-700 mb-3 flex items-center gap-2">🛁 Bathing & Shampooing <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">Essential</span></h4>
+          <p class="mb-2"><strong>Frequency:</strong> Monthly or as needed</p>
+          <p class="mb-2"><strong>Benefits:</strong> Removes dirt, allergens, and excess oils</p>
+          <p><strong>Special considerations:</strong> Use pet-specific shampoos only</p>
+        </div>
+
+        <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+          <h4 class="text-xl font-bold text-yellow-700 mb-3 flex items-center gap-2">🪮 Brushing & De-shedding <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">Important</span></h4>
+          <p class="mb-2"><strong>Frequency:</strong> Daily to weekly depending on coat type</p>
+          <p class="mb-2"><strong>Benefits:</strong> Reduces shedding, prevents matting, distributes natural oils</p>
+          <p><strong>Special considerations:</strong> Different brush types for different coat textures</p>
+        </div>
+
+        <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+          <h4 class="text-xl font-bold text-yellow-700 mb-3 flex items-center gap-2">💅 Nail Trimming <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">Essential</span></h4>
+          <p class="mb-2"><strong>Frequency:</strong> Every 3-4 weeks</p>
+          <p class="mb-2"><strong>Benefits:</strong> Prevents overgrowth, reduces scratching damage</p>
+          <p><strong>Special considerations:</strong> Requires proper technique to avoid injury</p>
+        </div>
+
+        <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+          <h4 class="text-xl font-bold text-yellow-700 mb-3 flex items-center gap-2">👂 Ear Cleaning <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">Important</span></h4>
+          <p class="mb-2"><strong>Frequency:</strong> Weekly to monthly</p>
+          <p class="mb-2"><strong>Benefits:</strong> Prevents infections, removes wax buildup</p>
+          <p><strong>Special considerations:</strong> Some breeds need more frequent cleaning</p>
+        </div>
+
+        <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+          <h4 class="text-xl font-bold text-yellow-700 mb-3 flex items-center gap-2">👁️ Eye Cleaning <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">Beneficial</span></h4>
+          <p class="mb-2"><strong>Frequency:</strong> As needed, usually weekly</p>
+          <p class="mb-2"><strong>Benefits:</strong> Removes tear stains, prevents irritation</p>
+          <p><strong>Special considerations:</strong> Important for flat-faced breeds</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">DIY Grooming vs Professional Services</h2>
+      <p class="mb-6">Understanding when you can handle grooming at home versus when professional services are needed:</p>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">DIY Grooming - Safe to Do at Home:</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li><strong>Basic brushing:</strong> Daily maintenance brushing</li>
+        <li><strong>Simple baths:</strong> Using appropriate pet shampoos</li>
+        <li><strong>Ear cleaning:</strong> With proper cleaning solutions</li>
+        <li><strong>Eye wiping:</strong> Gentle cleaning around eyes</li>
+        <li><strong>Paw maintenance:</strong> Basic cleaning between toes</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Professional Services - Leave to Experts:</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li><strong>Hair cutting:</strong> Especially breed-specific cuts</li>
+        <li><strong>Nail trimming:</strong> Reduces risk of injury</li>
+        <li><strong>De-matting:</strong> Severe matting removal</li>
+        <li><strong>Anal gland expression:</strong> Requires training</li>
+        <li><strong>Difficult pets:</strong> Anxious or aggressive animals</li>
+      </ul>
+
+      <!-- Warning Box -->
+      <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
+        <h4 class="font-bold text-red-800 mb-3">⚠️ Never Attempt These Without Training</h4>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Cutting matted fur close to skin</li>
+          <li>Using human hair products on pets</li>
+          <li>Trimming nails if you can't identify the quick</li>
+          <li>Deep ear cleaning with cotton swabs</li>
+          <li>Grooming an aggressive or highly stressed pet</li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Essential Grooming Tools</h2>
+      <p class="mb-6">Having the right tools makes grooming safer and more effective:</p>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Basic Brushing Tools:</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li><strong>Slicker brush:</strong> For removing loose hair and light matting</li>
+        <li><strong>Pin brush:</strong> For daily brushing of long coats</li>
+        <li><strong>Bristle brush:</strong> For short-haired breeds and finishing</li>
+        <li><strong>De-shedding tool:</strong> For heavy shedding breeds</li>
+        <li><strong>Comb:</strong> For detailed work and checking for parasites</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Bathing Supplies:</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li><strong>Pet-specific shampoo:</strong> Never use human products</li>
+        <li><strong>Conditioner:</strong> For long or dry coats</li>
+        <li><strong>Non-slip mat:</strong> For tub safety</li>
+        <li><strong>Absorbent towels:</strong> Multiple towels for drying</li>
+        <li><strong>Hair dryer:</strong> Pet-safe, cool setting only</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Cleaning Supplies:</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li><strong>Ear cleaning solution:</strong> Veterinarian-recommended</li>
+        <li><strong>Cotton balls:</strong> For ear and eye cleaning</li>
+        <li><strong>Nail clippers:</strong> Guillotine or scissor type</li>
+        <li><strong>Styptic powder:</strong> In case of minor nail bleeding</li>
+        <li><strong>Toothbrush and paste:</strong> Pet-specific dental products</li>
+      </ul>
+
+      <!-- Tip Box -->
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
+        <h4 class="font-bold text-green-800 mb-3">🛠️ Tool Selection Tips</h4>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Choose tools appropriate for your pet's coat type</li>
+          <li>Invest in quality tools that will last longer</li>
+          <li>Keep tools clean and sanitized between uses</li>
+          <li>Replace worn or damaged tools immediately</li>
+          <li>Store tools in a clean, organized grooming kit</li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Step-by-Step Grooming Process</h2>
+      <p class="mb-6">Follow this systematic approach for safe and effective grooming:</p>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Pre-Grooming Preparation:</h3>
+      <ol class="list-decimal pl-6 space-y-2 mb-6">
+        <li><strong>Choose the right time:</strong> When your pet is calm and relaxed</li>
+        <li><strong>Gather supplies:</strong> Have everything within reach</li>
+        <li><strong>Create comfort:</strong> Use non-slip surfaces and treats</li>
+        <li><strong>Start slowly:</strong> Gradually introduce grooming tools</li>
+        <li><strong>Check for issues:</strong> Look for cuts, irritation, or parasites</li>
+      </ol>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Grooming Order:</h3>
+      <ol class="list-decimal pl-6 space-y-2 mb-8">
+        <li><strong>Brushing first:</strong> Remove loose hair and detangle</li>
+        <li><strong>Nail trimming:</strong> While pet is dry and visible</li>
+        <li><strong>Ear cleaning:</strong> Before bathing to prevent water entry</li>
+        <li><strong>Bathing:</strong> Use lukewarm water and proper technique</li>
+        <li><strong>Drying:</strong> Thoroughly dry to prevent skin issues</li>
+        <li><strong>Final brushing:</strong> Style and finish the coat</li>
+      </ol>
+
+      <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Common Grooming Challenges</h2>
+
+      <!-- Challenge Solutions Table -->
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+        <h4 class="text-lg font-bold text-blue-800 mb-4">🚧 Challenge Solutions</h4>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="border border-gray-300 p-3 text-left font-semibold">Challenge</th>
+                <th class="border border-gray-300 p-3 text-left font-semibold">Cause</th>
+                <th class="border border-gray-300 p-3 text-left font-semibold">Solution</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 p-3">Matted fur</td>
+                <td class="border border-gray-300 p-3">Lack of regular brushing</td>
+                <td class="border border-gray-300 p-3">Professional de-matting, increase brushing frequency</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="border border-gray-300 p-3">Fear of water</td>
+                <td class="border border-gray-300 p-3">Bad experiences, unfamiliarity</td>
+                <td class="border border-gray-300 p-3">Gradual desensitization, positive reinforcement</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-3">Nail trimming resistance</td>
+                <td class="border border-gray-300 p-3">Fear of pain, bad experiences</td>
+                <td class="border border-gray-300 p-3">Professional training, gradual conditioning</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="border border-gray-300 p-3">Excessive shedding</td>
+                <td class="border border-gray-300 p-3">Seasonal, diet, health issues</td>
+                <td class="border border-gray-300 p-3">Regular brushing, vet consultation if sudden</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-3">Skin irritation</td>
+                <td class="border border-gray-300 p-3">Wrong products, allergies</td>
+                <td class="border border-gray-300 p-3">Use pet-specific products, consult veterinarian</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Special Considerations by Breed</h2>
+      <p class="mb-6">Different breeds have unique grooming requirements:</p>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Double-Coated Breeds (Golden Retrievers, German Shepherds):</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li>Never shave - disrupts temperature regulation</li>
+        <li>Regular brushing prevents matting of undercoat</li>
+        <li>Seasonal shedding requires extra attention</li>
+        <li>Professional de-shedding treatments recommended</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Curly/Poodle Coats:</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li>Require professional cutting every 4-6 weeks</li>
+        <li>Daily brushing prevents matting</li>
+        <li>Special shampoos for curly coat texture</li>
+        <li>Face and sanitary areas need frequent trimming</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Short-Haired Breeds:</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li>Weekly brushing usually sufficient</li>
+        <li>Focus on nail care and ear cleaning</li>
+        <li>Bath only when dirty or smelly</li>
+        <li>Check for skin issues more frequently</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Flat-Faced Breeds (Bulldogs, Pugs):</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-8">
+        <li>Daily facial fold cleaning essential</li>
+        <li>Extra attention to breathing during grooming</li>
+        <li>Frequent eye cleaning needed</li>
+        <li>Careful with water around nose and mouth</li>
+      </ul>
+
+      <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Grooming Cost Breakdown</h2>
+
+      <!-- Cost Table -->
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+        <h4 class="text-lg font-bold text-blue-800 mb-4">💰 Typical Grooming Costs in India</h4>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="border border-gray-300 p-3 text-left font-semibold">Service</th>
+                <th class="border border-gray-300 p-3 text-left font-semibold">Small Dogs</th>
+                <th class="border border-gray-300 p-3 text-left font-semibold">Large Dogs</th>
+                <th class="border border-gray-300 p-3 text-left font-semibold">Cats</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-300 p-3">Full grooming package</td>
+                <td class="border border-gray-300 p-3">₹800 - ₹1,500</td>
+                <td class="border border-gray-300 p-3">₹1,200 - ₹2,500</td>
+                <td class="border border-gray-300 p-3">₹600 - ₹1,200</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="border border-gray-300 p-3">Bath only</td>
+                <td class="border border-gray-300 p-3">₹300 - ₹600</td>
+                <td class="border border-gray-300 p-3">₹500 - ₹800</td>
+                <td class="border border-gray-300 p-3">₹400 - ₹700</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-300 p-3">Nail trimming only</td>
+                <td class="border border-gray-300 p-3">₹150 - ₹300</td>
+                <td class="border border-gray-300 p-3">₹200 - ₹400</td>
+                <td class="border border-gray-300 p-3">₹150 - ₹250</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="border border-gray-300 p-3">De-shedding treatment</td>
+                <td class="border border-gray-300 p-3">₹400 - ₹800</td>
+                <td class="border border-gray-300 p-3">₹600 - ₹1,000</td>
+                <td class="border border-gray-300 p-3">₹300 - ₹600</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Signs Your Pet Needs Professional Grooming</h2>
+      <p class="mb-6">Watch for these indicators that it's time for professional care:</p>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Immediate Professional Care Needed:</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li>Severely matted fur that pulls on skin</li>
+        <li>Strong, persistent odors despite bathing</li>
+        <li>Overgrown nails affecting walking</li>
+        <li>Ear infection symptoms (odor, discharge, scratching)</li>
+        <li>Skin irritation or hot spots</li>
+        <li>Excessive shedding with bald patches</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Regular Maintenance Indicators:</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-8">
+        <li>Coat looks dull or feels greasy</li>
+        <li>Light matting in areas like behind ears</li>
+        <li>Nails clicking on hard surfaces</li>
+        <li>Visible tear stains or eye discharge</li>
+        <li>Increased scratching or licking</li>
+      </ul>
+
+      <!-- Emergency Box -->
+      <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
+        <h4 class="font-bold text-red-800 mb-3">🚨 Emergency Grooming Situations</h4>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Severe matting causing skin tears</li>
+          <li>Foreign objects stuck in fur</li>
+          <li>Chemical contamination of coat</li>
+          <li>Injury during home grooming attempts</li>
+          <li>Signs of skin infection or parasites</li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Maintaining Results Between Sessions</h2>
+      <p class="mb-6">Keep your pet looking great between professional grooming appointments:</p>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Daily Maintenance (5 minutes):</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li>Quick brush through for long-haired pets</li>
+        <li>Wipe face and eye areas clean</li>
+        <li>Check for any new issues or changes</li>
+        <li>Praise and reward cooperative behavior</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Weekly Maintenance (15-20 minutes):</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-8">
+        <li>Thorough brushing session</li>
+        <li>Ear cleaning and inspection</li>
+        <li>Nail length check</li>
+        <li>Dental care (brushing or dental treats)</li>
+        <li>Overall health and skin examination</li>
+      </ul>
+
+      <!-- Home Grooming Tips -->
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
+        <h4 class="font-bold text-green-800 mb-3">Home Grooming Success Tips</h4>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Start grooming routines when pets are young</li>
+          <li>Always use positive reinforcement and treats</li>
+          <li>Keep sessions short and pleasant</li>
+          <li>Never rush or force a scared pet</li>
+          <li>Gradually increase grooming time as pet adjusts</li>
+          <li>End sessions on a positive note</li>
+        </ul>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Health Benefits of Regular Grooming</h2>
+      <p class="mb-6">Professional and consistent grooming provides measurable health advantages:</p>
+
+      <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Preventive Health Benefits:</h3>
+      <ul class="list-disc pl-6 space-y-2 mb-8">
+        <li><strong>Early disease detection:</strong> Regular handling reveals lumps, bumps, or changes</li>
+        <li><strong>Parasite prevention:</strong> Regular checks catch fleas and ticks early</li>
+        <li><strong>Skin health:</strong> Proper cleaning prevents bacterial and fungal infections</li>
+        <li><strong>Joint health:</strong> Nail maintenance prevents joint stress and injury</li>
+        <li><strong>Dental health:</strong> Regular dental care prevents serious oral diseases</li>
+      </ul>
+
+      <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6 mb-8">
+        <div>
+          <p class="font-semibold text-gray-800 mb-2">Q: How often should I bathe my pet?</p>
+          <p class="text-gray-700">A: It depends on coat type and lifestyle. Most pets benefit from monthly baths, but some may need weekly while others only need baths a few times per year.</p>
+        </div>
+
+        <div>
+          <p class="font-semibold text-gray-800 mb-2">Q: Can I use human shampoo on my pet?</p>
+          <p class="text-gray-700">A: Never. Human products have different pH levels that can cause skin irritation and damage your pet's coat.</p>
+        </div>
+
+        <div>
+          <p class="font-semibold text-gray-800 mb-2">Q: My pet hates grooming. What can I do?</p>
+          <p class="text-gray-700">A: Start slowly with positive reinforcement, consider professional help, and never force the process. Some pets need medication for severe anxiety.</p>
+        </div>
+
+        <div>
+          <p class="font-semibold text-gray-800 mb-2">Q: Should I tip my pet groomer?</p>
+          <p class="text-gray-700">A: Tipping 15-20% is appreciated for good service, especially if your pet is difficult to handle.</p>
+        </div>
+
+        <div>
+          <p class="font-semibold text-gray-800 mb-2">Q: How do I find a good professional groomer?</p>
+          <p class="text-gray-700">A: Ask for recommendations from your vet, check reviews, visit the facility, and ensure they're trained and certified.</p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Conclusion</h2>
+      <p class="mb-8">Regular grooming is an investment in your pet's health, comfort, and happiness. Whether you choose professional services, learn to groom at home, or combine both approaches, consistency is key. Start slowly, use positive reinforcement, and always prioritize your pet's safety and comfort over appearance. Remember that grooming should be a pleasant experience that strengthens your bond with your pet.</p>
+
+      <!-- Key Takeaways -->
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6">
+        <h4 class="font-bold text-green-800 mb-4">Key Takeaways</h4>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Establish regular grooming routines appropriate for your pet's breed</li>
+          <li>Invest in quality, pet-specific grooming tools and products</li>
+          <li>Learn basic techniques but leave complex procedures to professionals</li>
+          <li>Use grooming time to check for health issues</li>
+          <li>Make grooming a positive experience with patience and rewards</li>
+        </ul>
+      </div>
+    </div>
+
+      <!-- Back button -->
+      <a href="{{ url_for('services') }}" class="inline-block mt-8 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">
+        ← Back to Services
+      </a>
+    </div>
+
+    <!-- Right: Sidebar -->
+    <div class="lg:col-span-1">
+      <!-- Book Appointment -->
+      <div class="bg-green-50 rounded-2xl p-6 shadow-lg mb-8 border-2 border-green-200">
+        <h3 class="text-2xl font-bold text-green-700 mb-4 text-center">Book This Service</h3>
+        <p class="text-gray-600 text-center mb-6">Get professional veterinary care at your doorstep</p>
+        <div class="text-center">
+          <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20would%20like%20to%20book%20{{ service.title }}%20service.%20Please%20let%20me%20know%20the%20available%20time."
+             target="_blank"
+             class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+            📅 Book Now via WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg mb-8">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Contact Information</h3>
+        <div class="space-y-3">
+          <p class="flex items-center"><span class="text-green-500 mr-3">📞</span><a href="tel:+918208657969" class="text-blue-600 hover:underline">+91 82086 57969</a></p>
+          <p class="flex items-center"><span class="text-green-500 mr-3">📧</span><a href="mailto:Mrigaayuvets2025@gmail.com" class="text-blue-600 hover:underline">Mrigaayuvets2025@gmail.com</a></p>
+          <p class="flex items-center"><span class="text-green-500 mr-3">📍</span><span class="text-gray-600">Mumbai, Maharashtra, India</span></p>
+        </div>
+      </div>
+
+      <!-- Emergency Box -->
+      <div class="bg-red-50 rounded-2xl p-6 shadow-lg border-2 border-red-200">
+        <h3 class="text-xl font-bold text-red-700 mb-4">Emergency Services</h3>
+        <p class="text-gray-600 mb-4">For urgent veterinary care, contact us immediately.</p>
+        <a href="tel:+918208657969" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300 block text-center">
+          🚨 Call Emergency
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

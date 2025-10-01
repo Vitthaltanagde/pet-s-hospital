@@ -1,0 +1,301 @@
+{% extends "layout.html" %}
+
+{% block title %}Why Regular Veterinary Checkups are Important | MrigaAayuvets{% endblock %}
+
+{% block content %}
+
+<div class="container max-w-7xl mx-auto py-10 px-6">
+
+  <!-- Breadcrumb -->
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="{{ url_for('blogs') }}" class="text-green-600 hover:underline">← Back to Blogs</a> / Puppy Care Guide
+  </nav>
+
+  <!-- Main Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+    <!-- Left: Main Content -->
+    <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Why Regular Veterinary Checkups are Important</h1>
+        
+        <div class="flex flex-wrap gap-6 text-gray-500 text-sm mb-6">
+            <span>📅 Published: March 18, 2025</span>
+            <span>⏱️ 18 min read</span>
+            <span>🏷️ Health, Prevention, Wellness</span>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=800&h=400&fit=crop" 
+             alt="Adorable white puppy being fed" 
+             class="w-full h-96 object-cover rounded-xl mb-6">
+        <div class="prose prose-lg max-w-none space-y-6">
+                    <p class="mb-5">Regular veterinary checkups are one of the most important investments you can make in your pet's health and longevity. Just like humans need regular medical checkups to catch potential problems early, pets benefit tremendously from routine veterinary care that goes far beyond just vaccinations.</p>
+
+                    <p class="mb-8">At MrigaAayuvets, we've seen countless cases where early detection during routine checkups has saved pets' lives and saved owners from costly emergency treatments. This comprehensive guide explains why regular veterinary visits are essential and what you can expect during these important appointments.</p>
+
+                    <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 text-center my-6">
+                        <div class="text-4xl font-bold text-primary mb-3">67%</div>
+                        <p class="text-gray-700">of pet health problems are detected during routine checkups before owners notice any symptoms</p>
+                    </div>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">The Foundation of Preventive Care</h2>
+                    <p class="mb-5">Preventive veterinary care is based on a simple principle: it's better to prevent disease than to treat it after it develops. Regular checkups allow veterinarians to:</p>
+
+                    <ul class="list-disc pl-8 mb-6 space-y-3">
+                        <li>Detect health problems before they become serious</li>
+                        <li>Monitor your pet's overall health trends over time</li>
+                        <li>Provide vaccinations and preventive treatments</li>
+                        <li>Offer guidance on nutrition, behavior, and lifestyle</li>
+                        <li>Establish a health baseline for your individual pet</li>
+                    </ul>
+
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Early Detection Saves Lives</h3>
+                    <p class="mb-3">Many serious health conditions in pets develop gradually and may not show obvious symptoms until they're advanced. During routine examinations, veterinarians can detect:</p>
+
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li>Heart murmurs and cardiovascular issues</li>
+                        <li>Dental disease and oral health problems</li>
+                        <li>Kidney and liver function changes</li>
+                        <li>Early signs of cancer</li>
+                        <li>Joint and mobility issues</li>
+                        <li>Eye and ear problems</li>
+                        <li>Skin conditions and parasites</li>
+                    </ul>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Age-Specific Checkup Schedules</h2>
+                    <p class="mb-5">The frequency of veterinary checkups should be tailored to your pet's age, health status, and risk factors.</p>
+
+                    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+                        <h4 class="text-blue-800 font-semibold mb-4">📅 Recommended Checkup Schedule</h4>
+                        <div class="overflow-x-auto">
+                            <table class="w-full border-collapse mt-4">
+                                <thead>
+                                    <tr class="bg-gray-100">
+                                        <th class="border border-gray-300 p-3 text-left font-semibold">Life Stage</th>
+                                        <th class="border border-gray-300 p-3 text-left font-semibold">Age Range</th>
+                                        <th class="border border-gray-300 p-3 text-left font-semibold">Checkup Frequency</th>
+                                        <th class="border border-gray-300 p-3 text-left font-semibold">Focus Areas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-gray-300 p-3">Puppy/Kitten</td>
+                                        <td class="border border-gray-300 p-3">0-12 months</td>
+                                        <td class="border border-gray-300 p-3">Every 3-4 weeks until 16 weeks, then every 6 months</td>
+                                        <td class="border border-gray-300 p-3">Vaccinations, development, training</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border border-gray-300 p-3">Young Adult</td>
+                                        <td class="border border-gray-300 p-3">1-6 years</td>
+                                        <td class="border border-gray-300 p-3">Annually</td>
+                                        <td class="border border-gray-300 p-3">Preventive care, lifestyle optimization</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 p-3">Mature Adult</td>
+                                        <td class="border border-gray-300 p-3">7-10 years</td>
+                                        <td class="border border-gray-300 p-3">Every 6 months</td>
+                                        <td class="border border-gray-300 p-3">Early disease detection, senior screening</td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border border-gray-300 p-3">Senior</td>
+                                        <td class="border border-gray-300 p-3">10+ years</td>
+                                        <td class="border border-gray-300 p-3">Every 3-4 months</td>
+                                        <td class="border border-gray-300 p-3">Managing age-related conditions</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">What Happens During a Routine Checkup</h2>
+                    <p class="mb-5">A comprehensive veterinary examination is much more thorough than pet owners often realize. Here's what typically happens during a routine visit:</p>
+
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Physical Examination</h3>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li><strong>Weight and Body Condition:</strong> Monitoring for weight changes and obesity</li>
+                        <li><strong>Vital Signs:</strong> Temperature, heart rate, and respiratory rate</li>
+                        <li><strong>Head and Neck:</strong> Eyes, ears, nose, mouth, teeth, and throat examination</li>
+                        <li><strong>Heart and Lungs:</strong> Listening for abnormal sounds or rhythms</li>
+                        <li><strong>Abdomen:</strong> Palpating internal organs for size, shape, and pain</li>
+                        <li><strong>Lymph Nodes:</strong> Checking for swelling or abnormalities</li>
+                        <li><strong>Skin and Coat:</strong> Looking for parasites, infections, or unusual growths</li>
+                        <li><strong>Musculoskeletal:</strong> Assessing mobility, joint health, and muscle tone</li>
+                    </ul>
+
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Diagnostic Testing</h3>
+                    <p class="mb-3">Depending on your pet's age and health status, your veterinarian may recommend:</p>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li>Blood work to check organ function</li>
+                        <li>Urinalysis to assess kidney health</li>
+                        <li>Fecal examination for parasites</li>
+                        <li>Heartworm testing</li>
+                        <li>X-rays for senior pets or those with concerns</li>
+                    </ul>
+
+                    <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+                        <h4 class="text-green-800 font-semibold mb-3">💡 Preparing for Your Pet's Checkup:</h4>
+                        <ul class="list-disc pl-6 space-y-2 text-green-700">
+                            <li>Bring any previous medical records</li>
+                            <li>List current medications and supplements</li>
+                            <li>Note any behavioral or appetite changes</li>
+                            <li>Bring a fresh stool sample if requested</li>
+                            <li>Prepare questions about your pet's health</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">The Economics of Preventive Care</h2>
+                    <p class="mb-5">While regular checkups require an investment, they often save money in the long run by preventing costly emergency treatments and catching problems early when they're less expensive to treat.</p>
+
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Cost Comparison Example</h3>
+                    <ul class="list-disc pl-8 mb-4 space-y-2">
+                        <li><strong>Routine dental cleaning:</strong> ₹3,000-₹8,000</li>
+                        <li><strong>Treatment for advanced dental disease:</strong> ₹15,000-₹50,000+</li>
+                    </ul>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li><strong>Early kidney disease management:</strong> ₹5,000-₹10,000 annually</li>
+                        <li><strong>Advanced kidney failure treatment:</strong> ₹50,000-₹1,00,000+</li>
+                    </ul>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Vaccination and Parasite Prevention</h2>
+                    <p class="mb-5">Regular checkups ensure your pet stays current on essential vaccinations and parasite prevention.</p>
+
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Core Vaccinations</h3>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li><strong>Dogs:</strong> DHPP (Distemper, Hepatitis, Parvovirus, Parainfluenza) and Rabies</li>
+                        <li><strong>Cats:</strong> FVRCP (Rhinotracheitis, Calicivirus, Panleukopenia) and Rabies</li>
+                    </ul>
+
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Parasite Prevention</h3>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li>Heartworm prevention (monthly)</li>
+                        <li>Flea and tick control</li>
+                        <li>Intestinal parasite prevention</li>
+                        <li>Regular screening for parasites</li>
+                    </ul>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Dental Health Assessment</h2>
+                    <p class="mb-5">Dental disease affects over 80% of pets by age 3, making regular oral health assessment crucial.</p>
+
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-6 my-6">
+                        <h4 class="font-bold text-red-800 mb-4">⚠️ Signs of Dental Problems:</h4>
+                        <ul class="list-disc pl-6 space-y-2 text-red-700">
+                            <li>Bad breath</li>
+                            <li>Yellow or brown tartar buildup</li>
+                            <li>Red, swollen, or bleeding gums</li>
+                            <li>Difficulty eating or chewing</li>
+                            <li>Pawing at the mouth</li>
+                            <li>Loose or missing teeth</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Senior Pet Special Considerations</h2>
+                    <p class="mb-5">Older pets benefit from more frequent checkups as they're more susceptible to age-related conditions:</p>
+
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Common Senior Pet Health Issues</h3>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li>Arthritis and joint disease</li>
+                        <li>Kidney and liver disease</li>
+                        <li>Heart disease</li>
+                        <li>Diabetes</li>
+                        <li>Cognitive dysfunction</li>
+                        <li>Cancer</li>
+                    </ul>
+
+                    <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+                        <h4 class="text-green-800 font-semibold mb-3">💡 Senior Pet Checkup Additions:</h4>
+                        <ul class="list-disc pl-6 space-y-2 text-green-700">
+                            <li>More comprehensive blood work</li>
+                            <li>Blood pressure monitoring</li>
+                            <li>Joint and mobility assessment</li>
+                            <li>Cognitive function evaluation</li>
+                            <li>Pain assessment</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">When to Schedule Extra Checkups</h2>
+                    <p class="mb-3">Beyond routine visits, contact your veterinarian if you notice:</p>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li>Changes in appetite, drinking, or elimination habits</li>
+                        <li>Unusual behavior or lethargy</li>
+                        <li>Vomiting or diarrhea</li>
+                        <li>Difficulty breathing or coughing</li>
+                        <li>Limping or difficulty moving</li>
+                        <li>Unusual lumps or bumps</li>
+                        <li>Changes in sleep patterns</li>
+                    </ul>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Conclusion</h2>
+                    <p class="mb-5">Regular veterinary checkups are not just about treating illness—they're about maintaining optimal health and quality of life for your beloved pet. The comprehensive care provided during these visits addresses everything from physical health to behavior and nutrition, ensuring your pet lives the longest, healthiest, happiest life possible.</p>
+
+                    <p class="mb-5">At MrigaAayuvets, we believe that preventive care is the cornerstone of excellent pet health. Our comprehensive checkups are designed to catch problems early, maintain your pet's health, and strengthen the bond between you and your furry family member.</p>
+
+                    <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 text-center my-6">
+                        <div class="text-4xl font-bold text-primary mb-3">2-3x</div>
+                        <p class="text-gray-700">longer lifespan for pets who receive regular veterinary care compared to those who don't</p>
+                    </div>
+
+                    <p class="mb-5">Remember, your pet ages much faster than you do—one year of your pet's life is equivalent to 4-7 human years. This means that a lot can change in your pet's health between annual visits. By maintaining a consistent schedule of preventive checkups, you're giving your pet the best possible chance for a long, healthy, and happy life.</p>
+
+                    <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+                        <h4 class="text-green-800 font-semibold mb-3">💡 Take Action Today:</h4>
+                        <p class="text-green-700">Contact MrigaAayuvets at +91 98765 43210 to schedule your pet's routine checkup. Our caring team is available 24/7 for emergencies and ready to help you establish a preventive care plan that's right for your pet.</p>
+                    </div>
+                </div>
+        <a href="{{ url_for('blogs') }}"
+           class="inline-block mt-8 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">
+          ← Back to Blogs
+        </a>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="lg:col-span-1 space-y-8">
+      <!-- Ask the Vet Card -->
+      <div class="bg-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200">
+        <h3 class="text-2xl font-bold text-green-700 mb-4 text-center">Ask Our Vet</h3>
+        <p class="text-gray-600 text-center mb-6">Have questions about your pet's health?</p>
+        <div class="text-center">
+          <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20have%20a%20question%20about%20my%20pet's%20health.%20Can%20you%20help?"
+             target="_blank"
+             class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+             💬 Chat with Vet
+          </a>
+        </div>
+      </div>
+
+      <!-- Related Articles -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
+        <div class="space-y-4">
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Pet Vaccination Guide</h4>
+            <p class="text-sm text-gray-500">Essential vaccines for your pet's health</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Senior Pet Care Tips</h4>
+            <p class="text-sm text-gray-500">Caring for your aging companion</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Emergency Pet Care</h4>
+            <p class="text-sm text-gray-500">What to do in pet emergencies</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="bg-blue-50 rounded-2xl p-6 shadow-lg border-2 border-blue-200">
+        <h3 class="text-xl font-bold text-blue-700 mb-4">Get Pet Care Tips</h3>
+        <p class="text-gray-600 mb-4">Subscribe to our newsletter for expert pet care advice</p>
+        <form class="space-y-3">
+          <input type="email" 
+                 placeholder="Your email address" 
+                 class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          <button type="submit" 
+                  class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+            📧 Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

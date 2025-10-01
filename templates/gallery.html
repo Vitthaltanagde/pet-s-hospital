@@ -44,11 +44,20 @@
         {% endfor %}
     </div>
 </main>
+<main class="py-16 max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {% for img in images %}
+        <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-500 ease-in-out animate-fadeIn">
+            <img src="{{ url_for('static', filename='gallery/' ~ img.image_path) }}" 
+                 alt="Pet Gallery {{ loop.index }}" 
+                 class="w-full h-60 object-cover">
+        </div>
+        {% endfor %}
+    </div>
+</main>
 
-<!-- Footer -->
-<footer class="bg-gray-800 text-white py-6 mt-16 text-center">
-    <p>&copy; 2025 MrigaAayu Vets. All rights reserved.</p>
-</footer>
+
+
 
 {% endblock %}
 

@@ -1,0 +1,501 @@
+{% extends "layout.html" %}
+{% block title %}{{ service.title }} | MrigaAayuvets{% endblock %}
+
+{% block content %}
+<div class="container max-w-7xl mx-auto py-10 px-6">
+
+  <!-- Breadcrumb -->
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="{{ url_for('services') }}" class="text-green-600 hover:underline">← Back to Services</a> / {{ service.title }}
+  </nav>
+
+  <!-- Main Grid Layout -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+    <!-- Left Content -->
+    <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">{{ service.title }}</h1>
+      <img src="{{ url_for('static', filename='images/' + service.image) }}" 
+           alt="{{ service.title }}" 
+           class="w-full h-96 object-cover rounded-xl mb-6">
+
+      <!-- Article Body -->
+      <div class="prose prose-lg max-w-none space-y-6">
+        <p class="text-lg leading-relaxed">Intestinal parasites are one of the most common health issues affecting pets worldwide. These unwelcome guests can cause serious health problems if left untreated, making regular deworming an essential part of your pet's healthcare routine. Understanding different types of worms, their symptoms, and prevention strategies will help keep your furry friend healthy and happy.</p>
+
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6 text-center">
+          <div class="text-4xl font-bold text-green-500 mb-2">85%</div>
+          <p class="text-gray-700">of puppies are born with intestinal worms, making early deworming crucial for their health</p>
+        </div>
+
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">What Are Intestinal Parasites?</h2>
+        <p>Intestinal parasites are organisms that live inside your pet's digestive system, feeding off nutrients and potentially causing harm. They can be microscopic or visible to the naked eye, and they reproduce by laying eggs that are passed in your pet's feces.</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">How Pets Get Infected:</h3>
+        <ul class="list-disc list-inside space-y-2 ml-6">
+          <li><strong>From mother to baby:</strong> Through milk or in the womb</li>
+          <li><strong>Environmental exposure:</strong> Contaminated soil, water, or surfaces</li>
+          <li><strong>Prey consumption:</strong> Eating infected rodents, birds, or insects</li>
+          <li><strong>Flea ingestion:</strong> Some worms are transmitted by fleas</li>
+          <li><strong>Direct contact:</strong> With infected animals or their feces</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Common Types of Intestinal Parasites</h2>
+
+        <!-- Roundworms Card -->
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
+          <h4 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">Roundworms (Ascarids) <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">High Risk</span></h4>
+          <ul class="space-y-2">
+            <li><strong>Most common in:</strong> Puppies and kittens</li>
+            <li><strong>Appearance:</strong> Long, white, spaghetti-like worms</li>
+            <li><strong>Symptoms:</strong> Pot-bellied appearance, vomiting, diarrhea, poor growth</li>
+            <li><strong>Human risk:</strong> Yes - can cause serious health issues in children</li>
+          </ul>
+        </div>
+
+        <!-- Hookworms Card -->
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
+          <h4 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">Hookworms <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">High Risk</span></h4>
+          <ul class="space-y-2">
+            <li><strong>Most common in:</strong> Dogs in warm climates</li>
+            <li><strong>Appearance:</strong> Small, thin worms (rarely visible in stool)</li>
+            <li><strong>Symptoms:</strong> Anemia, pale gums, weakness, bloody diarrhea</li>
+            <li><strong>Human risk:</strong> Yes - can cause skin problems</li>
+          </ul>
+        </div>
+
+        <!-- Whipworms Card -->
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
+          <h4 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">Whipworms <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">Medium Risk</span></h4>
+          <ul class="space-y-2">
+            <li><strong>Most common in:</strong> Dogs (rare in cats)</li>
+            <li><strong>Appearance:</strong> Whip-like shape with thick and thin ends</li>
+            <li><strong>Symptoms:</strong> Chronic diarrhea, weight loss, dehydration</li>
+            <li><strong>Human risk:</strong> Low</li>
+          </ul>
+        </div>
+
+        <!-- Tapeworms Card -->
+        <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
+          <h4 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">Tapeworms <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">Low Risk</span></h4>
+          <ul class="space-y-2">
+            <li><strong>Most common in:</strong> Dogs and cats that hunt or have fleas</li>
+            <li><strong>Appearance:</strong> Flat, segmented worms; segments look like rice grains</li>
+            <li><strong>Symptoms:</strong> Often none; may see segments around anus or in stool</li>
+            <li><strong>Human risk:</strong> Low with proper hygiene</li>
+          </ul>
+        </div>
+
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Signs Your Pet May Have Worms</h2>
+        <p>Many pets with intestinal parasites show no obvious symptoms, especially in early stages. However, watch for these warning signs:</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Visible Signs:</h3>
+        <ul class="list-disc list-inside space-y-2 ml-6">
+          <li>Worms visible in vomit or stool</li>
+          <li>Small rice-like segments around the anus (tapeworms)</li>
+          <li>Scooting or dragging rear end on ground</li>
+          <li>Excessive licking of anal area</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Health Symptoms:</h3>
+        <ul class="list-disc list-inside space-y-2 ml-6">
+          <li>Diarrhea (may contain blood or mucus)</li>
+          <li>Vomiting</li>
+          <li>Weight loss despite good appetite</li>
+          <li>Pot-bellied appearance (especially in puppies)</li>
+          <li>Dull, dry coat</li>
+          <li>Weakness or lethargy</li>
+          <li>Pale gums (sign of anemia)</li>
+        </ul>
+
+        <!-- Warning Box -->
+        <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-6">
+          <h4 class="font-bold text-red-800 mb-3">Emergency Signs - Contact Vet Immediately</h4>
+          <ul class="list-disc list-inside space-y-2">
+            <li>Severe diarrhea with blood</li>
+            <li>Persistent vomiting</li>
+            <li>Extreme weakness or collapse</li>
+            <li>Very pale or white gums</li>
+            <li>Difficulty breathing</li>
+            <li>Severe dehydration</li>
+          </ul>
+          <div class="mt-4 space-y-2">
+            <p class="flex items-center">
+              <span class="text-green-500 mr-3">Phone:</span>
+              <a href="tel:+918208657969" class="text-blue-600 hover:underline">+91 82086 57969</a>
+            </p>
+            <p class="flex items-center">
+              <span class="text-green-500 mr-3">Email:</span>
+              <a href="mailto:Mrigaayuvets2025@gmail.com" class="text-blue-600 hover:underline">Mrigaayuvets2025@gmail.com</a>
+            </p>
+            <p class="flex items-center">
+              <span class="text-green-500 mr-3">Location:</span>
+              <span class="text-gray-600">Mumbai, Maharashtra, India</span>
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Deworming Schedule</h2>
+        <p>Regular deworming is essential because pets can be reinfected easily. The frequency depends on age, lifestyle, and risk factors:</p>
+
+        <!-- Deworming Schedule Table -->
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+          <h4 class="text-lg font-bold text-blue-800 mb-4">Recommended Deworming Schedule</h4>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-gray-300">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Age Group</th>
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Frequency</th>
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 p-3">Puppies (2-12 weeks)</td>
+                  <td class="border border-gray-300 p-3">Every 2 weeks</td>
+                  <td class="border border-gray-300 p-3">Start at 2 weeks of age</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="border border-gray-300 p-3">Kittens (2-12 weeks)</td>
+                  <td class="border border-gray-300 p-3">Every 2 weeks</td>
+                  <td class="border border-gray-300 p-3">Start at 2 weeks of age</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-3">Young adults (6 months - 2 years)</td>
+                  <td class="border border-gray-300 p-3">Every 3 months</td>
+                  <td class="border border-gray-300 p-3">More frequent if high risk</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="border border-gray-300 p-3">Adult pets (2+ years)</td>
+                  <td class="border border-gray-300 p-3">Every 6 months</td>
+                  <td class="border border-gray-300 p-3">Based on lifestyle and fecal exams</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-3">Pregnant females</td>
+                  <td class="border border-gray-300 p-3">Before breeding & during pregnancy</td>
+                  <td class="border border-gray-300 p-3">Prevents transmission to offspring</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Types of Deworming Medications</h2>
+        <p>Different medications target different types of worms. Your veterinarian will choose the best option based on the type of parasites present:</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Broad Spectrum Dewormers:</h3>
+        <ul class="list-disc list-inside space-y-2 ml-6">
+          <li><strong>Pyrantel pamoate:</strong> Effective against roundworms and hookworms</li>
+          <li><strong>Fenbendazole:</strong> Treats roundworms, hookworms, whipworms, and some tapeworms</li>
+          <li><strong>Milbemycin oxime:</strong> Broad spectrum, also prevents heartworms</li>
+          <li><strong>Praziquantel:</strong> Specifically targets tapeworms</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Forms Available:</h3>
+        <ul class="list-disc list-inside space-y-2 ml-6">
+          <li><strong>Oral tablets or chewables:</strong> Most common and effective</li>
+          <li><strong>Liquid suspension:</strong> Good for young pets or difficult medicators</li>
+          <li><strong>Paste:</strong> Easy to administer directly or mix with food</li>
+          <li><strong>Spot-on treatments:</strong> Applied to skin, absorbed systemically</li>
+        </ul>
+
+        <!-- Tip Box -->
+        <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-6">
+          <h4 class="font-bold text-green-800 mb-3">Medication Tips</h4>
+          <ul class="list-disc list-inside space-y-2">
+            <li>Always use veterinarian-prescribed dewormers</li>
+            <li>Follow dosing instructions exactly</li>
+            <li>Give medication with food to reduce stomach upset</li>
+            <li>Complete the full course even if symptoms improve</li>
+            <li>Store medications properly according to label instructions</li>
+          </ul>
+        </div>
+
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Fecal Examination</h2>
+        <p>Regular fecal testing is the most accurate way to detect parasites and determine the most effective treatment:</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">When to Test:</h3>
+        <ul class="list-disc list-inside space-y-2 ml-6">
+          <li>Before starting any deworming program</li>
+          <li>If symptoms of parasites are present</li>
+          <li>As part of routine wellness exams</li>
+          <li>After completing treatment to ensure success</li>
+          <li>Before breeding</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">How to Collect a Sample:</h3>
+        <ol class="list-decimal list-inside space-y-2 ml-6">
+          <li>Collect fresh stool (within 12 hours)</li>
+          <li>Use a clean container or plastic bag</li>
+          <li>Store in refrigerator until testing</li>
+          <li>Bring to vet within 24 hours</li>
+          <li>Include any worms or unusual material found</li>
+        </ol>
+
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Prevention Strategies</h2>
+        <p>Preventing parasite infections is easier and less expensive than treating them:</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Environmental Management:</h3>
+        <ul class="list-disc list-inside space-y-2 ml-6">
+          <li><strong>Clean up waste immediately:</strong> Remove feces from yard daily</li>
+          <li><strong>Maintain clean living areas:</strong> Wash bedding and toys regularly</li>
+          <li><strong>Control moisture:</strong> Fix leaky areas where parasites thrive</li>
+          <li><strong>Limit hunting:</strong> Supervise outdoor time to prevent prey consumption</li>
+          <li><strong>Flea control:</strong> Prevent fleas to reduce tapeworm transmission</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Health Management:</h3>
+        <ul class="list-disc list-inside space-y-2 ml-6">
+          <li>Regular veterinary checkups and fecal exams</li>
+          <li>Maintain proper nutrition for strong immunity</li>
+          <li>Avoid overcrowding in multi-pet households</li>
+          <li>Quarantine new pets until tested and treated</li>
+          <li>Practice good hygiene when handling pets</li>
+        </ul>
+
+        <!-- High-Risk Situations Table -->
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+          <h4 class="text-lg font-bold text-blue-800 mb-4">High-Risk Situations</h4>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-gray-300">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Situation</th>
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Increased Risk For</th>
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Prevention Strategy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 p-3">Multi-pet household</td>
+                  <td class="border border-gray-300 p-3">All parasite types</td>
+                  <td class="border border-gray-300 p-3">Test all pets, treat simultaneously</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="border border-gray-300 p-3">Outdoor cats/dogs</td>
+                  <td class="border border-gray-300 p-3">All types, especially from prey</td>
+                  <td class="border border-gray-300 p-3">More frequent testing and treatment</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-3">Dog parks/boarding</td>
+                  <td class="border border-gray-300 p-3">All types from contaminated areas</td>
+                  <td class="border border-gray-300 p-3">Avoid areas with poor sanitation</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="border border-gray-300 p-3">Rural/farm areas</td>
+                  <td class="border border-gray-300 p-3">Whipworms, hookworms</td>
+                  <td class="border border-gray-300 p-3">Monthly preventive medication</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Human Health Considerations</h2>
+        <p>Some pet parasites can infect humans, particularly children. This is called zoonotic transmission:</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Parasites That Affect Humans:</h3>
+        <ul class="list-disc list-inside space-y-2 ml-6">
+          <li><strong>Roundworms:</strong> Can cause eye problems, organ damage</li>
+          <li><strong>Hookworms:</strong> Cause skin lesions and itching</li>
+          <li><strong>Tapeworms:</strong> Rare but possible with poor hygiene</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Protection Strategies:</h3>
+        <ul class="list-disc list-inside space-y-2 ml-6">
+          <li>Wash hands thoroughly after handling pets</li>
+          <li>Clean up pet waste immediately</li>
+          <li>Don't let children play in areas with pet feces</li>
+          <li>Cover sandboxes when not in use</li>
+          <li>Teach children proper pet hygiene</li>
+          <li>Keep pets' parasite prevention up to date</li>
+        </ul>
+
+        <!-- Family Precautions -->
+        <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-6">
+          <h4 class="font-bold text-green-800 mb-3">Special Precautions for Families</h4>
+          <p>Pregnant women and immunocompromised individuals should take extra precautions. Consider having someone else handle pet waste and litter box cleaning during these times.</p>
+        </div>
+
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Natural vs. Commercial Dewormers</h2>
+        <p>While some natural remedies are promoted for deworming, it's important to understand their limitations:</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Commercial Dewormers:</h3>
+        <ul class="list-disc list-inside space-y-2 ml-6">
+          <li>Scientifically tested and proven effective</li>
+          <li>FDA approved for safety</li>
+          <li>Target specific parasites</li>
+          <li>Veterinarian recommended dosing</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Natural Remedies:</h3>
+        <ul class="list-disc list-inside space-y-2 ml-6">
+          <li>May help support digestive health</li>
+          <li>Not proven effective against parasites</li>
+          <li>Can delay proper treatment</li>
+          <li>May interact with other medications</li>
+        </ul>
+
+        <!-- Natural Support Box -->
+        <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-6">
+          <h4 class="font-bold text-green-800 mb-3">Natural Support Options</h4>
+          <p>While natural remedies shouldn't replace proper deworming, some may support overall digestive health. Always discuss with your veterinarian before using any supplements alongside conventional treatment.</p>
+        </div>
+
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Cost of Deworming</h2>
+        <p>Regular deworming is a cost-effective investment in your pet's health:</p>
+
+        <!-- Cost Comparison Table -->
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+          <h4 class="text-lg font-bold text-blue-800 mb-4">Typical Deworming Costs in India</h4>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-gray-300">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Service</th>
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Cost Range</th>
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 p-3">Fecal examination</td>
+                  <td class="border border-gray-300 p-3">₹200 - ₹500</td>
+                  <td class="border border-gray-300 p-3">Essential for accurate diagnosis</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="border border-gray-300 p-3">Basic deworming tablet</td>
+                  <td class="border border-gray-300 p-3">₹50 - ₹200</td>
+                  <td class="border border-gray-300 p-3">Depends on pet size and medication type</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-3">Broad spectrum dewormer</td>
+                  <td class="border border-gray-300 p-3">₹150 - ₹500</td>
+                  <td class="border border-gray-300 p-3">More comprehensive protection</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="border border-gray-300 p-3">Veterinary consultation</td>
+                  <td class="border border-gray-300 p-3">₹300 - ₹800</td>
+                  <td class="border border-gray-300 p-3">Includes examination and advice</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">When to Consult Your Veterinarian</h2>
+        <p>While routine deworming can often be done as scheduled, certain situations require professional veterinary care:</p>
+
+        <ul class="list-disc list-inside space-y-2 ml-6">
+          <li>First time deworming a new pet</li>
+          <li>Visible worms in stool or vomit</li>
+          <li>Symptoms of severe infestation</li>
+          <li>Pregnant or nursing animals</li>
+          <li>Pets with other health conditions</li>
+          <li>If over-the-counter treatments aren't working</li>
+          <li>Questions about medication safety or dosing</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Special Considerations</h2>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Pregnant Animals</h3>
+        <p>Pregnant pets should receive deworming before breeding and during pregnancy to prevent transmission to offspring. Always consult your veterinarian for proper timing and medication selection.</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Young Pets</h3>
+        <p>Puppies and kittens need more frequent deworming due to their higher risk of infection and developing immune systems.</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Senior Pets</h3>
+        <p>Older pets may have compromised immune systems, making regular deworming even more important for their health.</p>
+
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Frequently Asked Questions</h2>
+        
+        <div class="space-y-4">
+          <div>
+            <p><strong>Q: How often should I deworm my adult dog?</strong><br>
+            A: Generally every 6 months, but this may vary based on lifestyle and risk factors. Consult your veterinarian.</p>
+          </div>
+
+          <div>
+            <p><strong>Q: Can I use the same dewormer for dogs and cats?</strong><br>
+            A: Never give dog medication to cats. Some ingredients safe for dogs are toxic to cats.</p>
+          </div>
+
+          <div>
+            <p><strong>Q: Do indoor pets need deworming?</strong><br>
+            A: Yes! Indoor pets can still get parasites from various sources including insects, contaminated items, and brief outdoor exposure.</p>
+          </div>
+
+          <div>
+            <p><strong>Q: What should I do if my pet vomits after deworming medication?</strong><br>
+            A: Contact your veterinarian. They may recommend giving the medication with food or switching to a different formulation.</p>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Conclusion</h2>
+        <p>Regular deworming is a simple yet crucial aspect of responsible pet ownership. By understanding the types of parasites, maintaining a proper deworming schedule, and working closely with your veterinarian, you can keep your pet healthy and protect your family from zoonotic infections. Remember, prevention is always easier and less expensive than treatment of severe infestations.</p>
+
+
+        <!-- Key Takeaways -->
+        <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-8">
+          <h4 class="font-bold text-green-800 mb-4">📌 Key Takeaways</h4>
+          <ul class="list-disc list-inside space-y-2">
+            <li>Start deworming early for puppies and kittens.</li>
+            <li>Repeat treatments as per veterinary guidance.</li>
+            <li>Watch for signs of infestation and act quickly.</li>
+            <li>Prevent re-infestation through hygiene and flea control.</li>
+            <li>Deworming also protects human family members from zoonotic risks.</li>
+          </ul>
+        </div>
+      </div>
+
+      <a href="{{ url_for('services') }}" 
+         class="inline-block mt-8 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">
+        ← Back to Services
+      </a>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="lg:col-span-1 space-y-8">
+      <!-- Book Appointment -->
+      <div class="bg-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200">
+        <h3 class="text-2xl font-bold text-green-700 mb-4 text-center">Book This Service</h3>
+        <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20would%20like%20to%20book%20{{ service.title }}%20service."
+           target="_blank"
+           class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 block text-center">
+          📅 Book Now via WhatsApp
+        </a>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Contact Information</h3>
+        <div class="space-y-3">
+          <p class="flex items-center">
+            <span class="text-green-500 mr-3">📞</span>
+            <a href="tel:+918208657969" class="text-blue-600 hover:underline">+91 82086 57969</a>
+          </p>
+          <p class="flex items-center">
+            <span class="text-green-500 mr-3">📧</span>
+            <a href="mailto:Mrigaayuvets2025@gmail.com" class="text-blue-600 hover:underline">Mrigaayuvets2025@gmail.com</a>
+          </p>
+          <p class="flex items-center">
+            <span class="text-green-500 mr-3">📍</span>
+            <span class="text-gray-600">Mumbai, Maharashtra, India</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Emergency Notice -->
+      <div class="bg-red-50 rounded-2xl p-6 shadow-lg border-2 border-red-200">
+        <h3 class="text-xl font-bold text-red-700 mb-4">Emergency Services</h3>
+        <p class="text-gray-600 mb-4">For urgent veterinary care, contact us immediately.</p>
+        <a href="tel:+918208657969" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300 block text-center">
+          🚨 Call Emergency
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

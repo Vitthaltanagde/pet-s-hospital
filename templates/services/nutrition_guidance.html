@@ -1,0 +1,411 @@
+{% extends "layout.html" %}
+
+{% block title %}Complete Guide to Pet Nutrition | MrigaAayuvets{% endblock %}
+
+{% block content %}
+
+<div class="container max-w-7xl mx-auto py-10 px-6">
+
+  <!-- Breadcrumb -->
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="{{ url_for('services') }}" class="text-green-600 hover:underline">← Back to Services</a> / Pet Nutrition Guide
+  </nav>
+
+  <!-- Main Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+    <!-- Left: Main Content -->
+    <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
+
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">
+          Complete Guide to Pet Nutrition: Comprehensive Dietary Healthcare for Your Pet
+        </h1>
+        <div class="flex flex-wrap gap-6 text-gray-500 text-sm mb-6">
+          <span>📅 Published: March 20, 2024</span>
+          <span>⏱️ 25 min read</span>
+          <span>🏷️ Nutrition, Diet, Prevention, Health</span>
+          <span>👨‍⚕️ Dr. Veterinary Nutrition Team</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=800&h=400&fit=crop"
+             alt="Healthy pet food bowls with fresh ingredients"
+             class="w-full h-96 object-cover rounded-xl mb-6">
+       
+       <!-- Article Body -->
+      <div class="prose prose-lg max-w-none space-y-6">
+
+          <p class="text-lg mb-6">Proper nutrition is the foundation of your pet's health, affecting everything from energy levels and immune function to coat quality and longevity. Understanding nutritional requirements, choosing appropriate foods, and maintaining healthy feeding practices can prevent numerous health problems and enhance your pet's quality of life throughout all life stages.</p>
+
+          <!-- Stats Box -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 text-center my-8">
+            <div class="text-4xl font-bold text-emerald-500 mb-3">70%</div>
+            <p class="text-gray-700">of pet health problems are directly or indirectly related to nutrition, making proper diet the single most important factor in maintaining long-term health</p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-emerald-500 pl-6">Understanding Pet Nutritional Science</h2>
+          <p class="mb-6">Pets have specific nutritional requirements that differ significantly from human needs and vary between species, breeds, and life stages:</p>
+
+          <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Essential Nutrients for Pets:</h3>
+          <ul class="list-disc pl-6 space-y-2 mb-6">
+            <li><strong>Proteins:</strong> Building blocks for muscles, organs, enzymes, and immune system</li>
+            <li><strong>Fats:</strong> Energy source, essential fatty acids, vitamin absorption</li>
+            <li><strong>Carbohydrates:</strong> Energy source, fiber for digestive health</li>
+            <li><strong>Vitamins:</strong> Catalysts for metabolic processes and immune function</li>
+            <li><strong>Minerals:</strong> Bone health, enzyme function, fluid balance</li>
+            <li><strong>Water:</strong> Most critical nutrient for all body functions</li>
+          </ul>
+
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-8">
+            <h4 class="text-amber-700 font-bold text-xl mb-3 flex items-center gap-2">🥩 Protein Requirements <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">Essential</span></h4>
+            <p class="mb-2"><strong>Dogs:</strong> Omnivores requiring 18-25% protein (dry matter basis)</p>
+            <p class="mb-2"><strong>Cats:</strong> Obligate carnivores requiring 26-32% protein minimum</p>
+            <p class="mb-2"><strong>Quality matters:</strong> Complete amino acid profile more important than quantity</p>
+            <p><strong>Sources:</strong> Meat, fish, eggs, dairy, legumes (for dogs)</p>
+          </div>
+
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-8">
+            <h4 class="text-amber-700 font-bold text-xl mb-3 flex items-center gap-2">🧈 Fat Requirements <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">Essential</span></h4>
+            <p class="mb-2"><strong>Dogs:</strong> 8-15% fat content for maintenance, up to 20% for active dogs</p>
+            <p class="mb-2"><strong>Cats:</strong> 9-15% fat content, higher for kittens and active cats</p>
+            <p class="mb-2"><strong>Essential fatty acids:</strong> Omega-3 and Omega-6 for skin, coat, brain health</p>
+            <p><strong>Quality sources:</strong> Fish oil, chicken fat, vegetable oils</p>
+          </div>
+
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-8">
+            <h4 class="text-amber-700 font-bold text-xl mb-3 flex items-center gap-2">🌾 Carbohydrate Considerations <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">Variable</span></h4>
+            <p class="mb-2"><strong>Dogs:</strong> Can utilize 50-70% carbohydrates efficiently</p>
+            <p class="mb-2"><strong>Cats:</strong> Limited carbohydrate tolerance, maximum 10-12%</p>
+            <p class="mb-2"><strong>Benefits:</strong> Energy source, fiber for digestion, prebiotics</p>
+            <p><strong>Types:</strong> Rice, oats, sweet potatoes, vegetables</p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-emerald-500 pl-6">Life Stage Nutrition Requirements</h2>
+          <p class="mb-6">Nutritional needs change dramatically throughout your pet's life, requiring adjustments in diet composition and feeding practices:</p>
+
+          <!-- Puppy/Kitten Nutrition Schedule -->
+          <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+            <h4 class="text-lg font-bold text-blue-800 mb-4">🍼 Puppy/Kitten Nutrition (0-12 months)</h4>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Age Range</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Feeding Frequency</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Key Nutritional Focus</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Caloric Needs</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-300 p-3">0-3 months</td>
+                    <td class="border border-gray-300 p-3">4-6 meals daily</td>
+                    <td class="border border-gray-300 p-3">High protein (28-32%), DHA, calcium balance</td>
+                    <td class="border border-gray-300 p-3">2x adult requirements</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 p-3">3-6 months</td>
+                    <td class="border border-gray-300 p-3">3-4 meals daily</td>
+                    <td class="border border-gray-300 p-3">Continued growth support, immune development</td>
+                    <td class="border border-gray-300 p-3">1.8x adult requirements</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-3">6-12 months</td>
+                    <td class="border border-gray-300 p-3">2-3 meals daily</td>
+                    <td class="border border-gray-300 p-3">Controlled growth, bone development</td>
+                    <td class="border border-gray-300 p-3">1.5x adult requirements</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Puppy/Kitten Specific Needs:</h3>
+          <ul class="list-disc pl-6 space-y-2 mb-6">
+            <li><strong>Higher protein:</strong> 28-32% for rapid tissue development</li>
+            <li><strong>Increased fat:</strong> 15-20% for energy and brain development</li>
+            <li><strong>DHA supplementation:</strong> Critical for brain and eye development</li>
+            <li><strong>Calcium/phosphorus balance:</strong> 1.2:1 ratio for proper bone formation</li>
+            <li><strong>Small kibble size:</strong> Appropriate for developing teeth and jaws</li>
+            <li><strong>Digestible ingredients:</strong> Developing digestive systems need easily processed foods</li>
+          </ul>
+
+          <!-- Adult Maintenance Nutrition Schedule -->
+          <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+            <h4 class="text-lg font-bold text-blue-800 mb-4">🦴 Adult Maintenance Nutrition (1-7 years)</h4>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Activity Level</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Protein %</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Fat %</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Feeding Schedule</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-300 p-3">Sedentary/Indoor</td>
+                    <td class="border border-gray-300 p-3">18-22%</td>
+                    <td class="border border-gray-300 p-3">8-12%</td>
+                    <td class="border border-gray-300 p-3">1-2 meals daily</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 p-3">Moderate Activity</td>
+                    <td class="border border-gray-300 p-3">20-25%</td>
+                    <td class="border border-gray-300 p-3">10-15%</td>
+                    <td class="border border-gray-300 p-3">2 meals daily</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-3">High Activity/Working</td>
+                    <td class="border border-gray-300 p-3">25-32%</td>
+                    <td class="border border-gray-300 p-3">15-20%</td>
+                    <td class="border border-gray-300 p-3">2-3 meals daily</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Adult Maintenance Principles:</h3>
+          <ul class="list-disc pl-6 space-y-2 mb-6">
+            <li><strong>Maintain ideal weight:</strong> Body condition score 4-5 out of 9</li>
+            <li><strong>Consistent feeding schedule:</strong> Same times daily for digestive health</li>
+            <li><strong>Portion control:</strong> Measure food rather than free-feeding</li>
+            <li><strong>Activity matching:</strong> Adjust calories based on exercise level</li>
+            <li><strong>Regular weight monitoring:</strong> Weekly weighing for early detection of changes</li>
+          </ul>
+
+          <!-- Senior Nutrition Schedule -->
+          <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+            <h4 class="text-lg font-bold text-blue-800 mb-4">👴 Senior Nutrition (7+ years)</h4>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Age Category</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Protein Needs</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Special Considerations</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Monitoring Focus</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-300 p-3">Early Senior (7-10 years)</td>
+                    <td class="border border-gray-300 p-3">Maintain or slightly increase</td>
+                    <td class="border border-gray-300 p-3">Joint support, antioxidants</td>
+                    <td class="border border-gray-300 p-3">Weight management, activity level</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 p-3">Senior (10-13 years)</td>
+                    <td class="border border-gray-300 p-3">High-quality, easily digestible</td>
+                    <td class="border border-gray-300 p-3">Kidney support, cognitive health</td>
+                    <td class="border border-gray-300 p-3">Organ function, mobility</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-3">Geriatric (13+ years)</td>
+                    <td class="border border-gray-300 p-3">Individualized based on health</td>
+                    <td class="border border-gray-300 p-3">Palatable, nutrient-dense</td>
+                    <td class="border border-gray-300 p-3">Quality of life, comfort</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-emerald-500 pl-6">Breed-Specific Nutritional Considerations</h2>
+          <p class="mb-6">Different breeds have unique nutritional needs based on size, metabolism, and genetic predispositions:</p>
+
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-6">
+            <h4 class="text-amber-700 font-bold text-xl mb-3 flex items-center gap-2">🐕‍🦺 Large/Giant Breed Dogs <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">Special Care</span></h4>
+            <p class="mb-2"><strong>Growth control:</strong> Slower, controlled growth to prevent joint problems</p>
+            <p class="mb-2"><strong>Calcium restriction:</strong> 0.8-1.2% maximum during growth</p>
+            <p class="mb-2"><strong>Calorie management:</strong> Prevent overfeeding and rapid weight gain</p>
+            <p class="mb-2"><strong>Joint support:</strong> Early supplementation with glucosamine/chondroitin</p>
+            <p><strong>Longer puppy food period:</strong> 18-24 months vs. 12 months for small breeds</p>
+          </div>
+
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-6">
+            <h4 class="text-amber-700 font-bold text-xl mb-3 flex items-center gap-2">🐕 Small/Toy Breed Dogs <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">High Metabolism</span></h4>
+            <p class="mb-2"><strong>Higher caloric density:</strong> More calories per pound of body weight</p>
+            <p class="mb-2"><strong>Frequent feeding:</strong> 3-4 meals daily to prevent hypoglycemia</p>
+            <p class="mb-2"><strong>Small kibble size:</strong> Appropriate for tiny mouths and teeth</p>
+            <p class="mb-2"><strong>Dental considerations:</strong> Foods that promote dental health</p>
+            <p><strong>Temperature sensitivity:</strong> May need higher fat content for insulation</p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-emerald-500 pl-6">Understanding Pet Food Labels</h2>
+          <p class="mb-6">Reading and understanding pet food labels is crucial for making informed nutritional decisions:</p>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
+            <h4 class="font-bold text-green-800 mb-4">📋 AAFCO Statement - Most Important Information</h4>
+            <p class="mb-3">Look for: "This food is formulated to meet the nutritional levels established by AAFCO for [life stage]" or "Animal feeding tests using AAFCO procedures substantiate that this food provides complete and balanced nutrition for [life stage]."</p>
+            <p><strong>Feeding trial statement is preferred</strong> as it shows the food has been tested on actual animals.</p>
+          </div>
+
+          <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Ingredient List Analysis:</h3>
+          <ul class="list-disc pl-6 space-y-2 mb-6">
+            <li><strong>Listed by weight:</strong> Heaviest ingredients first</li>
+            <li><strong>Meat vs. meat meal:</strong> Meal is concentrated, meat includes water weight</li>
+            <li><strong>First 5 ingredients:</strong> Make up majority of the food</li>
+            <li><strong>Avoid splitting:</strong> Same ingredient listed multiple ways to appear lower</li>
+            <li><strong>Whole ingredients:</strong> Recognizable, minimally processed components</li>
+          </ul>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-emerald-500 pl-6">Weight Management and Body Condition</h2>
+          <p class="mb-6">Maintaining proper weight is crucial for overall health and longevity:</p>
+
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 text-center my-8">
+            <div class="text-4xl font-bold text-emerald-500 mb-3">56%</div>
+            <p class="text-gray-700">of dogs and 60% of cats are overweight or obese, making weight management one of the most important nutritional concerns</p>
+          </div>
+
+          <!-- Body Condition Scale -->
+          <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+            <h4 class="text-lg font-bold text-blue-800 mb-4">🔍 9-Point Body Condition Scale</h4>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Score</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Description</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Action Needed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-300 p-3">1-3</td>
+                    <td class="border border-gray-300 p-3">Underweight - ribs easily visible</td>
+                    <td class="border border-gray-300 p-3">Increase calories, veterinary evaluation</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 p-3">4-5</td>
+                    <td class="border border-gray-300 p-3">Ideal - ribs felt with slight pressure</td>
+                    <td class="border border-gray-300 p-3">Maintain current diet and exercise</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-3">6-7</td>
+                    <td class="border border-gray-300 p-3">Overweight - ribs felt with pressure</td>
+                    <td class="border border-gray-300 p-3">Reduce calories, increase exercise</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 p-3">8-9</td>
+                    <td class="border border-gray-300 p-3">Obese - ribs difficult to feel</td>
+                    <td class="border border-gray-300 p-3">Significant intervention needed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-emerald-500 pl-6">Common Supplements and Their Uses</h2>
+
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-6">
+            <h4 class="text-amber-700 font-bold text-xl mb-3 flex items-center gap-2">🐟 Omega-3 Fatty Acids <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">Anti-inflammatory</span></h4>
+            <p class="mb-2"><strong>Benefits:</strong> Skin/coat health, joint support, cognitive function</p>
+            <p class="mb-2"><strong>Sources:</strong> Fish oil, algae oil, flaxseed oil</p>
+            <p><strong>Dosing:</strong> Based on EPA/DHA content, veterinary guidance recommended</p>
+          </div>
+
+          <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-6">
+            <h4 class="text-amber-700 font-bold text-xl mb-3 flex items-center gap-2">🦴 Joint Support Supplements <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">Mobility</span></h4>
+            <p class="mb-2"><strong>Key ingredients:</strong> Glucosamine, chondroitin, MSM</p>
+            <p class="mb-2"><strong>Benefits:</strong> Cartilage support, reduced inflammation, improved mobility</p>
+            <p class="mb-2"><strong>Best for:</strong> Senior pets, large breeds, arthritis management</p>
+            <p><strong>Timeline:</strong> 6-8 weeks for noticeable effects</p>
+          </div>
+
+          <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
+            <h4 class="font-bold text-red-800 mb-4">⚠️ Supplement Safety Warning</h4>
+            <p>Not all supplements are necessary or safe. Over-supplementation can cause toxicity, especially with fat-soluble vitamins (A, D, E, K) and minerals like calcium and iron. Always consult your veterinarian before adding supplements to your pet's diet, especially if feeding a complete and balanced commercial food.</p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-emerald-500 pl-6">Frequently Asked Questions</h2>
+
+          <div class="space-y-6 mb-8">
+            <div>
+              <p class="font-semibold text-gray-800 mb-2">Q: Should I rotate between different pet food brands?</p>
+              <p class="text-gray-700">A: If your pet is thriving on their current food, rotation isn't necessary. However, gradual rotation can provide dietary variety and may help prevent food sensitivities from developing.</p>
+            </div>
+
+            <div>
+              <p class="font-semibold text-gray-800 mb-2">Q: How do I know if my pet has a food allergy?</p>
+              <p class="text-gray-700">A: Common signs include itching, skin infections, ear infections, and digestive upset. Diagnosis requires an elimination diet trial lasting 8-12 weeks under veterinary supervision.</p>
+            </div>
+
+            <div>
+              <p class="font-semibold text-gray-800 mb-2">Q: Can I feed my dog and cat the same food?</p>
+              <p class="text-gray-700">A: While dogs can eat cat food occasionally, cats should not eat dog food regularly. Cat food is formulated with higher protein and specific nutrients that cats require, while dog food may not meet feline nutritional needs.</p>
+            </div>
+
+            <div>
+              <p class="font-semibold text-gray-800 mb-2">Q: When should I switch my pet to senior food?</p>
+              <p class="text-gray-700">A: Generally around 7 years of age for most dogs and cats, though large breed dogs may benefit from senior nutrition earlier. Your veterinarian can help determine the right timing based on your pet's health status.</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-emerald-500 pl-6">Conclusion</h2>
+          <p class="mb-8">Optimal pet nutrition is a cornerstone of preventive healthcare that significantly impacts your pet's quality of life, longevity, and overall well-being. By understanding your pet's specific nutritional needs, choosing appropriate foods, maintaining proper feeding practices, and working closely with your veterinary team, you can provide the foundation for a long, healthy, and active life. Remember that nutrition is not one-size-fits-all – what works for one pet may not be appropriate for another. Stay informed, be observant of your pet's response to their diet, and don't hesitate to seek professional guidance when making important nutritional decisions.</p>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
+            <h4 class="font-bold text-green-800 mb-4">🎯 Nutrition Success Keys</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Focus on complete and balanced nutrition appropriate for life stage</li>
+              <li>Maintain ideal body weight through proper portions and exercise</li>
+              <li>Choose high-quality foods with AAFCO certification</li>
+              <li>Monitor your pet's response and adjust as needed</li>
+              <li>Work with your veterinary team for guidance</li>
+              <li>Remember that good nutrition is preventive medicine</li>
+            </ul>
+          </div>
+
+      </div>
+
+      <a href="{{ url_for('services') }}" 
+        class="inline-block mt-8 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">
+        ← Back to Services
+      </a>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="lg:col-span-1 space-y-8">
+      <!-- Book Appointment -->
+      <div class="bg-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200">
+        <h3 class="text-2xl font-bold text-green-700 mb-4 text-center">Book This Service</h3>
+        <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20would%20like%20to%20book%20Pet%20Nutrition%20Consultation%20service."
+           target="_blank"
+           class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 block text-center">
+          📅 Book Now via WhatsApp
+        </a>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Contact Information</h3>
+        <div class="space-y-3">
+          <p class="flex items-center">
+            <span class="text-green-500 mr-3">📞</span>
+            <a href="tel:+918208657969" class="text-blue-600 hover:underline">+91 82086 57969</a>
+          </p>
+          <p class="flex items-center">
+            <span class="text-green-500 mr-3">📧</span>
+            <a href="mailto:Mrigaayuvets2025@gmail.com" class="text-blue-600 hover:underline">Mrigaayuvets2025@gmail.com</a>
+          </p>
+          <p class="flex items-center">
+            <span class="text-green-500 mr-3">📍</span>
+            <span class="text-gray-600">Mumbai, Maharashtra, India</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Emergency Notice -->
+      <div class="bg-red-50 rounded-2xl p-6 shadow-lg border-2 border-red-200">
+        <h3 class="text-xl font-bold text-red-700 mb-4">Emergency Services</h3>
+        <p class="text-gray-600 mb-4">For urgent veterinary care, contact us immediately.</p>
+        <a href="tel:+918208657969" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300 block text-center">
+          🚨 Call Emergency
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

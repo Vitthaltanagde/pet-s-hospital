@@ -1,0 +1,491 @@
+{% extends "layout.html" %}
+{% block title %}Pet Dental Care Guide | MrigaAayuvets{% endblock %}
+
+{% block content %}
+<div class="container max-w-7xl mx-auto py-10 px-6">
+
+  <!-- Breadcrumb -->
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="{{ url_for('services') }}" class="text-green-600 hover:underline">← Back to Services</a> / Pet Dental Care Guide
+  </nav>
+
+  <!-- Main Grid Layout -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+    <!-- Left Content -->
+    <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">Complete Guide to Pet Dental Care</h1>
+      <img src="{{ url_for('static', filename='images/' + service.image) }}" 
+           alt="Pet Dental Care" 
+           class="w-full h-96 object-cover rounded-xl mb-6">
+
+      <!-- Article Body -->
+      <div class="prose prose-lg max-w-none space-y-6">
+
+        <p>
+          Dental health is a frequently overlooked but vital part of pet care. Maintaining good oral hygiene prevents pain, tooth loss, 
+          and serious health issues involving the heart, liver, and kidneys. This guide covers daily dental care, professional treatments, and more.
+        </p>
+
+        <p class="font-semibold text-red-600">
+          About 80% of dogs and 70% of cats show signs of dental disease by age 3, emphasizing the need for preventive care.
+        </p>
+
+        <hr class="my-6 border-gray-300" />
+
+        <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-green-600 pl-6 mb-4">Why Dental Care is Critical</h2>
+        <p>Understanding oral health's importance motivates consistent care and prevents severe complications.</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Health Impact</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li><strong>Systemic disease prevention:</strong> Oral bacteria can spread to vital organs.</li>
+          <li><strong>Pain management:</strong> Often hidden chronic pain caused by dental issues.</li>
+          <li><strong>Nutritional health:</strong> Healthy teeth enable proper eating and digestion.</li>
+          <li><strong>Longevity and quality of life:</strong> Healthy teeth support a longer, happier life.</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Common Dental Problems</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Plaque and tartar buildup</li>
+          <li>Gingivitis (gum inflammation)</li>
+          <li>Periodontitis (advanced gum disease)</li>
+          <li>Tooth loss</li>
+          <li>Oral infections affecting the body systemically</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-green-600 pl-6 mt-10 mb-4">Understanding Pet Dental Anatomy</h2>
+        <p>Knowing your pet's teeth structure helps improve care.</p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">🦷 Dog Dental Facts</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>42 adult teeth (12 incisors, 4 canines, 16 premolars, 10 molars)</li>
+              <li>Puppy teeth replaced by 6 months of age</li>
+              <li>Jaw designed for tearing and grinding</li>
+              <li>Back molars and gum line are problem areas</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">🐱 Cat Dental Facts</h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>30 adult teeth (12 incisors, 4 canines, 10 premolars, 4 molars)</li>
+              <li>Prone to tooth resorption (unique feline cavities)</li>
+              <li>Jaw designed for catching and tearing prey</li>
+              <li>Canine teeth and premolars often affected</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-green-600 pl-6 mt-10 mb-4">Signs of Dental Problems</h2>
+        <p>Early detection helps prevent serious dental disease.</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Visible Signs</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Yellow or brown tartar, especially on gums</li>
+          <li>Red or swollen gums, bleeding gums</li>
+          <li>Broken or loose teeth, oral masses or growths</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Behavioral Changes</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Persistent bad breath</li>
+          <li>Difficulty eating, dropping food, slow eating</li>
+          <li>Pawing at face, excessive drooling with possible blood</li>
+          <li>Favoring a side while chewing</li>
+          <li>Reluctance to play or avoid mouth-related activities</li>
+        </ul>
+
+        <div class="bg-red-50 border-l-4 border-red-600 p-4 rounded-lg mt-6">
+          <h4 class="font-semibold text-red-700 mb-2">🚨 Emergency Dental Signs - Seek Veterinary Care Immediately</h4>
+          <ul class="list-disc list-inside space-y-1 text-red-700">
+            <li>Severe facial swelling</li>
+            <li>Inability to eat or drink</li>
+            <li>Excessive bleeding or broken jaw</li>
+            <li>Signs of severe pain or discharge from nose</li>
+          </ul>
+        </div>
+
+        <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-green-600 pl-6 mt-10 mb-4">Daily Dental Care Routine</h2>
+        <p>The foundation of good pet dental health is a consistent daily routine.</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Tooth Brushing - The Gold Standard</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Start gradually by touching lips and gums</li>
+          <li>Use finger brush or gauze initially, then a soft-bristled pet toothbrush</li>
+          <li>Focus brushing along the gum line where plaque accumulates</li>
+          <li>Reward your pet with praise and treats after each session</li>
+        </ul>
+
+        <h4 class="mt-4 font-semibold text-gray-800">Brushing Success Tips</h4>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Never use human toothpaste—it is toxic to pets</li>
+          <li>Start young for better acceptance</li>
+          <li>Brush at least three times per week, daily is ideal</li>
+          <li>Focus on outer tooth surfaces where tartar forms</li>
+          <li>Keep sessions short and positive</li>
+          <li>Choose flavored pet toothpaste your pet likes</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-green-600 pl-6 mt-10 mb-4">Alternative Dental Care Methods</h2>
+        <p>If brushing isn't possible, these alternatives can partly help:</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Dental Chews and Toys</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Provide mechanical cleaning and entertainment</li>
+          <li>Choose VOHC-approved products sized appropriately</li>
+          <li>Monitor for choking risks and hardness level</li>
+          <li>Recommended for daily use</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Dental Treats and Supplements</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Easy to administer with appealing flavors</li>
+          <li>Contain enzymes, probiotics, or plaque-fighting compounds</li>
+          <li>Check calorie content and effectiveness varies</li>
+          <li>Use daily as directed on packaging</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Water Additives</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Convenient, no handling needed</li>
+          <li>Reduce oral bacteria and freshen breath</li>
+          <li>Limited effectiveness; some pets refuse treated water</li>
+          <li>Add daily to drinking water</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Dental Diets</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Kibble designed to scrape teeth mechanically while chewing</li>
+          <li>Special texture and size promote chewing action</li>
+          <li>Requires complete diet change</li>
+          <li>Clinically proven to reduce tartar buildup</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-green-600 pl-6 mt-10 mb-4">Professional Dental Care</h2>
+        <p>Regular professional cleanings and exams are essential for thorough care.</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">What Professional Cleaning Includes</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Pre-anesthetic exam and health assessment</li>
+          <li>General anesthesia for safety and thorough cleaning</li>
+          <li>Complete oral examination, including dental X-rays</li>
+          <li>Scaling and polishing plaque and tartar above and below gum line</li>
+          <li>Treatment planning for identified problems</li>
+        </ul>
+
+        <h4 class="mt-4 font-semibold text-gray-800">Professional Cleaning Schedule</h4>
+        <table class="w-full border-collapse border border-gray-300 text-left text-gray-700 mt-4">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="border border-gray-300 p-3 font-semibold">Pet Age / Risk</th>
+              <th class="border border-gray-300 p-3 font-semibold">Frequency</th>
+              <th class="border border-gray-300 p-3 font-semibold">Special Considerations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3">Young pets (1-3 years)</td>
+              <td class="border border-gray-300 p-3">Every 2-3 years</td>
+              <td class="border border-gray-300 p-3">Establish baseline, monitor development</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3">Adult pets (4-7 years)</td>
+              <td class="border border-gray-300 p-3">Every 1-2 years</td>
+              <td class="border border-gray-300 p-3">Prevention focus, early intervention</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3">Senior pets (8+ years)</td>
+              <td class="border border-gray-300 p-3">Every 6-12 months</td>
+              <td class="border border-gray-300 p-3">More frequent monitoring needed</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3">High-risk breeds</td>
+              <td class="border border-gray-300 p-3">Every 6-12 months</td>
+              <td class="border border-gray-300 p-3">Small and brachycephalic breeds</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3">Pets with dental disease</td>
+              <td class="border border-gray-300 p-3">As recommended</td>
+              <td class="border border-gray-300 p-3">Follow veterinary treatment plan</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-green-600 pl-6 mt-10 mb-4">Common Dental Procedures</h2>
+        <table class="w-full border-collapse border border-gray-300 text-left text-gray-700 mt-4">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="border border-gray-300 p-3 font-semibold">Procedure</th>
+              <th class="border border-gray-300 p-3 font-semibold">Purpose</th>
+              <th class="border border-gray-300 p-3 font-semibold">Cost Range (₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3">Basic cleaning</td>
+              <td class="border border-gray-300 p-3">Remove plaque and tartar</td>
+              <td class="border border-gray-300 p-3">3,000 - 8,000</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3">Deep cleaning with extractions</td>
+              <td class="border border-gray-300 p-3">Advanced disease treatment</td>
+              <td class="border border-gray-300 p-3">8,000 - 15,000</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3">Dental X-rays</td>
+              <td class="border border-gray-300 p-3">Diagnose hidden problems</td>
+              <td class="border border-gray-300 p-3">1,500 - 3,000</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3">Single tooth extraction</td>
+              <td class="border border-gray-300 p-3">Remove diseased tooth</td>
+              <td class="border border-gray-300 p-3">1,500 - 4,000</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3">Multiple extractions</td>
+              <td class="border border-gray-300 p-3">Advanced disease cases</td>
+              <td class="border border-gray-300 p-3">5,000 - 12,000</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3">Oral surgery</td>
+              <td class="border border-gray-300 p-3">Complex dental problems</td>
+              <td class="border border-gray-300 p-3">10,000 - 25,000</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-green-600 pl-6 mt-10 mb-4">Anesthesia and Dental Procedures</h2>
+        <p>Understanding anesthesia helps alleviate concerns surrounding dental procedures.</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Why Anesthesia is Necessary</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Allows thorough oral examination and treatment</li>
+          <li>Enables cleaning below the gum line, critical for disease prevention</li>
+          <li>Ensures pain is controlled during procedures</li>
+          <li>Prevents aspiration and injury for safety</li>
+          <li>Helps achieve quality cleaning and treatment outcomes</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Pre-Anesthetic Safety Measures</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Blood work and health screening</li>
+          <li>Physical examination</li>
+          <li>Fasting for 8-12 hours before procedure</li>
+          <li>Special protocols for young and senior pets</li>
+          <li>Individual risk assessment by veterinarian</li>
+        </ul>
+
+        <div class="bg-red-50 border-l-4 border-red-600 p-4 rounded-lg mt-6">
+          <h4 class="font-semibold text-red-700 mb-2">⚠️ Warning: Anesthesia-Free Dental Cleaning</h4>
+          <p>Anesthesia-free cleanings are not recommended by veterinary dental specialists because they cannot safely or effectively clean below the gum line and may provide only cosmetic improvement, giving false reassurance.</p>
+        </div>
+
+        <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-green-600 pl-6 mt-10 mb-4">Breed-Specific Dental Considerations</h2>
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Small Dog Breeds (Chihuahuas, Yorkies, Pomeranians)</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Higher risk for rapid plaque and tartar buildup</li>
+          <li>Often retain baby teeth requiring surgical removal</li>
+          <li>Crowded teeth needing more frequent cleaning</li>
+          <li>Early dental care initiation is critical</li>
+          <li>Smaller-sized dental diets recommended</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Brachycephalic Breeds (Bulldogs, Pugs, Persian Cats)</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Crowded mouths with misaligned teeth</li>
+          <li>Special anesthesia care due to breathing issues</li>
+          <li>Challenging home dental care</li>
+          <li>Often require more frequent professional cleanings</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Large Dog Breeds</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700">
+          <li>Lower risk due to better natural tooth cleaning</li>
+          <li>Can handle harder dental chews</li>
+          <li>Higher anesthetic doses needed for procedures</li>
+          <li>Risk of tooth fractures from strong chewing</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-green-600 pl-6 mt-10 mb-4">Age-Related Dental Care</h2>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Puppies and Kittens (0-6 months)</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Teething stage: losing baby teeth and adult teeth erupting</li>
+          <li>Provide appropriate chew toys for relief</li>
+          <li>Begin gentle handling of mouth to build acceptance</li>
+          <li>Avoid professional cleaning until adult teeth are fully in</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Young Adults (6 months - 2 years)</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Establish regular home dental care routines</li>
+          <li>Monitor for retained baby teeth or abnormalities</li>
+          <li>Schedule baseline professional dental evaluation</li>
+          <li>Focus on prevention and habit building</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Adults (2-7 years)</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Maintain daily brushing and regular veterinary checks</li>
+          <li>Address dental problems promptly as they arise</li>
+          <li>Optimize care strategies based on individual needs</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Seniors (7+ years)</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>More frequent dental examinations and cleaning</li>
+          <li>Management of age-related dental issues and pain</li>
+          <li>Consider softer food to ease chewing discomfort</li>
+          <li>Balance dental care with other systemic health concerns</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-green-600 pl-6 mt-10 mb-4">Dental Emergencies</h2>
+        <p>Recognizing dental emergencies ensures timely veterinary care.</p>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Common Emergencies</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Broken teeth often caused by hard chewing</li>
+          <li>Tooth avulsion (knocked-out teeth)</li>
+          <li>Jaw fractures due to trauma or advanced disease</li>
+          <li>Persistent oral bleeding</li>
+          <li>Severe pain, inability to eat, excessive drooling</li>
+          <li>Facial swelling indicating possible infection</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-2">Emergency First Aid</h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Control bleeding with gentle pressure using a clean cloth</li>
+          <li>Preserve knocked-out teeth in milk or saline</li>
+          <li>Never give human pain medications to pets</li>
+          <li>Restrict activity and avoid hard chewing to prevent further damage</li>
+          <li>Seek immediate veterinary care</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-green-600 pl-6 mt-10 mb-4">Dental Care Costs and Budgeting</h2>
+        <p>Planning your pet's dental care budget helps avoid surprises and ensures consistent care.</p>
+
+        <table class="w-full border-collapse border border-gray-300 text-left text-gray-700 mt-4 mb-6">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="border border-gray-300 p-3 font-semibold">Care Level</th>
+              <th class="border border-gray-300 p-3 font-semibold">Annual Cost (₹)</th>
+              <th class="border border-gray-300 p-3 font-semibold">Includes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3">Basic Home Care</td>
+              <td class="border border-gray-300 p-3">1,000 - 3,000</td>
+              <td class="border border-gray-300 p-3">Toothbrush, pet toothpaste, dental treats</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3">Home + Professional Cleaning</td>
+              <td class="border border-gray-300 p-3">4,000 - 11,000</td>
+              <td class="border border-gray-300 p-3">Basic cleaning and veterinary exam</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3">Comprehensive Care</td>
+              <td class="border border-gray-300 p-3">8,000 - 20,000</td>
+              <td class="border border-gray-300 p-3">Advanced cleaning, X-rays, treatments</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3">Treatment of Dental Disease</td>
+              <td class="border border-gray-300 p-3">15,000 - 40,000</td>
+              <td class="border border-gray-300 p-3">Extractions, surgery, medications</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-green-600 pl-6 mt-10 mb-4">Frequently Asked Questions</h2>
+        <div class="space-y-6">
+          <div>
+            <p class="font-semibold">Q: How do I know if my pet needs professional dental cleaning?</p>
+            <p>A: Visible tartar buildup, bad breath, red inflamed gums, or difficulty eating are key signs professional care is needed.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold">Q: Are dental chews as effective as brushing?</p>
+            <p>A: Dental chews help reduce plaque and tartar but do not replace the effectiveness of regular tooth brushing.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold">Q: How often should I have my pet's teeth professionally cleaned?</p>
+            <p>A: Cleaning frequency depends on age, breed, and risk but generally ranges from every 6 months to 2 years.</p>
+          </div>
+
+          <div>
+            <p class="font-semibold">Q: Can I perform dental cleaning without anesthesia?</p>
+            <p>A: Anesthesia-free cleaning is not recommended as it cannot safely clean below the gum line where disease develops.</p>
+          </div>
+        </div>
+
+        <h2 class="text-3xl font-bold text-gray-800 border-l-4 border-green-600 pl-6 mt-10 mb-4">Conclusion</h2>
+        <p>Maintaining your pet's dental health is a vital part of responsible pet ownership. Consistent home care, regular professional cleanings, and early attention to problems help prevent pain, improve quality of life, and avoid costly treatments. Work closely with your veterinarian to create a dental care plan customized for your pet's specific needs.</p>
+
+        <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-8">
+          <h4 class="font-bold text-green-800 mb-4">📌 Key Takeaways</h4>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li>Start dental care early and maintain consistent home routines</li>
+            <li>Daily tooth brushing is the most effective home care</li>
+            <li>Professional cleanings under anesthesia are essential for thorough care</li>
+            <li>Watch for signs of dental disease and act early</li>
+            <li>Prevention saves money and improves pet well-being</li>
+            <li>Consult your veterinarian regularly for best results</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <a href="{{ url_for('services') }}" 
+        class="inline-block mt-8 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">
+        ← Back to Services
+      </a>
+    </div>
+
+
+
+    <!-- Right Sidebar -->
+    <div class="lg:col-span-1 space-y-8">
+      <!-- Book Appointment -->
+      <div class="bg-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200">
+        <h3 class="text-2xl font-bold text-green-700 mb-4 text-center">Book This Service</h3>
+        <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20would%20like%20to%20book%20Pet%20Dental%20Care%20service."
+           target="_blank"
+           class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 block text-center">
+          📅 Book Now via WhatsApp
+        </a>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Contact Information</h3>
+        <div class="space-y-3">
+          <p class="flex items-center">
+            <span class="text-green-500 mr-3">📞</span>
+            <a href="tel:+918208657969" class="text-blue-600 hover:underline">+91 82086 57969</a>
+          </p>
+          <p class="flex items-center">
+            <span class="text-green-500 mr-3">📧</span>
+            <a href="mailto:Mrigaayuvets2025@gmail.com" class="text-blue-600 hover:underline">Mrigaayuvets2025@gmail.com</a>
+          </p>
+          <p class="flex items-center">
+            <span class="text-green-500 mr-3">📍</span>
+            <span class="text-gray-600">Mumbai, Maharashtra, India</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Emergency Notice -->
+      <div class="bg-red-50 rounded-2xl p-6 shadow-lg border-2 border-red-200">
+        <h3 class="text-xl font-bold text-red-700 mb-4">Emergency Services</h3>
+        <p class="text-gray-600 mb-4">For urgent veterinary care, contact us immediately.</p>
+        <a href="tel:+918208657969" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300 block text-center">
+          🚨 Call Emergency
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

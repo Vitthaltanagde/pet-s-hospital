@@ -1,0 +1,324 @@
+{% extends "layout.html" %}
+
+{% block title %}The Ultimate Pet Nutrition Guide | MrigaAayuvets{% endblock %}
+
+{% block content %}
+
+<div class="container max-w-7xl mx-auto py-10 px-6">
+
+  <!-- Breadcrumb -->
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="{{ url_for('blogs') }}" class="text-green-600 hover:underline">← Back to Blogs</a> / Puppy Care Guide
+  </nav>
+
+  <!-- Main Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+    <!-- Left: Main Content -->
+    <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">The Ultimate Pet Nutrition Guide</h1>
+        
+        <div class="flex flex-wrap gap-6 text-gray-500 text-sm mb-6">
+            <span>📅 Published: March 15, 2025</span>
+            <span>⏱️ 15 min read</span>
+            <span>🏷️ Nutrition, Health, Diet</span>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&h=400&fit=crop" 
+             alt="Adorable white puppy being fed" 
+             class="w-full h-96 object-cover rounded-xl mb-6">
+        <div class="prose prose-lg max-w-none space-y-6">
+                    <p class="mb-5">Proper nutrition is the foundation of your pet's health and longevity. Just like humans, pets require a balanced diet with the right proportions of proteins, carbohydrates, fats, vitamins, and minerals to thrive throughout their lives.</p>
+
+                    <!-- Nutrition Chart -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 my-6">
+                        <h4 class="text-gray-800 font-semibold mb-4 text-center">🥗 Ideal Pet Diet Breakdown</h4>
+                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+                            <div class="bg-white border-2 border-gray-200 rounded-lg p-4 text-center">
+                                <div class="text-3xl font-bold text-primary mb-1">40%</div>
+                                <div class="text-sm text-gray-600">Protein</div>
+                            </div>
+                            <div class="bg-white border-2 border-gray-200 rounded-lg p-4 text-center">
+                                <div class="text-3xl font-bold text-primary mb-1">30%</div>
+                                <div class="text-sm text-gray-600">Carbohydrates</div>
+                            </div>
+                            <div class="bg-white border-2 border-gray-200 rounded-lg p-4 text-center">
+                                <div class="text-3xl font-bold text-primary mb-1">15%</div>
+                                <div class="text-sm text-gray-600">Healthy Fats</div>
+                            </div>
+                            <div class="bg-white border-2 border-gray-200 rounded-lg p-4 text-center">
+                                <div class="text-3xl font-bold text-primary mb-1">15%</div>
+                                <div class="text-sm text-gray-600">Vitamins & Minerals</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Understanding Pet Nutritional Needs</h2>
+                    <p class="mb-5">Every pet is unique, and their nutritional requirements vary based on several factors including age, breed, size, activity level, and health status. Understanding these basics will help you make informed decisions about your pet's diet.</p>
+
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Essential Nutrients for Pets:</h3>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li><strong>Proteins:</strong> Building blocks for muscles, organs, and immune system</li>
+                        <li><strong>Carbohydrates:</strong> Primary energy source for daily activities</li>
+                        <li><strong>Fats:</strong> Essential for skin health, coat shine, and vitamin absorption</li>
+                        <li><strong>Vitamins:</strong> Support various bodily functions and immune health</li>
+                        <li><strong>Minerals:</strong> Crucial for bone development and metabolic processes</li>
+                        <li><strong>Water:</strong> Most important nutrient - maintains hydration and organ function</li>
+                    </ul>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Life Stage Nutrition</h2>
+                    <p class="mb-5">Your pet's nutritional needs change significantly throughout their life. Feeding the right diet at each stage is crucial for optimal health.</p>
+
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Puppy & Kitten Nutrition (0-12 months)</h3>
+                    <p class="mb-3">Growing pets need more calories per pound than adults, with higher protein and fat content to support rapid development.</p>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li>Feed 3-4 times daily until 6 months old</li>
+                        <li>Choose food specifically formulated for growth</li>
+                        <li>Protein should make up 22-32% of diet</li>
+                        <li>Fat content should be 8-22%</li>
+                    </ul>
+
+                    <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+                        <h4 class="text-green-800 font-semibold mb-3">💡 Puppy Feeding Tip</h4>
+                        <p class="text-green-700">Transition from mother's milk gradually by mixing puppy food with warm water to create a soft gruel, then slowly reduce water content over 1-2 weeks.</p>
+                    </div>
+
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Adult Pet Nutrition (1-7 years)</h3>
+                    <p class="mb-3">Adult pets need a balanced maintenance diet that supports their activity level and maintains ideal body weight.</p>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li>Feed 1-2 times daily on a consistent schedule</li>
+                        <li>Protein content: 18-25%</li>
+                        <li>Fat content: 5-15%</li>
+                        <li>Monitor weight and adjust portions accordingly</li>
+                    </ul>
+
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Senior Pet Nutrition (7+ years)</h3>
+                    <p class="mb-3">Older pets often need easily digestible foods with modified nutrient profiles to support aging organs.</p>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li>Higher quality, easily digestible proteins</li>
+                        <li>Added joint support supplements</li>
+                        <li>Reduced calories if less active</li>
+                        <li>Enhanced with antioxidants for cognitive health</li>
+                    </ul>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Choosing the Right Food</h2>
+                    <p class="mb-5">With countless pet food options available, selecting the right one can be overwhelming. Here's what to look for:</p>
+
+                    <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+                        <h4 class="text-green-800 font-semibold mb-3">🔍 Reading Pet Food Labels</h4>
+                        <ul class="list-disc pl-6 space-y-2 text-green-700">
+                            <li><strong>First ingredient:</strong> Should be a named protein source (chicken, beef, salmon)</li>
+                            <li><strong>AAFCO statement:</strong> Look for "complete and balanced" certification</li>
+                            <li><strong>Avoid:</strong> Generic terms like "meat meal" or "by-product meal"</li>
+                            <li><strong>Check:</strong> Expiration dates and proper storage instructions</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Dry vs. Wet Food: Pros and Cons</h3>
+                    
+                    <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Dry Food (Kibble)</h4>
+                    <p class="mb-2"><strong>Pros:</strong> Convenient, cost-effective, helps clean teeth, longer shelf life</p>
+                    <p class="mb-4"><strong>Cons:</strong> Lower moisture content, may contain more preservatives</p>
+
+                    <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Wet Food (Canned)</h4>
+                    <p class="mb-2"><strong>Pros:</strong> Higher moisture content, often more palatable, easier to digest</p>
+                    <p class="mb-6"><strong>Cons:</strong> More expensive, shorter shelf life once opened, doesn't help with dental health</p>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Special Dietary Considerations</h2>
+                    
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Food Allergies and Sensitivities</h3>
+                    <p class="mb-3">Some pets develop allergies or sensitivities to certain ingredients. Common allergens include:</p>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li>Beef, chicken, or other proteins</li>
+                        <li>Wheat, corn, or soy</li>
+                        <li>Dairy products</li>
+                        <li>Artificial colors or preservatives</li>
+                    </ul>
+
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-6 my-6">
+                        <h4 class="font-bold text-red-800 mb-4">⚠️ Signs of Food Allergies</h4>
+                        <ul class="list-disc pl-6 space-y-2 text-red-700">
+                            <li>Itchy skin, excessive scratching</li>
+                            <li>Digestive upset (vomiting, diarrhea)</li>
+                            <li>Ear infections</li>
+                            <li>Hair loss or skin irritation</li>
+                            <li>Changes in appetite</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Weight Management</h3>
+                    <p class="mb-3">Obesity is a growing problem in pets, leading to various health issues including diabetes, joint problems, and shortened lifespan.</p>
+
+                    <h4 class="text-lg font-semibold text-gray-800 mt-4 mb-2">Maintaining Ideal Weight:</h4>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li>Measure food portions accurately</li>
+                        <li>Limit treats to 10% of daily calories</li>
+                        <li>Provide regular exercise</li>
+                        <li>Schedule regular weight checks with your vet</li>
+                    </ul>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Feeding Guidelines and Best Practices</h2>
+                    
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Establishing a Feeding Schedule</h3>
+                    <p class="mb-3">Consistent feeding times help regulate digestion and prevent overeating:</p>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li><strong>Puppies/Kittens (under 6 months):</strong> 3-4 meals daily</li>
+                        <li><strong>Young adults (6 months - 1 year):</strong> 2-3 meals daily</li>
+                        <li><strong>Adults:</strong> 2 meals daily (morning and evening)</li>
+                        <li><strong>Seniors:</strong> 2 smaller meals daily or as recommended by vet</li>
+                    </ul>
+
+                    <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+                        <h4 class="text-green-800 font-semibold mb-3">🍽️ Feeding Environment Tips</h4>
+                        <ul class="list-disc pl-6 space-y-2 text-green-700">
+                            <li>Use stainless steel or ceramic bowls</li>
+                            <li>Keep food and water bowls clean</li>
+                            <li>Provide fresh water daily</li>
+                            <li>Feed in a quiet, consistent location</li>
+                            <li>For multiple pets, feed separately to prevent competition</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Common Feeding Mistakes to Avoid</h2>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li><strong>Free feeding:</strong> Leaving food out all day can lead to overeating</li>
+                        <li><strong>Too many treats:</strong> Should not exceed 10% of daily calories</li>
+                        <li><strong>Sudden diet changes:</strong> Always transition gradually over 7-10 days</li>
+                        <li><strong>Human food:</strong> Many human foods are toxic to pets</li>
+                        <li><strong>Ignoring age changes:</strong> Nutritional needs change as pets age</li>
+                    </ul>
+
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-6 my-6">
+                        <h4 class="font-bold text-red-800 mb-4">🚫 Toxic Foods to Never Feed Your Pet</h4>
+                        <ul class="list-disc pl-6 space-y-2 text-red-700">
+                            <li>Chocolate (especially dark chocolate)</li>
+                            <li>Grapes and raisins</li>
+                            <li>Onions and garlic</li>
+                            <li>Avocado</li>
+                            <li>Xylitol (artificial sweetener)</li>
+                            <li>Alcohol</li>
+                            <li>Caffeine</li>
+                            <li>Macadamia nuts</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Supplements: When They're Necessary</h2>
+                    <p class="mb-5">While a high-quality commercial pet food should provide all necessary nutrients, some pets may benefit from supplements:</p>
+
+                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Common Beneficial Supplements:</h3>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li><strong>Omega-3 fatty acids:</strong> For skin, coat, and joint health</li>
+                        <li><strong>Glucosamine/Chondroitin:</strong> For joint support in older pets</li>
+                        <li><strong>Probiotics:</strong> For digestive health</li>
+                        <li><strong>Multivitamins:</strong> For pets with specific deficiencies</li>
+                    </ul>
+
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6 my-6">
+                        <h4 class="text-yellow-800 font-semibold mb-3">⚠️ Important Note on Supplements</h4>
+                        <p class="text-yellow-700">Always consult with your veterinarian before adding supplements to your pet's diet. Some supplements can interact with medications or may be unnecessary if your pet is already eating a balanced diet.</p>
+                    </div>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Signs of Good Nutrition</h2>
+                    <p class="mb-3">A well-nourished pet will show these positive signs:</p>
+                    <ul class="list-disc pl-8 mb-6 space-y-2">
+                        <li>Shiny, smooth coat</li>
+                        <li>Clear, bright eyes</li>
+                        <li>Healthy skin without excessive dryness or oiliness</li>
+                        <li>Good energy levels appropriate for age</li>
+                        <li>Ideal body weight and condition</li>
+                        <li>Regular, well-formed bowel movements</li>
+                        <li>Good dental health</li>
+                    </ul>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Frequently Asked Questions</h2>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <p class="font-semibold mb-2">Q: How do I transition my pet to a new food?</p>
+                            <p>A: Gradually mix increasing amounts of new food with decreasing amounts of old food over 7-10 days.</p>
+                        </div>
+
+                        <div>
+                            <p class="font-semibold mb-2">Q: Can I feed my pet a vegetarian diet?</p>
+                            <p>A: While dogs can potentially thrive on well-planned vegetarian diets, cats are obligate carnivores and require nutrients found only in animal products. Consult your vet first.</p>
+                        </div>
+
+                        <div>
+                            <p class="font-semibold mb-2">Q: How much should I feed my pet?</p>
+                            <p>A: Follow the feeding guidelines on your pet food package as a starting point, then adjust based on your pet's body condition and activity level.</p>
+                        </div>
+
+                        <div>
+                            <p class="font-semibold mb-2">Q: Is grain-free food better for my pet?</p>
+                            <p>A: Not necessarily. Most pets digest grains well, and grain-free doesn't automatically mean healthier. Choose based on your pet's individual needs.</p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Conclusion</h2>
+                    <p class="mb-5">Proper nutrition is one of the most important gifts you can give your pet. By understanding their nutritional needs, choosing high-quality food, and maintaining consistent feeding practices, you're setting the foundation for a long, healthy, and happy life together.</p>
+
+                    <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+                        <h4 class="text-green-800 font-semibold mb-3">📌 Key Takeaway</h4>
+                        <p class="text-green-700">Remember that nutritional needs are individual. What works for one pet may not work for another. Regular veterinary checkups and monitoring your pet's body condition will help you make the best nutritional choices for your furry family member.</p>
+                    </div>
+                </div>
+                <!-- Back Button -->
+        <a href="{{ url_for('blogs') }}"
+           class="inline-block mt-8 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">
+          ← Back to Blogs
+        </a>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="lg:col-span-1 space-y-8">
+      <!-- Ask the Vet Card -->
+      <div class="bg-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200">
+        <h3 class="text-2xl font-bold text-green-700 mb-4 text-center">Ask Our Vet</h3>
+        <p class="text-gray-600 text-center mb-6">Have questions about your pet's health?</p>
+        <div class="text-center">
+          <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20have%20a%20question%20about%20my%20pet's%20health.%20Can%20you%20help?"
+             target="_blank"
+             class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+             💬 Chat with Vet
+          </a>
+        </div>
+      </div>
+
+      <!-- Related Articles -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
+        <div class="space-y-4">
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Pet Vaccination Guide</h4>
+            <p class="text-sm text-gray-500">Essential vaccines for your pet's health</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Senior Pet Care Tips</h4>
+            <p class="text-sm text-gray-500">Caring for your aging companion</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Emergency Pet Care</h4>
+            <p class="text-sm text-gray-500">What to do in pet emergencies</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="bg-blue-50 rounded-2xl p-6 shadow-lg border-2 border-blue-200">
+        <h3 class="text-xl font-bold text-blue-700 mb-4">Get Pet Care Tips</h3>
+        <p class="text-gray-600 mb-4">Subscribe to our newsletter for expert pet care advice</p>
+        <form class="space-y-3">
+          <input type="email" 
+                 placeholder="Your email address" 
+                 class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          <button type="submit" 
+                  class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+            📧 Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

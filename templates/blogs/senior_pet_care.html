@@ -1,0 +1,316 @@
+{% extends "layout.html" %}
+
+{% block title %}Caring for Senior Pets: Complete Guide | MrigaAayuvets{% endblock %}
+
+{% block content %}
+
+<div class="container max-w-7xl mx-auto py-10 px-6">
+
+  <!-- Breadcrumb -->
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="{{ url_for('blogs') }}" class="text-green-600 hover:underline">← Back to Blogs</a> / Puppy Care Guide
+  </nav>
+
+  <!-- Main Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+    <!-- Left: Main Content -->
+    <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Caring for Senior Pets: What You Need to Know</h1>
+        
+        <div class="flex flex-wrap gap-6 text-gray-500 text-sm mb-6">
+            <span>📅 Published: March 20, 2025</span>
+            <span>⏱️ 10 min read</span>
+            <span>🏷️ Senior Care, Health, Aging</span>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&h=400&fit=crop" 
+             alt="Adorable white puppy being fed" 
+             class="w-full h-96 object-cover rounded-xl mb-6">
+        <div class="prose prose-lg max-w-none space-y-6">
+          <p class="mb-5">As our beloved pets age, they require special attention and care to maintain their health and happiness. Senior pets (dogs 7+ years, cats 8+ years) face unique challenges that pet owners must understand and address proactively.</p>
+
+          <!-- Stats Box -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 my-6 text-center">
+            <div class="text-5xl font-bold text-primary mb-3">68%</div>
+            <p class="text-gray-700">of senior pet health issues go undetected because owners mistake aging symptoms for "normal" changes.</p>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Understanding the Aging Process</h2>
+          <p class="mb-5">Just like humans, pets experience physical and mental changes as they age. The key to successful senior pet care is recognizing these changes early and adapting their care routine accordingly.</p>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Common Age-Related Changes:</h3>
+          <ul class="list-disc pl-8 mb-6 space-y-2">
+            <li><strong>Decreased mobility:</strong> Arthritis and joint stiffness become common</li>
+            <li><strong>Sensory changes:</strong> Hearing and vision may decline</li>
+            <li><strong>Cognitive changes:</strong> Memory and learning may be affected</li>
+            <li><strong>Organ function:</strong> Kidney, heart, and liver function may decrease</li>
+            <li><strong>Immune system:</strong> Becomes less effective at fighting infections</li>
+          </ul>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Essential Health Monitoring</h2>
+          <p class="mb-5">Regular veterinary checkups become even more critical for senior pets. Early detection of health issues can significantly improve treatment outcomes and quality of life.</p>
+
+          <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+            <h4 class="text-blue-800 font-semibold mb-4">📋 Recommended Checkup Schedule for Senior Pets</h4>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse border border-gray-300">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Age Group</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Checkup Frequency</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Key Focus Areas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-300 p-3">7-10 years (Dogs)<br>8-12 years (Cats)</td>
+                    <td class="border border-gray-300 p-3">Every 6 months</td>
+                    <td class="border border-gray-300 p-3">Blood work, dental care, joint assessment</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-3">10+ years (Dogs)<br>12+ years (Cats)</td>
+                    <td class="border border-gray-300 p-3">Every 3-4 months</td>
+                    <td class="border border-gray-300 p-3">Comprehensive organ function, pain management</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Nutrition for Senior Pets</h2>
+          <p class="mb-5">Dietary needs change significantly as pets age. Senior pets often require:</p>
+
+          <ul class="list-disc pl-8 mb-6 space-y-2">
+            <li><strong>Reduced calories:</strong> Lower activity levels mean fewer calories needed</li>
+            <li><strong>High-quality protein:</strong> Maintains muscle mass while being easier to digest</li>
+            <li><strong>Joint support supplements:</strong> Glucosamine and chondroitin for arthritis</li>
+            <li><strong>Omega-3 fatty acids:</strong> Support brain function and reduce inflammation</li>
+            <li><strong>Easily digestible foods:</strong> Softer textures for dental issues</li>
+          </ul>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+            <h4 class="text-green-800 font-semibold mb-3">💡 Feeding Tip</h4>
+            <p class="text-green-700">Switch to senior-formulated food gradually over 7-10 days. Monitor weight closely as metabolism changes with age.</p>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Creating a Senior-Friendly Environment</h2>
+          <p class="mb-5">Simple modifications to your home can greatly improve your senior pet's comfort and safety:</p>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Mobility Improvements:</h3>
+          <ul class="list-disc pl-8 mb-6 space-y-2">
+            <li>Orthopedic beds with extra padding for joint support</li>
+            <li>Ramps or steps to help access furniture and cars</li>
+            <li>Non-slip mats on smooth surfaces</li>
+            <li>Raised food and water bowls to reduce neck strain</li>
+            <li>Litter boxes with lower sides for easier access (cats)</li>
+          </ul>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Temperature Control:</h3>
+          <ul class="list-disc pl-8 mb-6 space-y-2">
+            <li>Warm bedding in cool weather</li>
+            <li>Access to cool, shaded areas in summer</li>
+            <li>Extra blankets for pets with arthritis</li>
+          </ul>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Exercise and Mental Stimulation</h2>
+          <p class="mb-5">While senior pets may not be as active as they once were, regular exercise and mental stimulation remain important:</p>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+            <h4 class="text-green-800 font-semibold mb-3">🏃‍♂️ Senior Exercise Guidelines</h4>
+            <ul class="list-disc pl-6 space-y-2 text-green-700">
+              <li><strong>Dogs:</strong> Shorter, more frequent walks instead of long hikes</li>
+              <li><strong>Swimming:</strong> Excellent low-impact exercise for dogs with arthritis</li>
+              <li><strong>Cats:</strong> Interactive toys and puzzle feeders to encourage movement</li>
+              <li><strong>Mental games:</strong> Training sessions and puzzle toys keep minds active</li>
+            </ul>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Managing Common Senior Conditions</h2>
+          
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Arthritis and Joint Pain</h3>
+          <p class="mb-4">One of the most common conditions affecting senior pets. Signs include:</p>
+          <ul class="list-disc pl-8 mb-6 space-y-2">
+            <li>Stiffness when getting up</li>
+            <li>Reluctance to climb stairs or jump</li>
+            <li>Changes in gait or limping</li>
+            <li>Decreased activity or playfulness</li>
+          </ul>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Cognitive Dysfunction</h3>
+          <p class="mb-4">Similar to dementia in humans, this affects many senior pets. Watch for:</p>
+          <ul class="list-disc pl-8 mb-6 space-y-2">
+            <li>Disorientation or confusion</li>
+            <li>Changes in sleep patterns</li>
+            <li>Increased anxiety or restlessness</li>
+            <li>Accidents in house-trained pets</li>
+          </ul>
+
+          <div class="bg-red-50 border border-red-200 rounded-xl p-6 my-6">
+            <h4 class="font-bold text-red-800 mb-4">⚠️ When to Call Your Vet Immediately</h4>
+            <ul class="list-disc pl-6 space-y-2 text-red-700">
+              <li>Difficulty breathing or rapid breathing</li>
+              <li>Loss of appetite for more than 24 hours</li>
+              <li>Sudden collapse or inability to stand</li>
+              <li>Excessive drinking or urination</li>
+              <li>Seizures or disorientation</li>
+              <li>Pale gums or yellow tinge to eyes/gums</li>
+            </ul>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Quality of Life Assessment</h2>
+          <p class="mb-5">Regularly assess your senior pet's quality of life by considering:</p>
+
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-gray-300 mb-6">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Quality Factor</th>
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Good Signs</th>
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Concerning Signs</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 p-3">Appetite</td>
+                  <td class="border border-gray-300 p-3">Eager to eat, maintains weight</td>
+                  <td class="border border-gray-300 p-3">Refuses food, significant weight loss</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-3">Mobility</td>
+                  <td class="border border-gray-300 p-3">Moves willingly, manages stairs</td>
+                  <td class="border border-gray-300 p-3">Reluctant to move, frequent falls</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-3">Social Interaction</td>
+                  <td class="border border-gray-300 p-3">Responds to family, enjoys attention</td>
+                  <td class="border border-gray-300 p-3">Withdrawn, avoids interaction</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-3">Comfort</td>
+                  <td class="border border-gray-300 p-3">Rests peacefully, normal breathing</td>
+                  <td class="border border-gray-300 p-3">Restless, panting, signs of pain</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Preventive Care Strategies</h2>
+          <p class="mb-5">Prevention remains the best medicine for senior pets:</p>
+
+          <ul class="list-disc pl-8 mb-6 space-y-2">
+            <li><strong>Regular dental care:</strong> Professional cleanings and daily brushing</li>
+            <li><strong>Weight management:</strong> Maintain ideal body weight to reduce joint stress</li>
+            <li><strong>Parasite prevention:</strong> Continue flea, tick, and heartworm prevention</li>
+            <li><strong>Vaccination updates:</strong> Maintain immunity while avoiding over-vaccination</li>
+            <li><strong>Blood work:</strong> Annual screening for kidney, liver, and thyroid function</li>
+          </ul>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Making the Most of Senior Years</h2>
+          <p class="mb-5">Senior pets can still enjoy fulfilling, happy lives with proper care. Focus on:</p>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+            <h4 class="text-green-800 font-semibold mb-3">🎯 Senior Pet Happiness Checklist</h4>
+            <ul class="list-disc pl-6 space-y-2 text-green-700">
+              <li>Maintain familiar routines for security</li>
+              <li>Provide extra comfort and warmth</li>
+              <li>Adjust expectations for activity levels</li>
+              <li>Increase quality time and gentle attention</li>
+              <li>Monitor closely for changes in behavior or health</li>
+              <li>Celebrate small victories and good days</li>
+            </ul>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Frequently Asked Questions</h2>
+          
+          <div class="space-y-4 mb-6">
+            <div>
+              <p class="font-semibold mb-2"><strong>Q: At what age should I switch to senior pet food?</strong></p>
+              <p><strong>A:</strong> Generally around 7 years for dogs and 8 years for cats, but consult your vet for your pet's specific needs.</p>
+            </div>
+
+            <div>
+              <p class="font-semibold mb-2"><strong>Q: Is it normal for senior pets to sleep more?</strong></p>
+              <p><strong>A:</strong> Yes, increased sleeping is normal, but sudden changes in sleep patterns warrant veterinary attention.</p>
+            </div>
+
+            <div>
+              <p class="font-semibold mb-2"><strong>Q: Can senior pets learn new things?</strong></p>
+              <p><strong>A:</strong> Absolutely! Mental stimulation through training and new experiences benefits senior pets greatly.</p>
+            </div>
+
+            <div>
+              <p class="font-semibold mb-2"><strong>Q: How do I know if my pet is in pain?</strong></p>
+              <p><strong>A:</strong> Look for subtle signs like reluctance to move, changes in posture, decreased appetite, or behavioral changes.</p>
+            </div>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Conclusion</h2>
+          <p class="mb-5">Caring for a senior pet requires patience, understanding, and proactive healthcare. While aging brings challenges, it also brings the opportunity to deepen the bond with your lifelong companion. With proper care, many senior pets enjoy comfortable, happy years well into their golden age.</p>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+            <h4 class="text-green-800 font-semibold mb-3">📌 Remember</h4>
+            <p class="text-green-700">Age is not a disease. Many age-related conditions are treatable when caught early. Regular veterinary care and attentive home monitoring are the keys to successful senior pet care.</p>
+          </div>
+        </div>
+
+        <!-- Back Button -->
+        <a href="{{ url_for('blogs') }}"
+           class="inline-block mt-8 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">
+          ← Back to Blogs
+        </a>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="lg:col-span-1 space-y-8">
+      <!-- Ask the Vet Card -->
+      <div class="bg-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200">
+        <h3 class="text-2xl font-bold text-green-700 mb-4 text-center">Ask Our Vet</h3>
+        <p class="text-gray-600 text-center mb-6">Have questions about your pet's health?</p>
+        <div class="text-center">
+          <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20have%20a%20question%20about%20my%20pet's%20health.%20Can%20you%20help?"
+             target="_blank"
+             class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+             💬 Chat with Vet
+          </a>
+        </div>
+      </div>
+
+      <!-- Related Articles -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
+        <div class="space-y-4">
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Pet Vaccination Guide</h4>
+            <p class="text-sm text-gray-500">Essential vaccines for your pet's health</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Senior Pet Care Tips</h4>
+            <p class="text-sm text-gray-500">Caring for your aging companion</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Emergency Pet Care</h4>
+            <p class="text-sm text-gray-500">What to do in pet emergencies</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="bg-blue-50 rounded-2xl p-6 shadow-lg border-2 border-blue-200">
+        <h3 class="text-xl font-bold text-blue-700 mb-4">Get Pet Care Tips</h3>
+        <p class="text-gray-600 mb-4">Subscribe to our newsletter for expert pet care advice</p>
+        <form class="space-y-3">
+          <input type="email" 
+                 placeholder="Your email address" 
+                 class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          <button type="submit" 
+                  class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+            📧 Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

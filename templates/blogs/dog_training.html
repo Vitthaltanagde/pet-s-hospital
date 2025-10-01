@@ -1,0 +1,284 @@
+{% extends "layout.html" %}
+
+{% block title %}Top 5 Dog Training Tips for Beginners | MrigaAayuvets{% endblock %}
+
+{% block content %}
+
+<div class="container max-w-7xl mx-auto py-10 px-6">
+
+  <!-- Breadcrumb -->
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="{{ url_for('blogs') }}" class="text-green-600 hover:underline">← Back to Blogs</a> / Puppy Care Guide
+  </nav>
+
+  <!-- Main Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+    <!-- Left: Main Content -->
+    <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Top 5 Dog Training Tips for Beginners</h1>
+        
+        <div class="flex flex-wrap gap-6 text-gray-500 text-sm mb-6">
+            <span>📅 Published: March 15, 2025</span>
+            <span>⏱️ 15 min read</span>
+            <span>🏷️ Training, Behavior, Tips</span>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&h=400&fit=crop" 
+             alt="Adorable white puppy being fed" 
+             class="w-full h-96 object-cover rounded-xl mb-6">
+        
+        <div class="prose prose-lg max-w-none space-y-6">
+          <p class="mb-5">Training your dog doesn't have to be stressful or overwhelming! With the right approach, patience, and consistency, you can build a strong bond with your furry friend while teaching them essential skills. These five proven tips will set you and your dog up for training success.</p>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Why Training Matters</h2>
+          <p class="mb-5">Dog training is more than just teaching tricks — it's about communication, safety, and building a harmonious relationship. Well-trained dogs are happier, more confident, and better integrated into family life. Plus, training sessions provide mental stimulation that's just as important as physical exercise.</p>
+
+          <!-- Training Step 1 -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 my-8 relative">
+            <div class="absolute -top-3 left-6 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">1</div>
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-2 mb-3">Start with Positive Reinforcement</h3>
+            <p class="mb-4">Positive reinforcement is the most effective and humane training method. Instead of punishing bad behavior, focus on rewarding good behavior immediately when it happens.</p>
+            
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">How to Use Positive Reinforcement:</h4>
+            <ul class="list-disc pl-8 mb-6 space-y-2">
+              <li><strong>Timing is everything:</strong> Reward within 3 seconds of the desired behavior</li>
+              <li><strong>Use high-value treats:</strong> Small, soft treats your dog absolutely loves</li>
+              <li><strong>Add praise and petting:</strong> Combine treats with enthusiastic verbal praise</li>
+              <li><strong>Be consistent:</strong> Everyone in the family should use the same rewards</li>
+            </ul>
+
+            <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+              <h4 class="text-green-800 font-semibold mb-3">💡 Pro Tip</h4>
+              <p class="text-green-700">Keep training treats smaller than your pinky nail. You'll be giving lots of rewards, and you don't want to overfeed your dog!</p>
+            </div>
+          </div>
+
+          <!-- Training Step 2 -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 my-8 relative">
+            <div class="absolute -top-3 left-6 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">2</div>
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-2 mb-3">Keep Training Sessions Short and Sweet</h3>
+            <p class="mb-4">Dogs have limited attention spans, especially puppies. Short, frequent training sessions are much more effective than long, exhausting ones.</p>
+
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Optimal Training Schedule:</h4>
+            <ul class="list-disc pl-8 mb-6 space-y-2">
+              <li><strong>Puppies (8-16 weeks):</strong> 5-10 minutes, 2-3 times daily</li>
+              <li><strong>Young dogs (4 months-2 years):</strong> 10-15 minutes, 2 times daily</li>
+              <li><strong>Adult dogs:</strong> 15-20 minutes, 1-2 times daily</li>
+            </ul>
+
+            <p class="mb-4">End each session on a positive note with a command your dog knows well, so they always finish feeling successful!</p>
+          </div>
+
+          <!-- Training Step 3 -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 my-8 relative">
+            <div class="absolute -top-3 left-6 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">3</div>
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-2 mb-3">Master the Basic Commands First</h3>
+            <p class="mb-4">Before teaching fancy tricks, ensure your dog has mastered these essential life skills. These commands form the foundation for all future training.</p>
+
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">The "Big 5" Essential Commands:</h4>
+            <ol class="list-decimal pl-8 mb-6 space-y-2">
+              <li><strong>"Sit":</strong> The easiest command to teach and most useful in daily life</li>
+              <li><strong>"Stay":</strong> Builds impulse control and keeps your dog safe</li>
+              <li><strong>"Come":</strong> The most important command for safety and recall</li>
+              <li><strong>"Down":</strong> Teaches calm, submissive behavior</li>
+              <li><strong>"Leave it":</strong> Prevents your dog from picking up dangerous items</li>
+            </ol>
+
+            <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+              <h4 class="text-green-800 font-semibold mb-3">🎯 Training Order</h4>
+              <p class="text-green-700">Start with "Sit" as it's the easiest to learn. Once mastered, "Sit" becomes the foundation for teaching "Stay" and "Down."</p>
+            </div>
+          </div>
+
+          <!-- Training Step 4 -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 my-8 relative">
+            <div class="absolute -top-3 left-6 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">4</div>
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-2 mb-3">Be Consistent with Commands and Rules</h3>
+            <p class="mb-4">Consistency is the key to successful dog training. Mixed messages confuse your dog and slow down the learning process.</p>
+
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Consistency Guidelines:</h4>
+            <ul class="list-disc pl-8 mb-6 space-y-2">
+              <li><strong>Use the same words:</strong> Don't switch between "Down" and "Lie down"</li>
+              <li><strong>Same rules for everyone:</strong> If the dog can't be on the couch, this applies to all family members</li>
+              <li><strong>Consistent timing:</strong> Train at the same times each day when possible</li>
+              <li><strong>Same rewards:</strong> Use the same type of treats and praise</li>
+            </ul>
+
+            <div class="bg-red-50 border border-red-200 rounded-xl p-6 my-6">
+              <h4 class="font-bold text-red-800 mb-4">⚠️ Avoid These Consistency Mistakes</h4>
+              <ul class="list-disc pl-6 space-y-2 text-red-700">
+                <li>Sometimes allowing behavior you usually forbid</li>
+                <li>Different family members using different commands</li>
+                <li>Inconsistent meal and potty schedules</li>
+                <li>Rewarding the same behavior differently each time</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Training Step 5 -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 my-8 relative">
+            <div class="absolute -top-3 left-6 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">5</div>
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-2 mb-3">Practice in Different Environments</h3>
+            <p class="mb-4">Dogs don't automatically generalize their training. A dog who sits perfectly in your living room might not understand the command in the park. Gradually practice in various locations to strengthen their learning.</p>
+
+            <h4 class="text-lg font-semibold text-gray-800 mb-3">Progressive Environment Training:</h4>
+            <ol class="list-decimal pl-8 mb-6 space-y-2">
+              <li><strong>Start at home:</strong> Quiet, familiar environment with minimal distractions</li>
+              <li><strong>Move to the backyard:</strong> Slightly more distracting with outdoor sounds and smells</li>
+              <li><strong>Try the front yard:</strong> More stimulation with people and cars passing by</li>
+              <li><strong>Practice on walks:</strong> High-distraction environment with other dogs and people</li>
+              <li><strong>Visit dog-friendly stores:</strong> Ultimate test of your training success</li>
+            </ol>
+
+            <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+              <h4 class="text-green-800 font-semibold mb-3">🌟 Distraction Training Tips</h4>
+              <ul class="list-disc pl-6 space-y-2 text-green-700">
+                <li>Start with easy commands your dog knows well</li>
+                <li>Increase distractions gradually</li>
+                <li>Use higher-value treats in challenging environments</li>
+                <li>If your dog struggles, take a step back to an easier environment</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Common Training Mistakes to Avoid</h2>
+          <ul class="list-disc pl-8 mb-6 space-y-2">
+            <li><strong>Punishment-based training:</strong> This can create fear and aggression</li>
+            <li><strong>Training when frustrated:</strong> Dogs pick up on your emotions</li>
+            <li><strong>Expecting immediate results:</strong> Learning takes time and repetition</li>
+            <li><strong>Inconsistent practice:</strong> Training once a week won't create lasting habits</li>
+            <li><strong>Skipping socialization:</strong> Training should include exposure to new experiences</li>
+          </ul>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">When to Seek Professional Help</h2>
+          <p class="mb-3">Sometimes professional guidance can accelerate your training success or help with specific behavioral issues:</p>
+
+          <ul class="list-disc pl-8 mb-6 space-y-2">
+            <li><strong>Aggressive behavior:</strong> Any signs of aggression toward people or animals</li>
+            <li><strong>Extreme anxiety:</strong> Separation anxiety or fear-based behaviors</li>
+            <li><strong>Lack of progress:</strong> If you've been consistent but see no improvement after 4-6 weeks</li>
+            <li><strong>Complex issues:</strong> Resource guarding, excessive barking, or destructive behavior</li>
+          </ul>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+            <h4 class="text-green-800 font-semibold mb-3">🏆 Success Metrics</h4>
+            <p class="text-green-700">You'll know your training is working when your dog responds to commands reliably (80% of the time) in low-distraction environments. High-distraction success comes with more practice!</p>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Training Tools You'll Need</h2>
+          <p class="mb-3">Keep your training setup simple with these essentials:</p>
+
+          <ul class="list-disc pl-8 mb-6 space-y-2">
+            <li><strong>High-value treats:</strong> Small, soft pieces your dog loves</li>
+            <li><strong>Treat pouch:</strong> Keeps rewards easily accessible</li>
+            <li><strong>6-foot leash:</strong> For controlled outdoor training</li>
+            <li><strong>Collar or harness:</strong> Properly fitted and comfortable</li>
+            <li><strong>Clicker (optional):</strong> For precise timing of rewards</li>
+          </ul>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Building Long-Term Success</h2>
+          <p class="mb-5">Remember that dog training is an ongoing process, not a one-time event. Even well-trained dogs benefit from regular practice sessions to maintain their skills and learn new things.</p>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+            <h4 class="text-green-800 font-semibold mb-3">📅 Maintenance Schedule</h4>
+            <ul class="list-disc pl-6 space-y-2 text-green-700">
+              <li><strong>Daily:</strong> Practice basic commands during regular activities</li>
+              <li><strong>Weekly:</strong> Dedicated training session for new skills</li>
+              <li><strong>Monthly:</strong> Challenge sessions in new environments</li>
+              <li><strong>Ongoing:</strong> Reinforce good behavior as part of daily routine</li>
+            </ul>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Frequently Asked Questions</h2>
+          
+          <div class="space-y-4 mb-6">
+            <div>
+              <p class="font-semibold mb-2">Q: How long does it take to train a dog?</p>
+              <p>A: Basic commands can be learned in 4-6 weeks with consistent daily practice. However, truly reliable behavior takes 3-6 months of regular reinforcement.</p>
+            </div>
+
+            <div>
+              <p class="font-semibold mb-2">Q: What if my dog won't take treats during training?</p>
+              <p>A: Try training before meal times when your dog is hungry, or experiment with different types of rewards like toys, praise, or playtime.</p>
+            </div>
+
+            <div>
+              <p class="font-semibold mb-2">Q: Is it too late to train an older dog?</p>
+              <p>A: Absolutely not! While puppies learn faster, adult dogs can learn new behaviors at any age. Older dogs often have better attention spans than puppies.</p>
+            </div>
+
+            <div>
+              <p class="font-semibold mb-2">Q: Should I train my dog myself or hire a professional?</p>
+              <p>A: Most basic training can be done successfully at home. Consider professional help for behavioral issues, lack of progress, or if you want to accelerate the process.</p>
+            </div>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Conclusion</h2>
+          <p class="mb-5">Successful dog training comes down to patience, consistency, and positive reinforcement. Remember that every dog learns at their own pace, so celebrate small victories along the way. The time you invest in training now will pay dividends in years of better communication and a stronger bond with your furry companion.</p>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+            <h4 class="text-green-800 font-semibold mb-3">🚀 Ready to Start?</h4>
+            <p class="text-green-700">Pick one command from the "Big 5" and commit to practicing it for 5 minutes, twice a day. You'll be amazed at the progress you can make in just one week!</p>
+          </div>
+        </div>
+<!-- Back Button -->
+        <a href="{{ url_for('blogs') }}"
+           class="inline-block mt-8 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">
+          ← Back to Blogs
+        </a>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="lg:col-span-1 space-y-8">
+      <!-- Ask the Vet Card -->
+      <div class="bg-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200">
+        <h3 class="text-2xl font-bold text-green-700 mb-4 text-center">Ask Our Vet</h3>
+        <p class="text-gray-600 text-center mb-6">Have questions about your pet's health?</p>
+        <div class="text-center">
+          <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20have%20a%20question%20about%20my%20pet's%20health.%20Can%20you%20help?"
+             target="_blank"
+             class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+             💬 Chat with Vet
+          </a>
+        </div>
+      </div>
+
+      <!-- Related Articles -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
+        <div class="space-y-4">
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Pet Vaccination Guide</h4>
+            <p class="text-sm text-gray-500">Essential vaccines for your pet's health</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Senior Pet Care Tips</h4>
+            <p class="text-sm text-gray-500">Caring for your aging companion</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Emergency Pet Care</h4>
+            <p class="text-sm text-gray-500">What to do in pet emergencies</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="bg-blue-50 rounded-2xl p-6 shadow-lg border-2 border-blue-200">
+        <h3 class="text-xl font-bold text-blue-700 mb-4">Get Pet Care Tips</h3>
+        <p class="text-gray-600 mb-4">Subscribe to our newsletter for expert pet care advice</p>
+        <form class="space-y-3">
+          <input type="email" 
+                 placeholder="Your email address" 
+                 class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          <button type="submit" 
+                  class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+            📧 Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

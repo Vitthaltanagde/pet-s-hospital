@@ -1,0 +1,406 @@
+{% extends "layout.html" %}
+
+{% block title %}Complete Guide to Pet X-Ray Imaging | MrigaAayuvets{% endblock %}
+
+{% block content %}
+
+<div class="container max-w-7xl mx-auto py-10 px-6">
+
+  <!-- Breadcrumb -->
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="{{ url_for('services') }}" class="text-green-600 hover:underline">← Back to Services</a> / Pet X-Ray Imaging Guide
+  </nav>
+
+  <!-- Main Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+    <!-- Left: Main Content -->
+    <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
+
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">
+          Complete Guide to Pet X-Ray Imaging: Understanding Diagnostic Radiography for Your Pet
+        </h1>
+        <div class="flex flex-wrap gap-6 text-gray-500 text-sm mb-6">
+          <span>📅 Published: March 15, 2024</span>
+          <span>⏱️ 18 min read</span>
+          <span>🏷️ Diagnostic Imaging, X-Ray, Radiology</span>
+          <span>👨‍⚕️ Dr. Veterinary Team</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&h=400&fit=crop"
+             alt="Veterinarian examining X-ray images of a pet"
+             class="w-full h-96 object-cover rounded-xl mb-6">
+
+       <!-- Article Body -->
+      <div class="prose prose-lg max-w-none space-y-6">
+
+          <p class="text-lg mb-6">X-ray imaging, also known as radiography, is one of the most valuable diagnostic tools in veterinary medicine. This non-invasive imaging technique allows veterinarians to see inside your pet's body, diagnosing conditions that would be impossible to detect through physical examination alone. Understanding when X-rays are needed, what they can reveal, and how to prepare your pet helps you make informed decisions about your companion's healthcare.</p>
+
+          <!-- Stats Box -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 text-center my-8">
+            <div class="text-4xl font-bold text-green-500 mb-3">75%</div>
+            <p class="text-gray-700">of internal injuries and bone problems in pets can be accurately diagnosed using X-ray imaging, making it an essential diagnostic tool</p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-6">Understanding X-Ray Technology</h2>
+          <p class="mb-6">X-rays use electromagnetic radiation to create images of internal structures:</p>
+
+          <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">How X-Rays Work:</h3>
+          <ul class="list-disc pl-6 space-y-3 mb-6">
+            <li><strong>Radiation penetration:</strong> X-rays pass through soft tissues but are absorbed by dense materials</li>
+            <li><strong>Image contrast:</strong> Different tissues appear as varying shades of gray</li>
+            <li><strong>Bone visualization:</strong> Dense bones appear white on X-ray films</li>
+            <li><strong>Soft tissue detail:</strong> Organs and muscles appear in gray tones</li>
+            <li><strong>Air spaces:</strong> Lungs and gas-filled areas appear black</li>
+            <li><strong>Digital advancement:</strong> Modern digital X-rays provide instant, high-quality images</li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Types of X-Ray Systems:</h3>
+
+          <!-- Digital X-Ray Card -->
+          <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+            <h4 class="text-blue-700 font-bold text-xl mb-3 flex items-center gap-3">
+              📱 Digital Radiography 
+              <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">Modern Standard</span>
+            </h4>
+            <p class="mb-2"><strong>Advantages:</strong> Instant images, better quality, easy storage and sharing</p>
+            <p class="mb-2"><strong>Image processing:</strong> Can enhance contrast and detail digitally</p>
+            <p class="mb-2"><strong>Efficiency:</strong> Faster diagnosis, reduced retakes</p>
+            <p><strong>Environmental:</strong> No chemical processing required</p>
+          </div>
+
+          <!-- Traditional X-Ray Card -->
+          <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6 mb-6">
+            <h4 class="text-yellow-700 font-bold text-xl mb-3 flex items-center gap-3">
+              🎞️ Traditional Film X-Rays 
+              <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-bold">Still Used</span>
+            </h4>
+            <p class="mb-2"><strong>Process:</strong> Chemical development required</p>
+            <p class="mb-2"><strong>Time:</strong> 10-15 minutes for processing</p>
+            <p class="mb-2"><strong>Quality:</strong> Good image quality but less flexible</p>
+            <p><strong>Storage:</strong> Physical film storage required</p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-6">When X-Rays Are Recommended</h2>
+          <p class="mb-6">X-rays are valuable diagnostic tools for a wide range of conditions:</p>
+
+          <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Emergency Situations:</h3>
+          <ul class="list-disc pl-6 space-y-3 mb-6">
+            <li><strong>Trauma cases:</strong> Hit by car, falls, fights with other animals</li>
+            <li><strong>Suspected fractures:</strong> Limping, inability to bear weight, visible deformity</li>
+            <li><strong>Bloat (GDV):</strong> Suspected gastric dilatation-volvulus in dogs</li>
+            <li><strong>Foreign object ingestion:</strong> Non-food items swallowed</li>
+            <li><strong>Difficulty breathing:</strong> Respiratory distress, chest injuries</li>
+            <li><strong>Abdominal emergencies:</strong> Severe pain, distension, internal bleeding</li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Routine Diagnostic Uses:</h3>
+          <ul class="list-disc pl-6 space-y-3 mb-6">
+            <li><strong>Pre-surgical evaluation:</strong> Assess organ placement and health</li>
+            <li><strong>Chronic conditions:</strong> Monitor heart disease, arthritis progression</li>
+            <li><strong>Pregnancy confirmation:</strong> Count puppies/kittens, assess fetal development</li>
+            <li><strong>Cancer screening:</strong> Detect masses, metastasis, staging</li>
+            <li><strong>Dental evaluation:</strong> Tooth root assessment, hidden dental disease</li>
+            <li><strong>Preventive screening:</strong> Early detection in senior pets</li>
+          </ul>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-6">What X-Rays Can Diagnose</h2>
+          <p class="mb-6">X-rays excel at imaging certain body systems and conditions:</p>
+
+          <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Skeletal System:</h3>
+
+          <!-- Bone Fractures Card -->
+          <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-6">
+            <h4 class="text-red-700 font-bold text-xl mb-3 flex items-center gap-3">
+              🦴 Bone Fractures 
+              <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">Excellent Visualization</span>
+            </h4>
+            <p class="mb-2"><strong>Detection:</strong> All types of bone breaks clearly visible</p>
+            <p class="mb-2"><strong>Assessment:</strong> Location, severity, displacement, healing progress</p>
+            <p class="mb-2"><strong>Treatment planning:</strong> Surgical vs. conservative management decisions</p>
+            <p><strong>Follow-up:</strong> Monitor healing and hardware placement</p>
+          </div>
+
+          <!-- Arthritis Card -->
+          <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 mb-6">
+            <h4 class="text-orange-700 font-bold text-xl mb-3 flex items-center gap-3">
+              🦴 Arthritis and Joint Disease 
+              <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-bold">Good Detail</span>
+            </h4>
+            <p class="mb-2"><strong>Early changes:</strong> Joint space narrowing, bone spurs</p>
+            <p class="mb-2"><strong>Severity assessment:</strong> Grade joint damage and progression</p>
+            <p class="mb-2"><strong>Treatment monitoring:</strong> Response to therapy over time</p>
+            <p><strong>Surgical planning:</strong> Joint replacement or fusion considerations</p>
+          </div>
+
+          <!-- Hip Dysplasia Card -->
+          <div class="bg-purple-50 border border-purple-200 rounded-xl p-6 mb-6">
+            <h4 class="text-purple-700 font-bold text-xl mb-3 flex items-center gap-3">
+              🦴 Hip Dysplasia 
+              <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-bold">Diagnostic Standard</span>
+            </h4>
+            <p class="mb-2"><strong>Screening:</strong> Early detection in young dogs</p>
+            <p class="mb-2"><strong>Certification:</strong> OFA and PennHIP evaluation methods</p>
+            <p class="mb-2"><strong>Breeding decisions:</strong> Genetic screening for breeding programs</p>
+            <p><strong>Treatment planning:</strong> Conservative vs. surgical management</p>
+          </div>
+
+          <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Respiratory System:</h3>
+
+          <!-- Lung Conditions Card -->
+          <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+            <h4 class="text-blue-700 font-bold text-xl mb-3 flex items-center gap-3">
+              🫁 Lung Conditions 
+              <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">Critical Assessment</span>
+            </h4>
+            <p class="mb-2"><strong>Pneumonia:</strong> Lung infection patterns and severity</p>
+            <p class="mb-2"><strong>Pulmonary edema:</strong> Fluid in lungs from heart or lung disease</p>
+            <p class="mb-2"><strong>Tumors:</strong> Primary lung masses or metastatic disease</p>
+            <p><strong>Trauma:</strong> Pneumothorax, lung contusions, rib fractures</p>
+          </div>
+
+          <!-- Heart Disease Card -->
+          <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-6">
+            <h4 class="text-red-700 font-bold text-xl mb-3 flex items-center gap-3">
+              ❤️ Heart Disease 
+              <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">Essential Monitoring</span>
+            </h4>
+            <p class="mb-2"><strong>Heart size:</strong> Enlargement patterns indicate specific conditions</p>
+            <p class="mb-2"><strong>Pulmonary vessels:</strong> Blood vessel changes with heart disease</p>
+            <p class="mb-2"><strong>Fluid accumulation:</strong> Congestive heart failure complications</p>
+            <p><strong>Treatment response:</strong> Monitor improvement with medications</p>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-6">X-Ray Procedure and What to Expect</h2>
+          <p class="mb-6">Understanding the X-ray process helps reduce anxiety for both pets and owners:</p>
+
+          <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Pre-Procedure Preparation:</h3>
+          <ul class="list-disc pl-6 space-y-3 mb-6">
+            <li><strong>Fasting requirements:</strong> Usually not necessary unless sedation planned</li>
+            <li><strong>Medication considerations:</strong> Continue regular medications unless instructed otherwise</li>
+            <li><strong>Comfort items:</strong> Familiar blanket or toy for nervous pets</li>
+            <li><strong>Medical history:</strong> Bring current medication list and health records</li>
+            <li><strong>Questions prepared:</strong> List concerns and questions for veterinarian</li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">During the X-Ray Procedure:</h3>
+
+          <!-- X-Ray Procedure Table -->
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
+            <h4 class="text-lg font-bold text-green-800 mb-4">📋 X-Ray Procedure Steps</h4>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Step</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Process</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-300 p-3">Positioning</td>
+                    <td class="border border-gray-300 p-3">Pet placed in specific positions for different views</td>
+                    <td class="border border-gray-300 p-3">2-5 minutes per view</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 p-3">Restraint</td>
+                    <td class="border border-gray-300 p-3">Manual restraint or sedation if needed</td>
+                    <td class="border border-gray-300 p-3">As required for safety</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-3">Imaging</td>
+                    <td class="border border-gray-300 p-3">X-ray beam exposure (fraction of a second)</td>
+                    <td class="border border-gray-300 p-3">Instant per image</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 p-3">Review</td>
+                    <td class="border border-gray-300 p-3">Veterinarian evaluates image quality</td>
+                    <td class="border border-gray-300 p-3">1-2 minutes</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-3">Additional views</td>
+                    <td class="border border-gray-300 p-3">Multiple angles often needed</td>
+                    <td class="border border-gray-300 p-3">Variable</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-6">Sedation and Anesthesia for X-Rays</h2>
+          <p class="mb-6">Some pets require chemical restraint for safe, diagnostic X-rays:</p>
+
+          <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">When Sedation May Be Needed:</h3>
+          <ul class="list-disc pl-6 space-y-3 mb-6">
+            <li><strong>Painful conditions:</strong> Fractures, severe arthritis, trauma</li>
+            <li><strong>Anxious pets:</strong> Extreme fear or stress</li>
+            <li><strong>Aggressive behavior:</strong> Safety concerns for staff and pet</li>
+            <li><strong>Precise positioning:</strong> Hip dysplasia screening, spinal alignment</li>
+            <li><strong>Extended procedures:</strong> Multiple views, contrast studies</li>
+            <li><strong>Very young pets:</strong> Difficulty staying still</li>
+          </ul>
+
+          <!-- Light Sedation Card -->
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-6">
+            <h4 class="text-green-700 font-bold text-xl mb-3 flex items-center gap-3">
+              💊 Light Sedation 
+              <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">Minimal Risk</span>
+            </h4>
+            <p class="mb-2"><strong>Medications:</strong> Oral or injectable calming agents</p>
+            <p class="mb-2"><strong>Benefits:</strong> Reduces anxiety, allows better positioning</p>
+            <p class="mb-2"><strong>Recovery:</strong> 2-6 hours depending on medication</p>
+            <p><strong>Monitoring:</strong> Basic vital sign observation</p>
+          </div>
+
+          <!-- General Anesthesia Card -->
+          <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6 mb-6">
+            <h4 class="text-yellow-700 font-bold text-xl mb-3 flex items-center gap-3">
+              😴 General Anesthesia 
+              <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-bold">More Involved</span>
+            </h4>
+            <p class="mb-2"><strong>When used:</strong> Painful procedures, contrast studies</p>
+            <p class="mb-2"><strong>Benefits:</strong> Complete immobilization, pain-free procedure</p>
+            <p class="mb-2"><strong>Recovery:</strong> Several hours with close monitoring</p>
+            <p><strong>Prerequisites:</strong> Pre-anesthetic blood work recommended</p>
+          </div>
+
+          <!-- Pre-Sedation Safety -->
+          <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+            <h4 class="font-bold text-blue-800 mb-4">🩺 Pre-Sedation Safety Measures</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Physical examination to assess anesthetic risk</li>
+              <li>Blood work to evaluate organ function</li>
+              <li>Fasting requirements (usually 8-12 hours)</li>
+              <li>Intravenous catheter placement for drug administration</li>
+              <li>Monitoring equipment attached during procedure</li>
+              <li>Recovery area prepared for post-procedure care</li>
+            </ul>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-6">Radiation Safety</h2>
+          <p class="mb-6">X-ray safety is a priority for pets, owners, and veterinary staff:</p>
+
+          <!-- Radiation Safety Warning -->
+          <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
+            <h4 class="font-bold text-red-800 mb-4">⚠️ Radiation Safety Guidelines</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Never hold your pet during X-rays - trained staff will provide restraint</li>
+              <li>Pregnant women should not be in X-ray rooms during procedures</li>
+              <li>Children should remain in waiting areas during imaging</li>
+              <li>Lead protective equipment must be worn by all persons in X-ray room</li>
+              <li>Report any concerns about radiation exposure to veterinary staff</li>
+            </ul>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-6">X-Ray Costs and Financial Planning</h2>
+
+          <!-- Cost Table -->
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
+            <h4 class="text-lg font-bold text-green-800 mb-4">💰 X-Ray Imaging Costs (₹)</h4>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="border border-gray-300 p-3 text-left font-semibold">X-Ray Type</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Basic Cost Range</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-300 p-3">Basic 2-view X-rays</td>
+                    <td class="border border-gray-300 p-3">₹1,500 – ₹3,000</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 p-3">Chest X-rays</td>
+                    <td class="border border-gray-300 p-3">₹2,000 – ₹4,000</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-3">Abdominal X-rays</td>
+                    <td class="border border-gray-300 p-3">₹2,500 – ₹5,000</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 p-3">Dental X-rays</td>
+                    <td class="border border-gray-300 p-3">₹2,000 – ₹4,500</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-3">Contrast studies</td>
+                    <td class="border border-gray-300 p-3">₹3,500 – ₹7,000</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 p-3">Specialist interpretation</td>
+                    <td class="border border-gray-300 p-3">₹1,000 – ₹2,000 (extra)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <p class="mb-6">Costs vary depending on your location, the veterinary clinic, whether sedation is needed, and if additional specialist interpretation is required. Always ask for an estimate before the procedure to avoid surprises.</p>
+
+          <!-- Financial Tips -->
+          <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+            <h4 class="font-bold text-blue-800 mb-4">💡 Financial Planning Tips</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Consider pet insurance that covers diagnostic imaging</li>
+              <li>Ask if your vet offers payment plans for larger bills</li>
+              <li>Prioritize essential imaging in emergencies</li>
+              <li>Keep a small emergency fund for unexpected vet costs</li>
+              <li>Compare costs between general practice and specialty clinics</li>
+            </ul>
+          </div>
+
+          <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-6">Conclusion</h2>
+          <p class="mb-8">X-ray imaging is an essential diagnostic tool that gives veterinarians a clear window into your pet's internal health. While it has limitations, when combined with other tests and physical examination, it provides a powerful way to detect, treat, and monitor many conditions. Understanding the process, safety, costs, and what to expect ensures you can make the best decisions for your pet's health and wellbeing.</p>
+
+      </div>
+
+      <a href="{{ url_for('services') }}" 
+        class="inline-block mt-8 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">
+        ← Back to Services
+      </a>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="lg:col-span-1 space-y-8">
+      <!-- Book Appointment -->
+      <div class="bg-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200">
+        <h3 class="text-2xl font-bold text-green-700 mb-4 text-center">Book This Service</h3>
+        <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20would%20like%20to%20book%20Pet%20X-Ray%20Imaging%20service."
+           target="_blank"
+           class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 block text-center">
+          📅 Book Now via WhatsApp
+        </a>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Contact Information</h3>
+        <div class="space-y-3">
+          <p class="flex items-center">
+            <span class="text-green-500 mr-3">📞</span>
+            <a href="tel:+918208657969" class="text-blue-600 hover:underline">+91 82086 57969</a>
+          </p>
+          <p class="flex items-center">
+            <span class="text-green-500 mr-3">📧</span>
+            <a href="mailto:Mrigaayuvets2025@gmail.com" class="text-blue-600 hover:underline">Mrigaayuvets2025@gmail.com</a>
+          </p>
+          <p class="flex items-center">
+            <span class="text-green-500 mr-3">📍</span>
+            <span class="text-gray-600">Mumbai, Maharashtra, India</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Emergency Notice -->
+      <div class="bg-red-50 rounded-2xl p-6 shadow-lg border-2 border-red-200">
+        <h3 class="text-xl font-bold text-red-700 mb-4">Emergency Services</h3>
+        <p class="text-gray-600 mb-4">For urgent veterinary care, contact us immediately.</p>
+        <a href="tel:+918208657969" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300 block text-center">
+          🚨 Call Emergency
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

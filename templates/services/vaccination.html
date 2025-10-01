@@ -1,0 +1,452 @@
+
+{% extends "layout.html" %}
+{% block title %}{{ service.title }} | MrigaAayuvets{% endblock %}
+
+{% block content %}
+<div class="container max-w-7xl mx-auto py-10 px-6">
+
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="{{ url_for('services') }}" class="text-green-600 hover:underline">← Back to Services</a> / {{ service.title }}
+  </nav>
+
+  <!-- Main Grid Layout -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+    <!-- Left: Main Content -->
+    <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
+      <!-- Header -->
+      <article class="mb-10">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Complete Guide to Pet Vaccination: Protecting Your Furry Friend</h1>
+        <div class="flex flex-wrap gap-6 text-gray-500 text-sm mb-6">
+          <span>📅 Published: March 18, 2024</span>
+          <span>⏱️ 12 min read</span>
+          <span>🏷️ Vaccination, Prevention, Pet Health</span>
+          <span>👨‍⚕️ Dr. Veterinary Team</span>
+        </div>
+        <img src="{{ url_for('static', filename='images/' + service.image) }}" alt="Pet vaccination" class="w-full h-96 object-cover rounded-xl mb-6">
+      </article>
+
+      <!-- Article Body -->
+      
+        <div class="prose prose-lg max-w-none space-y-6">
+    <p class="text-lg leading-relaxed">Vaccination is one of the most important things you can do to protect your pet's health. Vaccines help prevent serious, often life-threatening diseases that can affect dogs, cats, and other pets. Understanding which vaccines your pet needs and when they need them is crucial for responsible pet ownership.</p>
+
+    <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">How Vaccines Work</h2>
+    <p>Vaccines contain antigens that look like disease-causing microorganisms but don't actually cause disease. When injected, they stimulate your pet's immune system to recognize and fight specific diseases. If your pet is later exposed to the actual disease, their immune system will remember how to fight it off.</p>
+
+    <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Types of Immunity:</h3>
+    <ul class="list-disc list-inside space-y-2 ml-6">
+      <li><strong>Active immunity:</strong> Your pet's own immune system produces antibodies</li>
+      <li><strong>Passive immunity:</strong> Antibodies passed from mother to babies through milk</li>
+      <li><strong>Herd immunity:</strong> Protection of the entire population when most animals are vaccinated</li>
+    </ul>
+
+    <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Core vs. Non-Core Vaccines</h2>
+    <p>Veterinarians classify vaccines into two main categories based on risk assessment and disease severity:</p>
+
+    <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Core Vaccines (Essential for All Pets)</h3>
+    <p>These vaccines protect against diseases that are widespread, highly contagious, or pose serious health risks:</p>
+
+    <!-- Dog Vaccines Card -->
+    <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
+      <h4 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">🐕 Dogs - Core Vaccines</h4>
+      <ul class="space-y-3">
+        <li><strong>Rabies:</strong> <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">Fatal</span> - Required by law, protects against rabies virus</li>
+        <li><strong>DHPP (4-in-1):</strong> Protects against:
+          <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+            <li>Distemper - <span class="bg-red-500 text-white px-2 py-1 rounded-full text-xs">Often Fatal</span></li>
+            <li>Hepatitis - <span class="bg-orange-500 text-white px-2 py-1 rounded-full text-xs">Severe</span></li>
+            <li>Parvovirus - <span class="bg-red-500 text-white px-2 py-1 rounded-full text-xs">Often Fatal</span></li>
+            <li>Parainfluenza - <span class="bg-blue-500 text-white px-2 py-1 rounded-full text-xs">Respiratory</span></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Cat Vaccines Card -->
+    <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
+      <h4 class="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">🐱 Cats - Core Vaccines</h4>
+      <ul class="space-y-3">
+        <li><strong>Rabies:</strong> <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">Fatal</span> - Required by law</li>
+        <li><strong>FVRCP (3-in-1):</strong> Protects against:
+          <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+            <li>Feline Viral Rhinotracheitis - <span class="bg-blue-500 text-white px-2 py-1 rounded-full text-xs">Respiratory</span></li>
+            <li>Calicivirus - <span class="bg-blue-500 text-white px-2 py-1 rounded-full text-xs">Respiratory</span></li>
+            <li>Panleukopenia - <span class="bg-red-500 text-white px-2 py-1 rounded-full text-xs">Often Fatal</span></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Non-Core Vaccines (Risk-Based)</h3>
+    <p>These vaccines are recommended based on your pet's lifestyle, location, and exposure risk:</p>
+
+    <!-- Non-Core Vaccines Table -->
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+      <h4 class="text-lg font-bold text-blue-800 mb-4">📋 Non-Core Vaccines by Risk Factors</h4>
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse border border-gray-300">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 p-3 text-left font-semibold">Lifestyle/Risk</th>
+              <th class="border border-gray-300 p-3 text-left font-semibold">Dogs</th>
+              <th class="border border-gray-300 p-3 text-left font-semibold">Cats</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3">Boarding/Daycare</td>
+              <td class="border border-gray-300 p-3">Kennel Cough, Canine Influenza</td>
+              <td class="border border-gray-300 p-3">Feline Leukemia (FeLV)</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3">Outdoor/Hunting</td>
+              <td class="border border-gray-300 p-3">Lyme Disease, Leptospirosis</td>
+              <td class="border border-gray-300 p-3">FeLV, Feline Immunodeficiency Virus</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3">High Tick Area</td>
+              <td class="border border-gray-300 p-3">Lyme Disease</td>
+              <td class="border border-gray-300 p-3">Not typically needed</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3">Multi-cat Household</td>
+              <td class="border border-gray-300 p-3">Not applicable</td>
+              <td class="border border-gray-300 p-3">FeLV, FIV</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Vaccination Schedule</h2>
+    <p>Proper timing is crucial for vaccine effectiveness. Puppies and kittens need a series of vaccines because maternal antibodies can interfere with vaccination.</p>
+
+    <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Puppy Vaccination Schedule</h3>
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+      <h4 class="text-lg font-bold text-blue-800 mb-4">🐕 Recommended Puppy Vaccine Timeline</h4>
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse border border-gray-300">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 p-3 text-left font-semibold">Age</th>
+              <th class="border border-gray-300 p-3 text-left font-semibold">Vaccines</th>
+              <th class="border border-gray-300 p-3 text-left font-semibold">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3">6-8 weeks</td>
+              <td class="border border-gray-300 p-3">First DHPP</td>
+              <td class="border border-gray-300 p-3">Start of vaccine series</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3">10-12 weeks</td>
+              <td class="border border-gray-300 p-3">Second DHPP</td>
+              <td class="border border-gray-300 p-3">Booster for better immunity</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3">14-16 weeks</td>
+              <td class="border border-gray-300 p-3">Third DHPP + Rabies</td>
+              <td class="border border-gray-300 p-3">Final puppy series</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3">12-16 months</td>
+              <td class="border border-gray-300 p-3">DHPP + Rabies boosters</td>
+              <td class="border border-gray-300 p-3">First adult boosters</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Kitten Vaccination Schedule</h3>
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+      <h4 class="text-lg font-bold text-blue-800 mb-4">🐱 Recommended Kitten Vaccine Timeline</h4>
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse border border-gray-300">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 p-3 text-left font-semibold">Age</th>
+              <th class="border border-gray-300 p-3 text-left font-semibold">Vaccines</th>
+              <th class="border border-gray-300 p-3 text-left font-semibold">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3">6-8 weeks</td>
+              <td class="border border-gray-300 p-3">First FVRCP</td>
+              <td class="border border-gray-300 p-3">Start of vaccine series</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3">10-12 weeks</td>
+              <td class="border border-gray-300 p-3">Second FVRCP</td>
+              <td class="border border-gray-300 p-3">Booster + non-core if needed</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3">14-16 weeks</td>
+              <td class="border border-gray-300 p-3">Third FVRCP + Rabies</td>
+              <td class="border border-gray-300 p-3">Final kitten series</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3">12-16 months</td>
+              <td class="border border-gray-300 p-3">FVRCP + Rabies boosters</td>
+              <td class="border border-gray-300 p-3">First adult boosters</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Adult Pet Vaccination</h2>
+    <p>After completing the initial series, adult pets need regular boosters to maintain immunity:</p>
+
+    <ul class="list-disc list-inside space-y-2 ml-6">
+      <li><strong>Rabies:</strong> Every 1-3 years (depending on vaccine type and local laws)</li>
+      <li><strong>DHPP/FVRCP:</strong> Every 1-3 years (based on vaccine type and risk assessment)</li>
+      <li><strong>Non-core vaccines:</strong> Annually or as recommended by your veterinarian</li>
+    </ul>
+
+    <!-- Tip Box -->
+    <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-6">
+      <h4 class="font-bold text-green-800 mb-3">💡 Vaccination Reminder</h4>
+      <p>Keep a vaccination record for your pet. Many clinics send reminders, but it's good to track dates yourself. Some boarding facilities and groomers require up-to-date vaccination records.</p>
+    </div>
+
+    <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Common Vaccine Reactions</h2>
+    <p>Most pets tolerate vaccines well, but mild reactions can occur. Knowing what to expect helps you monitor your pet properly:</p>
+
+    <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Normal Reactions (First 24-48 hours):</h3>
+    <ul class="list-disc list-inside space-y-2 ml-6">
+      <li>Mild lethargy or reduced activity</li>
+      <li>Slight fever</li>
+      <li>Reduced appetite</li>
+      <li>Soreness at injection site</li>
+      <li>Small lump at injection site (may last several weeks)</li>
+    </ul>
+
+    <!-- Warning Box -->
+    <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-6">
+      <h4 class="font-bold text-red-800 mb-3">⚠️ Serious Reactions - Contact Vet Immediately</h4>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Vomiting or diarrhea</li>
+        <li>Difficulty breathing</li>
+        <li>Swelling of face or muzzle</li>
+        <li>Hives or skin reactions</li>
+        <li>Collapse or extreme lethargy</li>
+        <li>Seizures</li>
+      </ul>
+      <p class="mt-4 font-semibold"><strong>These symptoms may indicate an allergic reaction and require immediate veterinary attention.</strong></p>
+    </div>
+
+    <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Special Considerations</h2>
+
+    <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Pregnant Animals</h3>
+    <p>Pregnant pets should not receive live vaccines. However, vaccinating before breeding can help pass antibodies to offspring through milk.</p>
+
+    <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Sick Animals</h3>
+    <p>Vaccines should be delayed if your pet is ill. A healthy immune system is necessary for proper vaccine response.</p>
+
+    <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Senior Pets</h3>
+    <p>Older pets may have different vaccination needs. Some may require more frequent boosters, while others may need modified schedules based on health status.</p>
+
+    <h3 class="text-2xl font-semibold text-gray-800 mt-6 mb-3">Indoor vs. Outdoor Pets</h3>
+    <p>Even indoor pets need core vaccines. However, outdoor pets may need additional protection based on exposure risks.</p>
+
+    <!-- Indoor Cat Myth Box -->
+    <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-6">
+      <h4 class="font-bold text-green-800 mb-3">🏠 Indoor Cat Myth</h4>
+      <p>Many people think indoor cats don't need vaccines, but this isn't true! Rabies vaccination is required by law in most areas, and other diseases can enter homes on shoes, clothing, or through open doors.</p>
+    </div>
+
+    <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Vaccination Costs and Value</h2>
+    <p>While vaccines require an upfront investment, they're far less expensive than treating the diseases they prevent:</p>
+
+    <!-- Cost Comparison Table -->
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+      <h4 class="text-lg font-bold text-blue-800 mb-4">💰 Cost Comparison: Prevention vs. Treatment</h4>
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse border border-gray-300">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 p-3 text-left font-semibold">Disease</th>
+              <th class="border border-gray-300 p-3 text-left font-semibold">Vaccine Cost</th>
+              <th class="border border-gray-300 p-3 text-left font-semibold">Treatment Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-3">Parvovirus</td>
+              <td class="border border-gray-300 p-3">₹200 (part of DHPP)</td>
+              <td class="border border-gray-300 p-3">₹15,000 - ₹50,000</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border border-gray-300 p-3">Rabies</td>
+              <td class="border border-gray-300 p-3">₹300 - ₹500</td>
+              <td class="border border-gray-300 p-3">No cure - Fatal</td>
+            </tr>
+            <tr>
+              <td class="border border-gray-300 p-3">Distemper</td>
+              <td class="border border-gray-300 p-3">₹200 (part of DHPP)</td>
+              <td class="border border-gray-300 p-3">₹10,000 - ₹30,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Choosing a Vaccination Provider</h2>
+    <p>Where you get your pet vaccinated matters. Consider these factors:</p>
+
+    <ul class="list-disc list-inside space-y-2 ml-6">
+      <li><strong>Licensed veterinarian:</strong> Ensures proper handling and administration</li>
+      <li><strong>Complete health exam:</strong> Vaccines should be part of a wellness visit</li>
+      <li><strong>Proper storage:</strong> Vaccines must be kept at correct temperatures</li>
+      <li><strong>Medical records:</strong> Proper documentation for future reference</li>
+      <li><strong>Emergency care:</strong> Available if reactions occur</li>
+    </ul>
+
+    <!-- Mistakes Warning Box -->
+    <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-6">
+      <h4 class="font-bold text-red-800 mb-3">⚠️ Avoid These Vaccination Mistakes</h4>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Skipping vaccines because your pet stays indoors</li>
+        <li>Using expired or improperly stored vaccines</li>
+        <li>Getting vaccines from unlicensed sources</li>
+        <li>Missing booster appointments</li>
+        <li>Not monitoring for reactions after vaccination</li>
+      </ul>
+    </div>
+
+    <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Traveling with Your Pet</h2>
+    <p>If you plan to travel with your pet, additional vaccines may be required:</p>
+
+    <ul class="list-disc list-inside space-y-2 ml-6">
+      <li><strong>Health certificates:</strong> Required for air travel and crossing state lines</li>
+      <li><strong>Rabies certificates:</strong> Must be current and from licensed veterinarian</li>
+      <li><strong>Regional diseases:</strong> Some areas require additional vaccines</li>
+      <li><strong>International travel:</strong> May require quarantine and specific vaccines</li>
+    </ul>
+
+    <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Myths and Facts About Vaccination</h2>
+
+    <!-- Myth vs Fact Box -->
+    <div class="bg-green-50 border border-green-200 rounded-xl p-6 mb-6">
+      <h4 class="font-bold text-green-800 mb-4">🔍 Myth vs. Fact</h4>
+      
+      <div class="space-y-4">
+        <div>
+          <p><strong>Myth:</strong> Vaccines cause autism in pets<br>
+          <strong>Fact:</strong> There is no scientific evidence linking vaccines to autism in animals</p>
+        </div>
+        
+        <div>
+          <p><strong>Myth:</strong> Indoor pets don't need vaccines<br>
+          <strong>Fact:</strong> Even indoor pets need core vaccines for protection</p>
+        </div>
+        
+        <div>
+          <p><strong>Myth:</strong> One vaccine lasts a lifetime<br>
+          <strong>Fact:</strong> Immunity wanes over time, requiring boosters</p>
+        </div>
+        
+        <div>
+          <p><strong>Myth:</strong> Vaccines always cause side effects<br>
+          <strong>Fact:</strong> Serious reactions are rare; benefits far outweigh risks</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Frequently Asked Questions</h2>
+    
+    <div class="space-y-4">
+      <div>
+        <p><strong>Q: Can my puppy go outside before completing vaccines?</strong><br>
+        A: Limited exposure is okay, but avoid areas with high dog traffic until 2 weeks after the final vaccine.</p>
+      </div>
+
+      <div>
+        <p><strong>Q: What if my pet misses a booster appointment?</strong><br>
+        A: Contact your vet immediately. Depending on how late, you may need to restart the series.</p>
+      </div>
+
+      <div>
+        <p><strong>Q: Are there alternatives to traditional vaccines?</strong><br>
+        A: Some newer vaccines offer longer protection, but there are no effective alternatives to vaccination for disease prevention.</p>
+      </div>
+
+      <div>
+        <p><strong>Q: Can I vaccinate my pet myself?</strong><br>
+        A: While vaccines are available for purchase, professional administration ensures proper handling, storage, and medical oversight.</p>
+      </div>
+    </div>
+
+    <h2 class="text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-600 pl-6">Conclusion</h2>
+    <p>Vaccination is a simple, safe, and effective way to protect your pet from serious diseases. Working with your veterinarian to develop an appropriate vaccination schedule based on your pet's age, health, and lifestyle ensures they receive optimal protection throughout their life.</p>
+
+    <!-- Key Takeaways -->
+    <div class="bg-green-50 border border-green-200 rounded-xl p-6 mt-8">
+      <h4 class="font-bold text-green-800 mb-4">📌 Key Takeaways</h4>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Start vaccines early and follow the recommended schedule</li>
+        <li>Keep vaccination records up to date</li>
+        <li>Discuss risk factors with your veterinarian</li>
+        <li>Monitor for reactions and seek help if needed</li>
+        <li>Remember that prevention is always better than treatment</li>
+      </ul>
+    </div>
+  </div>
+
+      <!-- Back button -->
+      <a href="{{ url_for('services') }}" class="inline-block mt-8 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">
+        ← Back to Services
+      </a>
+    </div>
+
+    <!-- Right: Sidebar -->
+    <div class="lg:col-span-1">
+      <!-- Book Appointment Card -->
+      <div class="bg-green-50 rounded-2xl p-6 shadow-lg mb-8 border-2 border-green-200">
+        <h3 class="text-2xl font-bold text-green-700 mb-4 text-center">Book This Service</h3>
+        <p class="text-gray-600 text-center mb-6">Get professional veterinary care at your doorstep</p>
+        <div class="text-center">
+          <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20would%20like%20to%20book%20{{ service.title }}%20service.%20Please%20let%20me%20know%20the%20available%20time."
+             target="_blank"
+             class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+            📅 Book Now via WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg mb-8">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Contact Information</h3>
+        <div class="space-y-3">
+          <p class="flex items-center">
+            <span class="text-green-500 mr-3">📞</span>
+            <a href="tel:+918208657969" class="text-blue-600 hover:underline">+91 82086 57969</a>
+          </p>
+          <p class="flex items-center">
+            <span class="text-green-500 mr-3">📧</span>
+            <a href="mailto:Mrigaayuvets2025@gmail.com" class="text-blue-600 hover:underline">Mrigaayuvets2025@gmail.com</a>
+          </p>
+          <p class="flex items-center">
+            <span class="text-green-500 mr-3">📍</span>
+            <span class="text-gray-600">Mumbai, Maharashtra, India</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Emergency Notice -->
+      <div class="bg-red-50 rounded-2xl p-6 shadow-lg border-2 border-red-200">
+        <h3 class="text-xl font-bold text-red-700 mb-4">Emergency Services</h3>
+        <p class="text-gray-600 mb-4">For urgent veterinary care, contact us immediately.</p>
+        <a href="tel:+918208657969" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300 block text-center">
+          🚨 Call Emergency
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

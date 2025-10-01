@@ -1,0 +1,448 @@
+{% extends "layout.html" %}
+
+{% block title %}Choosing the Right Dog Breed for Your Lifestyle | MrigaAayuvets{% endblock %}
+
+{% block content %}
+
+<div class="container max-w-7xl mx-auto py-10 px-6">
+
+  <!-- Breadcrumb -->
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="{{ url_for('blogs') }}" class="text-green-600 hover:underline">← Back to Blogs</a> / Puppy Care Guide
+  </nav>
+
+  <!-- Main Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+    <!-- Left: Main Content -->
+    <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Choosing the Right Dog Breed for Your Lifestyle</h1>
+        
+        <div class="flex flex-wrap gap-6 text-gray-500 text-sm mb-6">
+            <span>📅 Published: March 20, 2025</span>
+            <span>⏱️ 10 min read</span>
+            <span>🏷️ Dog Breeds, Pet Selection, Lifestyle</span>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&h=400&fit=crop" 
+             alt="Adorable white puppy being fed" 
+             class="w-full h-96 object-cover rounded-xl mb-6">
+
+        <div class="prose prose-lg max-w-none space-y-6">
+          <p class="mb-5">Choosing the right dog breed is one of the most important decisions you'll make as a pet owner. The perfect match depends on your lifestyle, living situation, experience level, and personal preferences. A mismatch can lead to behavioral problems, unhappiness for both you and your dog, and potentially rehoming situations.</p>
+
+          <!-- Stats Box -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 my-6 text-center">
+            <div class="text-5xl font-bold text-primary mb-3">25%</div>
+            <p class="text-gray-700">of dogs are rehomed within their first year due to lifestyle mismatches with their breed characteristics.</p>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Understanding Dog Breed Classifications</h2>
+          <p class="mb-5">Dogs are typically categorized into groups based on their original purpose. Understanding these groups helps predict behavior and needs:</p>
+
+          <!-- Breed Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-6">
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+              <h4 class="text-gray-700 mb-2 font-semibold">🏃‍♂️ Working Group</h4>
+              <p><strong>Purpose:</strong> Guard, rescue, pull sleds</p>
+              <p><strong>Traits:</strong> Strong, intelligent, task-oriented</p>
+              <p><strong>Examples:</strong> German Shepherd, Siberian Husky</p>
+            </div>
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+              <h4 class="text-gray-700 mb-2 font-semibold">🦆 Sporting Group</h4>
+              <p><strong>Purpose:</strong> Hunt and retrieve game</p>
+              <p><strong>Traits:</strong> High energy, friendly, trainable</p>
+              <p><strong>Examples:</strong> Golden Retriever, Labrador</p>
+            </div>
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+              <h4 class="text-gray-700 mb-2 font-semibold">🏠 Toy Group</h4>
+              <p><strong>Purpose:</strong> Companionship</p>
+              <p><strong>Traits:</strong> Small size, alert, affectionate</p>
+              <p><strong>Examples:</strong> Chihuahua, Pomeranian</p>
+            </div>
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+              <h4 class="text-gray-700 mb-2 font-semibold">🐕 Terrier Group</h4>
+              <p><strong>Purpose:</strong> Hunt vermin</p>
+              <p><strong>Traits:</strong> Feisty, energetic, determined</p>
+              <p><strong>Examples:</strong> Jack Russell, Bull Terrier</p>
+            </div>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Assessing Your Lifestyle</h2>
+          <p class="mb-5">Before falling in love with a particular breed, honestly evaluate these key factors:</p>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Living Space Assessment</h3>
+          <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+            <h4 class="text-blue-800 font-semibold mb-4">🏠 Space Requirements by Breed Size</h4>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse border border-gray-300">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Living Situation</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Best Breed Sizes</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Recommended Breeds</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-300 p-3">Small Apartment</td>
+                    <td class="border border-gray-300 p-3">Toy to Small (5-25 lbs)</td>
+                    <td class="border border-gray-300 p-3">French Bulldog, Cavalier King Charles, Boston Terrier</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-3">Large Apartment</td>
+                    <td class="border border-gray-300 p-3">Small to Medium (10-50 lbs)</td>
+                    <td class="border border-gray-300 p-3">Cocker Spaniel, Bulldog, Beagle</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-3">House with Small Yard</td>
+                    <td class="border border-gray-300 p-3">Medium (25-60 lbs)</td>
+                    <td class="border border-gray-300 p-3">Border Collie, Australian Shepherd, Standard Poodle</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-3">House with Large Yard</td>
+                    <td class="border border-gray-300 p-3">Large (50+ lbs)</td>
+                    <td class="border border-gray-300 p-3">Golden Retriever, German Shepherd, Great Dane</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Activity Level Matching</h3>
+          <p class="mb-5">One of the most critical factors in breed selection is matching energy levels:</p>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+            <h4 class="text-green-800 font-semibold mb-3">🏃‍♂️ High-Energy Breeds (Need 2+ hours daily exercise)</h4>
+            <ul class="list-disc pl-6 space-y-2 text-green-700">
+              <li><strong>Border Collie:</strong> Extremely intelligent, needs mental stimulation</li>
+              <li><strong>Australian Cattle Dog:</strong> Working breed, thrives with jobs to do</li>
+              <li><strong>Jack Russell Terrier:</strong> Small but mighty, needs consistent activity</li>
+              <li><strong>Siberian Husky:</strong> Built for endurance, loves running and hiking</li>
+              <li><strong>Weimaraner:</strong> "Gray ghost" needs vigorous daily exercise</li>
+            </ul>
+          </div>
+
+          <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+            <h4 class="text-blue-800 font-semibold mb-3">🚶‍♂️ Moderate-Energy Breeds (Need 1-2 hours daily exercise)</h4>
+            <ul class="list-disc pl-6 space-y-2 text-blue-700">
+              <li><strong>Golden Retriever:</strong> Friendly, adaptable, great family dogs</li>
+              <li><strong>Labrador Retriever:</strong> Versatile, loves swimming and fetching</li>
+              <li><strong>German Shepherd:</strong> Loyal, protective, needs mental challenges</li>
+              <li><strong>Standard Poodle:</strong> Highly trainable, hypoallergenic coat</li>
+              <li><strong>Brittany Spaniel:</strong> Gentle, energetic, great with children</li>
+            </ul>
+          </div>
+
+          <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 my-6">
+            <h4 class="text-orange-800 font-semibold mb-3">😴 Low-Energy Breeds (Need 30-60 minutes daily exercise)</h4>
+            <ul class="list-disc pl-6 space-y-2 text-orange-700">
+              <li><strong>Bulldog:</strong> Calm temperament, heat sensitive</li>
+              <li><strong>Basset Hound:</strong> Gentle, good with families, moderate exercise</li>
+              <li><strong>Shih Tzu:</strong> Friendly companion, indoor-oriented</li>
+              <li><strong>Great Dane:</strong> "Gentle giant," surprisingly calm indoors</li>
+              <li><strong>Cavalier King Charles Spaniel:</strong> Adaptable, sweet-natured</li>
+            </ul>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Time Commitment Factors</h2>
+          
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Grooming Requirements</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-gray-300 mb-6">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Grooming Level</th>
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Time Commitment</th>
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Breed Examples</th>
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Requirements</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 p-3">Low Maintenance</td>
+                  <td class="border border-gray-300 p-3">Weekly brushing</td>
+                  <td class="border border-gray-300 p-3">Beagle, Boxer, Pointer</td>
+                  <td class="border border-gray-300 p-3">Short coat, minimal shedding</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-3">Moderate Maintenance</td>
+                  <td class="border border-gray-300 p-3">2-3 times weekly</td>
+                  <td class="border border-gray-300 p-3">Golden Retriever, German Shepherd</td>
+                  <td class="border border-gray-300 p-3">Regular brushing, seasonal shedding</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-3">High Maintenance</td>
+                  <td class="border border-gray-300 p-3">Daily brushing + professional grooming</td>
+                  <td class="border border-gray-300 p-3">Poodle, Afghan Hound, Maltese</td>
+                  <td class="border border-gray-300 p-3">Prevents matting, professional cuts needed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Training and Socialization Needs</h3>
+          <p class="mb-4">Different breeds have varying training requirements and learning speeds:</p>
+          <ul class="list-disc pl-8 mb-6 space-y-2">
+            <li><strong>Highly Trainable:</strong> Border Collie, Poodle, German Shepherd - Learn quickly, need mental stimulation</li>
+            <li><strong>Moderately Trainable:</strong> Golden Retriever, Labrador - Eager to please, respond well to positive reinforcement</li>
+            <li><strong>Independent Thinkers:</strong> Afghan Hound, Basenji - Need patient, consistent training</li>
+            <li><strong>Stubborn but Smart:</strong> Bulldog, Beagle - Can be trained but may require more patience</li>
+          </ul>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Climate Considerations</h2>
+          <p class="mb-5">India's diverse climate zones affect breed suitability significantly:</p>
+
+          <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+            <h4 class="text-blue-800 font-semibold mb-4">🌡️ Climate Adaptability Guide</h4>
+            <div class="overflow-x-auto">
+              <table class="w-full border-collapse border border-gray-300">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Climate Type</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Suitable Breeds</th>
+                    <th class="border border-gray-300 p-3 text-left font-semibold">Breeds to Avoid</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border border-gray-300 p-3">Hot & Humid (Mumbai, Chennai)</td>
+                    <td class="border border-gray-300 p-3">Indian Pariah, Doberman, Short-coated breeds</td>
+                    <td class="border border-gray-300 p-3">Siberian Husky, Saint Bernard, thick-coated breeds</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-3">Hot & Dry (Delhi, Rajasthan)</td>
+                    <td class="border border-gray-300 p-3">German Shepherd, Indian Spitz, Labrador</td>
+                    <td class="border border-gray-300 p-3">Bulldogs, Pugs (breathing issues in heat)</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-3">Moderate (Pune, Bangalore)</td>
+                    <td class="border border-gray-300 p-3">Most breeds adapt well</td>
+                    <td class="border border-gray-300 p-3">Extreme cold-weather breeds still challenging</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Family Considerations</h2>
+          
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Best Breeds for Families with Children</h3>
+          <ul class="list-disc pl-8 mb-6 space-y-2">
+            <li><strong>Golden Retriever:</strong> Patient, gentle, protective of children</li>
+            <li><strong>Labrador Retriever:</strong> Friendly, energetic playmate</li>
+            <li><strong>Beagle:</strong> Sturdy, tolerant, good size for kids</li>
+            <li><strong>Cavalier King Charles Spaniel:</strong> Gentle, patient, adaptable</li>
+            <li><strong>Indian Pariah Dog:</strong> Hardy, intelligent, naturally good with families</li>
+          </ul>
+
+          <div class="bg-red-50 border border-red-200 rounded-xl p-6 my-6">
+            <h4 class="font-bold text-red-800 mb-4">⚠️ Breeds Requiring Extra Supervision with Children</h4>
+            <ul class="list-disc pl-6 space-y-2 text-red-700">
+              <li><strong>Small Toy Breeds:</strong> Can be injured by rough play</li>
+              <li><strong>Herding Breeds:</strong> May try to "herd" children by nipping</li>
+              <li><strong>Guard Breeds:</strong> Need proper socialization and training</li>
+              <li><strong>High-Prey Drive Breeds:</strong> May chase running children</li>
+            </ul>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">First-Time Owner Recommendations</h2>
+          <p class="mb-5">If you're new to dog ownership, consider these beginner-friendly breeds:</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-6">
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+              <h4 class="text-gray-700 mb-2 font-semibold">🥇 Labrador Retriever</h4>
+              <p><strong>Why Great:</strong> Forgiving temperament, eager to please</p>
+              <p><strong>Considerations:</strong> High energy, sheds considerably</p>
+            </div>
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+              <h4 class="text-gray-700 mb-2 font-semibold">🥈 Golden Retriever</h4>
+              <p><strong>Why Great:</strong> Patient, trainable, great family dog</p>
+              <p><strong>Considerations:</strong> Regular grooming needed</p>
+            </div>
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+              <h4 class="text-gray-700 mb-2 font-semibold">🥉 Cavalier King Charles</h4>
+              <p><strong>Why Great:</strong> Gentle, adaptable size, friendly</p>
+              <p><strong>Considerations:</strong> Some health concerns to monitor</p>
+            </div>
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+              <h4 class="text-gray-700 mb-2 font-semibold">🏆 Indian Pariah Dog</h4>
+              <p><strong>Why Great:</strong> Hardy, intelligent, low maintenance</p>
+              <p><strong>Considerations:</strong> Mixed traits, adopt from shelters</p>
+            </div>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Cost Considerations</h2>
+          <p class="mb-5">Different breeds have varying financial requirements:</p>
+
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse border border-gray-300 mb-6">
+              <thead>
+                <tr class="bg-gray-100">
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Cost Factor</th>
+                  <th class="border border-gray-300 p-3 text-left font-semibold">Low Cost Breeds</th>
+                  <th class="border border-gray-300 p-3 text-left font-semibold">High Cost Breeds</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 p-3">Initial Purchase</td>
+                  <td class="border border-gray-300 p-3">Indian Pariah, Mixed breeds</td>
+                  <td class="border border-gray-300 p-3">Purebreds from registered breeders</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-3">Grooming</td>
+                  <td class="border border-gray-300 p-3">Short-coated breeds</td>
+                  <td class="border border-gray-300 p-3">Poodles, Afghan Hounds, Long-coated breeds</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-3">Healthcare</td>
+                  <td class="border border-gray-300 p-3">Hardy mixed breeds</td>
+                  <td class="border border-gray-300 p-3">Breeds with genetic predispositions</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-3">Food</td>
+                  <td class="border border-gray-300 p-3">Small to medium breeds</td>
+                  <td class="border border-gray-300 p-3">Large and giant breeds</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Red Flags: Breeds That May Not Be Right</h2>
+          
+          <div class="bg-red-50 border border-red-200 rounded-xl p-6 my-6">
+            <h4 class="font-bold text-red-800 mb-4">🚩 Avoid These Breeds If You...</h4>
+            <ul class="list-disc pl-6 space-y-2 text-red-700">
+              <li><strong>Live in a small apartment:</strong> Great Danes, Siberian Huskies, High-energy working breeds</li>
+              <li><strong>Work long hours:</strong> Border Collies, Jack Russell Terriers, Separation anxiety-prone breeds</li>
+              <li><strong>Are a first-time owner:</strong> Chow Chow, Afghan Hound, Strong-willed independent breeds</li>
+              <li><strong>Have limited time for grooming:</strong> Poodles, Old English Sheepdogs, Long-coated breeds</li>
+              <li><strong>Live in hot climate:</strong> Saint Bernard, Newfoundland, Arctic breeds</li>
+            </ul>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">The Adoption Advantage</h2>
+          <p class="mb-5">Consider adopting from shelters and rescue organizations:</p>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+            <h4 class="text-green-800 font-semibold mb-3">👍 Benefits of Adoption</h4>
+            <ul class="list-disc pl-6 space-y-2 text-green-700">
+              <li><strong>Save a life:</strong> Give a homeless dog a second chance</li>
+              <li><strong>Known temperament:</strong> Shelter staff can assess personality</li>
+              <li><strong>Lower cost:</strong> Adoption fees much less than breeder prices</li>
+              <li><strong>Health benefits:</strong> Often already spayed/neutered and vaccinated</li>
+              <li><strong>Adult dogs available:</strong> Skip puppy training phase</li>
+              <li><strong>Mixed breeds:</strong> Often healthier and unique personalities</li>
+            </ul>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Making Your Final Decision</h2>
+          <p class="mb-5">Use this checklist to evaluate potential breeds:</p>
+
+          <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+            <h4 class="text-blue-800 font-semibold mb-4">✅ Breed Selection Checklist</h4>
+            <ul class="list-disc pl-6 space-y-2 text-blue-700">
+              <li>✓ Size appropriate for your living space</li>
+              <li>✓ Energy level matches your activity level</li>
+              <li>✓ Grooming requirements fit your schedule</li>
+              <li>✓ Training needs match your experience</li>
+              <li>✓ Climate suitability for your location</li>
+              <li>✓ Temperament fits your family situation</li>
+              <li>✓ Budget allows for breed-specific costs</li>
+              <li>✓ Long-term commitment (10-15+ years)</li>
+            </ul>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Frequently Asked Questions</h2>
+          
+          <div class="space-y-4 mb-6">
+            <div>
+              <p class="font-semibold mb-2"><strong>Q: Should I get a puppy or adult dog?</strong></p>
+              <p><strong>A:</strong> Puppies require more time and training but can be molded to your lifestyle. Adult dogs have established personalities but may have fewer behavioral surprises.</p>
+            </div>
+
+            <div>
+              <p class="font-semibold mb-2"><strong>Q: Are mixed breeds healthier than purebreds?</strong></p>
+              <p><strong>A:</strong> Mixed breeds often have fewer genetic health issues due to greater genetic diversity, though individual health varies.</p>
+            </div>
+
+            <div>
+              <p class="font-semibold mb-2"><strong>Q: How do I find a reputable breeder?</strong></p>
+              <p><strong>A:</strong> Look for breeders who health test their breeding dogs, allow you to meet the mother, provide health guarantees, and are knowledgeable about the breed.</p>
+            </div>
+
+            <div>
+              <p class="font-semibold mb-2"><strong>Q: What about Indian native breeds?</strong></p>
+              <p><strong>A:</strong> Indian Pariah Dogs and Indian Spitz are excellent choices - they're well-adapted to local climate, intelligent, and often available for adoption.</p>
+            </div>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-primary pl-5">Conclusion</h2>
+          <p class="mb-5">Choosing the right dog breed is a decision that will impact your life for 10-15+ years. Take time to honestly assess your lifestyle, research breeds thoroughly, and consider visiting shelters to meet different dogs in person. Remember, the "perfect" breed on paper might not be perfect for your specific situation.</p>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+            <h4 class="text-green-800 font-semibold mb-3">🎯 Final Tip</h4>
+            <p class="text-green-700">The best dog for you is one whose needs you can meet consistently and happily. A well-matched dog and owner make for the happiest, healthiest relationships.</p>
+          </div>
+        </div>
+             <!-- Back Button -->
+        <a href="{{ url_for('blogs') }}"
+           class="inline-block mt-8 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">
+          ← Back to Blogs
+        </a>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="lg:col-span-1 space-y-8">
+      <!-- Ask the Vet Card -->
+      <div class="bg-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200">
+        <h3 class="text-2xl font-bold text-green-700 mb-4 text-center">Ask Our Vet</h3>
+        <p class="text-gray-600 text-center mb-6">Have questions about your pet's health?</p>
+        <div class="text-center">
+          <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20have%20a%20question%20about%20my%20pet's%20health.%20Can%20you%20help?"
+             target="_blank"
+             class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+             💬 Chat with Vet
+          </a>
+        </div>
+      </div>
+
+      <!-- Related Articles -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
+        <div class="space-y-4">
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Pet Vaccination Guide</h4>
+            <p class="text-sm text-gray-500">Essential vaccines for your pet's health</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Senior Pet Care Tips</h4>
+            <p class="text-sm text-gray-500">Caring for your aging companion</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Emergency Pet Care</h4>
+            <p class="text-sm text-gray-500">What to do in pet emergencies</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="bg-blue-50 rounded-2xl p-6 shadow-lg border-2 border-blue-200">
+        <h3 class="text-xl font-bold text-blue-700 mb-4">Get Pet Care Tips</h3>
+        <p class="text-gray-600 mb-4">Subscribe to our newsletter for expert pet care advice</p>
+        <form class="space-y-3">
+          <input type="email" 
+                 placeholder="Your email address" 
+                 class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          <button type="submit" 
+                  class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+            📧 Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

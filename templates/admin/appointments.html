@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments Management - Mrigaayuvets Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="fixed top-4 right-4 z-50 max-w-sm">
+                {% for category, message in messages %}
+                    <div class="mb-2 p-4 rounded-lg shadow-md
+                        {% if category == 'error' %}bg-red-100 border border-red-400 text-red-700
+                        {% elif category == 'success' %}bg-green-100 border border-green-400 text-green-700
+                        {% else %}bg-blue-100 border border-blue-400 text-blue-700{% endif %}">
+                        <div class="flex items-center justify-between">
+                            <span>{{ message }}</span>
+                            <button onclick="this.parentElement.parentElement.remove()" class="ml-2 text-gray-500 hover:text-gray-700">×</button>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <h1 class="text-xl font-bold text-blue-600">Mrigaayuvets Admin</h1>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="{{ url_for('admin_dashboard') }}" class="text-gray-600 hover:text-blue-600 transition duration-200">Dashboard</a>
+                        <a href="{{ url_for('admin_gallery') }}" class="text-gray-600 hover:text-blue-600 transition duration-200">Gallery</a>
+                        <a href="{{ url_for('admin_appointments') }}" class="text-blue-600 font-medium border-b-2 border-blue-600">Appointments</a>
+                        <a href="{{ url_for('admin_messages') }}" class="text-gray-600 hover:text-blue-600 transition duration-200">Messages</a>
+                    </div>
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md text-gray-600 hover:text-blue-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="hidden sm:block text-gray-700 text-sm">Welcome, {{ admin_username or 'Admin' }}</span>
+                    <a href="{{ url_for('admin_logout') }}" 
+                       class="bg-red-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded text-sm hover:bg-red-700 transition duration-200">
+                        Logout
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 py-2">
+                <div class="flex flex-col space-y-2">
+                    <a href="{{ url_for('admin_dashboard') }}" class="text-gray-600 hover:text-blue-600 px-4 py-2 transition duration-200">Dashboard</a>
+                    <a href="{{ url_for('admin_gallery') }}" class="text-gray-600 hover:text-blue-600 px-4 py-2 transition duration-200">Gallery</a>
+                    <a href="{{ url_for('admin_appointments') }}" class="text-blue-600 font-medium px-4 py-2 bg-blue-50">Appointments</a>
+                    <a href="{{ url_for('admin_messages') }}" class="text-gray-600 hover:text-blue-600 px-4 py-2 transition duration-200">Messages</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <!-- Page Header -->
+        <div class="mb-8">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Appointments Management</h2>
+                    <p class="mt-1 text-sm text-gray-600">Manage and track all appointment requests</p>
+                </div>
+                <div class="mt-4 sm:mt-0">
+                    <button onclick="refreshPage()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-200 text-sm">
+                        <svg class="w-4 h-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                        Refresh
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Cards for Appointments -->
+        {% if stats %}
+        <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+            <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-500">
+                <div class="text-2xl font-bold text-blue-600">{{ stats.total or 0 }}</div>
+                <div class="text-sm text-gray-600">Total</div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-yellow-500">
+                <div class="text-2xl font-bold text-yellow-600">{{ stats.pending or 0 }}</div>
+                <div class="text-sm text-gray-600">Pending</div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-green-500">
+                <div class="text-2xl font-bold text-green-600">{{ stats.confirmed or 0 }}</div>
+                <div class="text-sm text-gray-600">Confirmed</div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-purple-500">
+                <div class="text-2xl font-bold text-purple-600">{{ stats.completed or 0 }}</div>
+                <div class="text-sm text-gray-600">Completed</div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-red-500">
+                <div class="text-2xl font-bold text-red-600">{{ stats.cancelled or 0 }}</div>
+                <div class="text-sm text-gray-600">Cancelled</div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Filter Section -->
+        <div class="bg-white rounded-lg shadow mb-6">
+            <div class="p-4 sm:p-6 border-b border-gray-200">
+                <h3 class="text-lg font-medium text-gray-900">Filter Appointments</h3>
+            </div>
+            <div class="p-4 sm:p-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <select id="statusFilter" class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500">
+                        <option value="">All Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="confirmed">Confirmed</option>
+                        <option value="completed">Completed</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                    
+                    <select id="serviceFilter" class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500">
+                        <option value="">All Services</option>
+                        <option value="Vaccination">Vaccination</option>
+                        <option value="General Treatment">General Treatment</option>
+                        <option value="Deworming">Deworming</option>
+                        <option value="Grooming">Grooming</option>
+                        <option value="Emergency Care">Emergency Care</option>
+                    </select>
+                    
+                    <input type="date" id="dateFilter" class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500">
+                    
+                    <button onclick="clearFilters()" class="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition duration-200 text-sm">
+                        Clear Filters
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Appointments Table -->
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+            <div class="p-4 sm:p-6 border-b border-gray-200">
+                <h3 class="text-lg font-medium text-gray-900">All Appointments</h3>
+            </div>
+            
+            <!-- Mobile Card View -->
+            <div class="block sm:hidden">
+                {% for appointment in appointments %}
+                <div class="appointment-card border-b border-gray-200 p-4" 
+                     data-status="{{ appointment.status }}" 
+                     data-service="{{ appointment.service or '' }}" 
+                     data-date="{{ appointment.preferred_date or '' }}">
+                    <div class="flex justify-between items-start mb-3">
+                        <div>
+                            <h4 class="font-semibold text-gray-900">{{ appointment.name }}</h4>
+                            <p class="text-sm text-gray-600">{{ appointment.email }}</p>
+                            <p class="text-sm text-gray-600">{{ appointment.phone }}</p>
+                        </div>
+                        <span class="px-2 py-1 text-xs font-medium rounded-full
+                            {% if appointment.status == 'pending' %}bg-yellow-100 text-yellow-800
+                            {% elif appointment.status == 'confirmed' %}bg-blue-100 text-blue-800
+                            {% elif appointment.status == 'completed' %}bg-green-100 text-green-800
+                            {% else %}bg-red-100 text-red-800{% endif %}">
+                            {{ appointment.status.title() }}
+                        </span>
+                    </div>
+                    
+                    <div class="space-y-2 text-sm">
+                        {% if appointment.pet_name %}
+                        <p><span class="font-medium">Pet:</span> {{ appointment.pet_name }}</p>
+                        {% endif %}
+                        {% if appointment.service %}
+                        <p><span class="font-medium">Service:</span> {{ appointment.service }}</p>
+                        {% endif %}
+                        {% if appointment.preferred_date %}
+                        <p><span class="font-medium">Date:</span> {{ appointment.preferred_date }}</p>
+                        {% endif %}
+                        {% if appointment.preferred_time %}
+                        <p><span class="font-medium">Time:</span> {{ appointment.preferred_time }}</p>
+                        {% endif %}
+                        {% if appointment.message %}
+                        <p><span class="font-medium">Message:</span> {{ appointment.message[:100] }}{% if appointment.message|length > 100 %}...{% endif %}</p>
+                        {% endif %}
+                        <p><span class="font-medium">Submitted:</span> {{ appointment.created_at.strftime('%Y-%m-%d %H:%M') }}</p>
+                    </div>
+                    
+                    <div class="mt-4 flex space-x-2">
+                        <form method="POST" action="{{ url_for('update_appointment_status', appointment_id=appointment.id) }}" class="inline">
+                            <select name="status" onchange="this.form.submit()" class="text-xs border border-gray-300 rounded px-2 py-1 focus:ring-1 focus:ring-blue-500">
+                                <option value="pending" {% if appointment.status == 'pending' %}selected{% endif %}>Pending</option>
+                                <option value="confirmed" {% if appointment.status == 'confirmed' %}selected{% endif %}>Confirmed</option>
+                                <option value="completed" {% if appointment.status == 'completed' %}selected{% endif %}>Completed</option>
+                                <option value="cancelled" {% if appointment.status == 'cancelled' %}selected{% endif %}>Cancelled</option>
+                            </select>
+                        </form>
+                        
+                        <a href="tel:{{ appointment.phone }}" class="bg-green-500 text-white px-3 py-1 rounded text-xs hover:bg-green-600 transition duration-200">
+                            Call
+                        </a>
+                        
+                        <a href="https://wa.me/91{{ appointment.phone }}?text=Hello%20{{ appointment.name }},%20regarding%20your%20appointment%20request..." 
+                           target="_blank" 
+                           class="bg-blue-500 text-white px-3 py-1 rounded text-xs hover:bg-blue-600 transition duration-200">
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="p-8 text-center text-gray-500">
+                    <svg class="w-12 h-12 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a4 4 0 118 0v4m-4 11v-3m0 0V7m0 8h8m-8 0H4m8-8h4m-4 0V3"></path>
+                    </svg>
+                    <p>No appointments found</p>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <!-- Desktop Table View -->
+            <div class="hidden sm:block overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Patient Info</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pet Details</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Service</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Schedule</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200" id="appointmentsTableBody">
+                        {% for appointment in appointments %}
+                        <tr class="appointment-row hover:bg-gray-50 transition duration-200" 
+                            data-status="{{ appointment.status }}" 
+                            data-service="{{ appointment.service or '' }}" 
+                            data-date="{{ appointment.preferred_date or '' }}">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div>
+                                    <div class="text-sm font-medium text-gray-900">{{ appointment.name }}</div>
+                                    <div class="text-sm text-gray-500">{{ appointment.email }}</div>
+                                    <div class="text-sm text-gray-500">{{ appointment.phone }}</div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="text-sm text-gray-900">{{ appointment.pet_name or 'Not specified' }}</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="text-sm text-gray-900">{{ appointment.service or 'General Consultation' }}</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                <div>{{ appointment.preferred_date or 'Not specified' }}</div>
+                                <div class="text-gray-500">{{ appointment.preferred_time or 'Flexible' }}</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-3 py-1 text-xs font-medium rounded-full
+                                    {% if appointment.status == 'pending' %}bg-yellow-100 text-yellow-800
+                                    {% elif appointment.status == 'confirmed' %}bg-blue-100 text-blue-800
+                                    {% elif appointment.status == 'completed' %}bg-green-100 text-green-800
+                                    {% else %}bg-red-100 text-red-800{% endif %}">
+                                    {{ appointment.status.title() }}
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                <div class="flex flex-col lg:flex-row gap-2">
+                                    <form method="POST" action="{{ url_for('update_appointment_status', appointment_id=appointment.id) }}" class="inline">
+                                        <select name="status" onchange="this.form.submit()" class="text-xs border border-gray-300 rounded px-2 py-1 focus:ring-1 focus:ring-blue-500">
+                                            <option value="pending" {% if appointment.status == 'pending' %}selected{% endif %}>Pending</option>
+                                            <option value="confirmed" {% if appointment.status == 'confirmed' %}selected{% endif %}>Confirmed</option>
+                                            <option value="completed" {% if appointment.status == 'completed' %}selected{% endif %}>Completed</option>
+                                            <option value="cancelled" {% if appointment.status == 'cancelled' %}selected{% endif %}>Cancelled</option>
+                                        </select>
+                                    </form>
+                                    
+                                    <div class="flex gap-1">
+                                        <a href="tel:{{ appointment.phone }}" 
+                                           class="bg-green-500 text-white px-2 py-1 rounded text-xs hover:bg-green-600 transition duration-200"
+                                           title="Call {{ appointment.name }}">
+                                            📞
+                                        </a>
+                                        
+                                        <a href="https://wa.me/91{{ appointment.phone }}?text=Hello%20{{ appointment.name }},%20regarding%20your%20appointment%20request%20for%20{{ appointment.service or 'veterinary service' }}..." 
+                                           target="_blank" 
+                                           class="bg-blue-500 text-white px-2 py-1 rounded text-xs hover:bg-blue-600 transition duration-200"
+                                           title="WhatsApp {{ appointment.name }}">
+                                            💬
+                                        </a>
+                                        
+                                        <button onclick="viewDetails({{ appointment.id }})" 
+                                                class="bg-purple-500 text-white px-2 py-1 rounded text-xs hover:bg-purple-600 transition duration-200"
+                                                title="View Details">
+                                            👁️
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="6" class="px-6 py-12 text-center text-gray-500">
+                                <svg class="w-12 h-12 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a4 4 0 118 0v4m-4 11v-3m0 0V7m0 8h8m-8 0H4m8-8h4m-4 0V3"></path>
+                                </svg>
+                                <p class="text-lg font-medium">No appointments found</p>
+                                <p class="text-sm">Appointment requests will appear here when submitted</p>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Appointment Details Modal -->
+    <div id="appointmentModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden z-50">
+        <div class="flex items-center justify-center min-h-screen px-4">
+            <div class="bg-white rounded-lg shadow-xl max-w-lg w-full max-h-screen overflow-y-auto">
+                <div class="p-6 border-b border-gray-200">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-lg font-medium text-gray-900">Appointment Details</h3>
+                        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="modalContent" class="p-6">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Auto-hide flash messages
+        setTimeout(() => {
+            const flashMessages = document.querySelectorAll('.fixed.top-4 > div');
+            flashMessages.forEach(msg => {
+                msg.style.opacity = '0';
+                msg.style.transform = 'translateX(100%)';
+                setTimeout(() => msg.remove(), 300);
+            });
+        }, 5000);
+
+        // Filter functionality
+        function filterAppointments() {
+            const statusFilter = document.getElementById('statusFilter').value;
+            const serviceFilter = document.getElementById('serviceFilter').value;
+            const dateFilter = document.getElementById('dateFilter').value;
+            
+            // Filter mobile cards
+            const cards = document.querySelectorAll('.appointment-card');
+            cards.forEach(card => {
+                let show = true;
+                
+                if (statusFilter && card.dataset.status !== statusFilter) show = false;
+                if (serviceFilter && card.dataset.service !== serviceFilter) show = false;
+                if (dateFilter && card.dataset.date !== dateFilter) show = false;
+                
+                card.style.display = show ? 'block' : 'none';
+            });
+            
+            // Filter desktop table rows
+            const rows = document.querySelectorAll('.appointment-row');
+            rows.forEach(row => {
+                let show = true;
+                
+                if (statusFilter && row.dataset.status !== statusFilter) show = false;
+                if (serviceFilter && row.dataset.service !== serviceFilter) show = false;
+                if (dateFilter && row.dataset.date !== dateFilter) show = false;
+                
+                row.style.display = show ? 'table-row' : 'none';
+            });
+        }
+
+        // Add event listeners to filters
+        document.getElementById('statusFilter').addEventListener('change', filterAppointments);
+        document.getElementById('serviceFilter').addEventListener('change', filterAppointments);
+        document.getElementById('dateFilter').addEventListener('change', filterAppointments);
+
+        function clearFilters() {
+            document.getElementById('statusFilter').value = '';
+            document.getElementById('serviceFilter').value = '';
+            document.getElementById('dateFilter').value = '';
+            filterAppointments();
+        }
+
+        function refreshPage() {
+            window.location.reload();
+        }
+
+        // Modal functionality - Fixed version without JSON serialization
+        function viewDetails(appointmentId) {
+            // Extract appointment data directly from the table row
+            const rows = document.querySelectorAll('.appointment-row, .appointment-card');
+            let appointmentData = null;
+            
+            for (let row of rows) {
+                const updateForm = row.querySelector(`form[action*="appointment/${appointmentId}/update"]`);
+                if (updateForm) {
+                    appointmentData = {
+                        id: appointmentId,
+                        name: row.querySelector('.font-medium, h4')?.textContent?.trim() || 'N/A',
+                        email: row.querySelector('.text-gray-500')?.textContent?.trim() || 'N/A',
+                        phone: row.querySelectorAll('.text-gray-500')[1]?.textContent?.trim() || 'N/A',
+                        petName: row.querySelector('td:nth-child(2) .text-gray-900')?.textContent?.trim() || 'Not specified',
+                        service: row.querySelector('td:nth-child(3) .text-gray-900')?.textContent?.trim() || 'General Consultation',
+                        preferredDate: row.querySelector('td:nth-child(4) div:first-child')?.textContent?.trim() || 'Not specified',
+                        preferredTime: row.querySelector('td:nth-child(4) .text-gray-500')?.textContent?.trim() || 'Flexible',
+                        status: row.querySelector('.rounded-full')?.textContent?.trim()?.toLowerCase() || 'pending'
+                    };
+                    break;
+                }
+            }
+            
+            if (appointmentData) {
+                showAppointmentModal(appointmentData);
+            } else {
+                alert('Appointment details not found');
+            }
+        }
+        
+        function showAppointmentModal(appointment) {
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Name</label>
+                            <p class="mt-1 text-sm text-gray-900">${appointment.name}</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Email</label>
+                            <p class="mt-1 text-sm text-gray-900">${appointment.email}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Phone</label>
+                            <p class="mt-1 text-sm text-gray-900">${appointment.phone}</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Pet Name</label>
+                            <p class="mt-1 text-sm text-gray-900">${appointment.petName}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Service</label>
+                            <p class="mt-1 text-sm text-gray-900">${appointment.service}</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Status</label>
+                            <span class="mt-1 inline-flex px-2 py-1 text-xs font-medium rounded-full
+                                ${appointment.status === 'pending' ? 'bg-yellow-100 text-yellow-800' :
+                                  appointment.status === 'confirmed' ? 'bg-blue-100 text-blue-800' :
+                                  appointment.status === 'completed' ? 'bg-green-100 text-green-800' :
+                                  'bg-red-100 text-red-800'}">
+                                ${appointment.status.charAt(0).toUpperCase() + appointment.status.slice(1)}
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Preferred Date</label>
+                            <p class="mt-1 text-sm text-gray-900">${appointment.preferredDate}</p>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Preferred Time</label>
+                            <p class="mt-1 text-sm text-gray-900">${appointment.preferredTime}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-3 pt-4 border-t border-gray-200">
+                        <a href="tel:${appointment.phone}" 
+                           class="flex-1 bg-green-500 text-white text-center py-2 px-4 rounded-lg hover:bg-green-600 transition duration-200">
+                            Call
+                        </a>
+                        <a href="https://wa.me/91${appointment.phone.replace(/\D/g, '')}?text=Hello%20${appointment.name},%20regarding%20your%20appointment%20request..." 
+                           target="_blank" 
+                           class="flex-1 bg-blue-500 text-white text-center py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200">
+                           WhatsApp
+                        </a>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('appointmentModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('appointmentModal').classList.add('hidden');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('appointmentModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });

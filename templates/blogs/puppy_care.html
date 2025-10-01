@@ -1,0 +1,372 @@
+{% extends "layout.html" %}
+
+{% block title %}How to Take Care of Your Puppy and Feed Them - Complete Guide | MrigaAayuvets{% endblock %}
+
+{% block content %}
+
+<div class="container max-w-7xl mx-auto py-10 px-6">
+
+  <!-- Breadcrumb -->
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="{{ url_for('blogs') }}" class="text-green-600 hover:underline">← Back to Blogs</a> / Puppy Care Guide
+  </nav>
+
+  <!-- Main Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+    <!-- Left: Main Content -->
+    <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">How to Take Care of Your Puppy and Feed Them</h1>
+        
+        <div class="flex flex-wrap gap-6 text-gray-500 text-sm mb-6">
+            <span>📅 Published: March 15, 2025</span>
+            <span>⏱️ 15 min read</span>
+            <span>🏷️ Nutrition, Puppy Care</span>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800&h=400&fit=crop" 
+             alt="Adorable white puppy being fed" 
+             class="w-full h-96 object-cover rounded-xl mb-6">
+
+        <!-- Article Body -->
+        <div class="prose prose-lg max-w-none space-y-6">
+            <p class="mb-5">The first few weeks and months of a puppy's life are absolutely critical for their development, health, and future well-being. Proper nutrition and care during this period lay the foundation for a long, healthy, and happy life. At MrigaAayuvets, we understand that new puppy parents often feel overwhelmed by the responsibility of caring for their tiny new family member.</p>
+
+            <p class="mb-8">This comprehensive guide will walk you through everything you need to know about feeding and caring for your puppy, from their first days to their first birthday and beyond.</p>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-5">The Critical First Week</h2>
+            <p class="mb-5">The first week of a puppy's life is indeed the most critical period for survival. During this time, puppies are completely dependent on their mother for warmth, nutrition, and even basic bodily functions.</p>
+
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">What Happens in the First Week</h3>
+            <ul class="list-disc pl-8 mb-6 space-y-3">
+                <li><strong>Days 1-3:</strong> Puppies should nurse within the first few hours of birth to receive colostrum, which contains essential antibodies</li>
+                <li><strong>Days 4-7:</strong> Puppies should gain weight daily and sleep most of the time</li>
+                <li><strong>Eyes and ears:</strong> Remain closed during this period</li>
+                <li><strong>Temperature regulation:</strong> Puppies cannot regulate their body temperature and rely on their mother and littermates</li>
+            </ul>
+
+            <div class="bg-red-50 border border-red-200 rounded-xl p-6 my-6">
+                <h4 class="font-bold text-red-800 mb-4">⚠️ Emergency Signs in Newborn Puppies:</h4>
+                <ul class="list-disc pl-6 space-y-2 text-red-700">
+                    <li>Not gaining weight or losing weight</li>
+                    <li>Constant crying or lethargy</li>
+                    <li>Difficulty nursing</li>
+                    <li>Cold to the touch</li>
+                    <li>Diarrhea or lack of urination</li>
+                </ul>
+                <p class="mt-4 text-red-800">Contact your veterinarian immediately if you notice any of these signs.</p>
+            </div>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-5">Feeding Schedule by Age</h2>
+            <p class="mb-5">Proper feeding schedules are crucial for healthy development. Here's a comprehensive guide based on your puppy's age:</p>
+
+            <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+                <h4 class="text-blue-800 font-semibold mb-4">📅 Age-Based Feeding Schedule</h4>
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse mt-4">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border border-gray-300 p-3 text-left font-semibold">Age</th>
+                                <th class="border border-gray-300 p-3 text-left font-semibold">Feeding Frequency</th>
+                                <th class="border border-gray-300 p-3 text-left font-semibold">Food Type</th>
+                                <th class="border border-gray-300 p-3 text-left font-semibold">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 p-3">0-4 weeks</td>
+                                <td class="border border-gray-300 p-3">Every 2-3 hours</td>
+                                <td class="border border-gray-300 p-3">Mother's milk only</td>
+                                <td class="border border-gray-300 p-3">Critical bonding period</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 p-3">4-6 weeks</td>
+                                <td class="border border-gray-300 p-3">4-5 times daily</td>
+                                <td class="border border-gray-300 p-3">Begin weaning with puppy mush</td>
+                                <td class="border border-gray-300 p-3">Gradual transition</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3">6-12 weeks</td>
+                                <td class="border border-gray-300 p-3">4 times daily</td>
+                                <td class="border border-gray-300 p-3">High-quality puppy food</td>
+                                <td class="border border-gray-300 p-3">Small, frequent meals</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 p-3">3-6 months</td>
+                                <td class="border border-gray-300 p-3">3 times daily</td>
+                                <td class="border border-gray-300 p-3">Puppy food</td>
+                                <td class="border border-gray-300 p-3">Consistent schedule</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3">6-12 months</td>
+                                <td class="border border-gray-300 p-3">2 times daily</td>
+                                <td class="border border-gray-300 p-3">Puppy food</td>
+                                <td class="border border-gray-300 p-3">Monitor growth</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="border border-gray-300 p-3">12+ months</td>
+                                <td class="border border-gray-300 p-3">1-2 times daily</td>
+                                <td class="border border-gray-300 p-3">Adult dog food</td>
+                                <td class="border border-gray-300 p-3">Transition complete</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-5">Choosing the Right Puppy Food</h2>
+            <p class="mb-5">Not all puppy foods are created equal. The quality of nutrition you provide during the puppy stage will impact your dog's health throughout their life.</p>
+
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">What to Look for in Puppy Food</h3>
+            <ul class="list-disc pl-8 mb-6 space-y-3">
+                <li><strong>AAFCO certification:</strong> Look for foods that meet AAFCO (Association of American Feed Control Officials) standards</li>
+                <li><strong>High-quality protein:</strong> Should be the first ingredient (chicken, lamb, fish)</li>
+                <li><strong>DHA:</strong> Essential fatty acid for brain and eye development</li>
+                <li><strong>Appropriate calcium levels:</strong> For proper bone development</li>
+                <li><strong>No artificial preservatives:</strong> Avoid BHA, BHT, and ethoxyquin</li>
+            </ul>
+
+            <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+                <h4 class="text-green-800 font-semibold mb-3">💡 Feeding Tips for Success:</h4>
+                <ul class="list-disc pl-6 space-y-2 text-green-700">
+                    <li>Stick to a consistent feeding schedule</li>
+                    <li>Measure portions according to package guidelines</li>
+                    <li>Use the same bowl and feeding location</li>
+                    <li>Remove uneaten food after 20-30 minutes</li>
+                    <li>Always provide fresh water</li>
+                </ul>
+            </div>
+
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Foods to Avoid</h3>
+            <p class="mb-3">Many human foods are toxic to puppies and dogs. Never feed your puppy:</p>
+            <ul class="list-disc pl-8 mb-6 space-y-2">
+                <li>Chocolate (especially dark chocolate)</li>
+                <li>Grapes and raisins</li>
+                <li>Onions and garlic</li>
+                <li>Xylitol (artificial sweetener)</li>
+                <li>Avocado</li>
+                <li>Cooked bones (can splinter)</li>
+                <li>Alcohol</li>
+                <li>Caffeine</li>
+            </ul>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-5">The Weaning Process (4-8 weeks)</h2>
+            <p class="mb-5">Weaning is the gradual transition from mother's milk to solid food. This process should be done slowly and carefully.</p>
+
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Step-by-Step Weaning Guide</h3>
+            <ol class="list-decimal pl-8 mb-6 space-y-3">
+                <li><strong>Week 4:</strong> Introduce "puppy mush" - high-quality puppy food mixed with warm water or puppy milk replacer</li>
+                <li><strong>Week 5:</strong> Gradually reduce the liquid, making the food thicker</li>
+                <li><strong>Week 6:</strong> Offer mostly solid food with minimal liquid</li>
+                <li><strong>Week 7-8:</strong> Puppies should be eating solid food independently</li>
+            </ol>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-5">Portion Control and Weight Management</h2>
+            <p class="mb-5">Overfeeding is just as dangerous as underfeeding. Overweight puppies are more prone to joint problems and other health issues later in life.</p>
+
+            <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+                <h4 class="text-green-800 font-semibold mb-3">💡 How to Determine Proper Portions:</h4>
+                <ul class="list-disc pl-6 space-y-2 text-green-700">
+                    <li>Follow feeding guidelines on puppy food packaging</li>
+                    <li>Adjust based on your puppy's body condition</li>
+                    <li>You should be able to feel your puppy's ribs without pressing hard</li>
+                    <li>Your puppy should have a visible waist when viewed from above</li>
+                    <li>Consult your veterinarian for personalized recommendations</li>
+                </ul>
+            </div>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-5">Hydration and Water Needs</h2>
+            <p class="mb-5">Puppies need constant access to fresh, clean water. Young puppies get most of their hydration from mother's milk, but as they wean, water becomes increasingly important.</p>
+
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Water Guidelines</h3>
+            <ul class="list-disc pl-8 mb-6 space-y-2">
+                <li>Provide fresh water daily in clean bowls</li>
+                <li>Puppies need about ½ to 1 ounce of water per pound of body weight daily</li>
+                <li>Monitor water intake - excessive drinking can indicate health problems</li>
+                <li>Clean water bowls regularly to prevent bacteria growth</li>
+                <li>Consider multiple water stations in larger homes</li>
+            </ul>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-5">Essential Care Beyond Feeding</h2>
+            <p class="mb-5">Proper nutrition is just one aspect of puppy care. Here are other critical areas that require attention:</p>
+
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Vaccination Schedule</h3>
+            <p class="mb-3">Puppies need a series of vaccinations to protect them from serious diseases. Work with your veterinarian to establish a vaccination schedule.</p>
+
+            <p class="mb-3 font-semibold">Typical vaccination timeline:</p>
+            <ul class="list-disc pl-8 mb-6 space-y-2">
+                <li><strong>6-8 weeks:</strong> First DHPP (Distemper, Hepatitis, Parvovirus, Parainfluenza)</li>
+                <li><strong>10-12 weeks:</strong> Second DHPP, first Rabies</li>
+                <li><strong>14-16 weeks:</strong> Third DHPP</li>
+                <li><strong>12-16 weeks:</strong> Rabies vaccination</li>
+            </ul>
+
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Socialization (3-14 weeks)</h3>
+            <p class="mb-3">The socialization period is critical for developing a well-adjusted adult dog. Expose your puppy to:</p>
+            <ul class="list-disc pl-8 mb-6 space-y-2">
+                <li>Different people (children, adults, seniors)</li>
+                <li>Various sounds and environments</li>
+                <li>Other vaccinated, friendly dogs</li>
+                <li>Different surfaces and textures</li>
+                <li>Car rides and handling</li>
+            </ul>
+
+            <div class="bg-red-50 border border-red-200 rounded-xl p-6 my-6">
+                <h4 class="font-bold text-red-800 mb-3">⚠️ Socialization Safety:</h4>
+                <p class="text-red-700">Until your puppy is fully vaccinated, avoid areas with unknown dogs or high traffic areas like dog parks. Focus on controlled socialization with known, healthy, vaccinated dogs.</p>
+            </div>
+
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">House Training</h3>
+            <p class="mb-3">Start house training immediately when you bring your puppy home:</p>
+            <ul class="list-disc pl-8 mb-6 space-y-2">
+                <li>Take your puppy outside frequently (every 1-2 hours)</li>
+                <li>Always go outside after meals, naps, and play</li>
+                <li>Praise and reward successful outdoor elimination</li>
+                <li>Never punish accidents - clean thoroughly and try again</li>
+                <li>Use a consistent command like "go potty"</li>
+            </ul>
+
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Sleep and Rest</h3>
+            <p class="mb-3">Puppies need 18-20 hours of sleep per day for proper development. Provide:</p>
+            <ul class="list-disc pl-8 mb-6 space-y-2">
+                <li>A comfortable, quiet sleeping area</li>
+                <li>Consistent bedtime routine</li>
+                <li>Crate training for security and house training</li>
+                <li>Undisturbed nap times</li>
+            </ul>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-5">Common Feeding Problems and Solutions</h2>
+            
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Picky Eating</h3>
+            <p class="mb-3">Some puppies may be finicky eaters. Try these solutions:</p>
+            <ul class="list-disc pl-8 mb-6 space-y-2">
+                <li>Stick to a consistent feeding schedule</li>
+                <li>Remove uneaten food after 20 minutes</li>
+                <li>Avoid giving treats between meals</li>
+                <li>Try warming the food slightly</li>
+                <li>Mix in a small amount of low-sodium chicken broth</li>
+            </ul>
+
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Eating Too Fast</h3>
+            <p class="mb-3">Fast eating can lead to choking or bloat. Solutions include:</p>
+            <ul class="list-disc pl-8 mb-6 space-y-2">
+                <li>Use a slow-feeder bowl</li>
+                <li>Spread food on a large, flat surface</li>
+                <li>Feed smaller, more frequent meals</li>
+                <li>Add obstacles like tennis balls to the food bowl</li>
+            </ul>
+
+            <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">Digestive Upset</h3>
+            <p class="mb-3">Puppies have sensitive stomachs. Signs of digestive issues include:</p>
+            <ul class="list-disc pl-8 mb-6 space-y-2">
+                <li>Vomiting</li>
+                <li>Diarrhea</li>
+                <li>Loss of appetite</li>
+                <li>Lethargy</li>
+                <li>Abdominal pain</li>
+            </ul>
+
+            <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+                <h4 class="text-green-800 font-semibold mb-3">💡 When to Call Your Veterinarian:</h4>
+                <ul class="list-disc pl-6 space-y-2 text-green-700">
+                    <li>Persistent vomiting or diarrhea</li>
+                    <li>Signs of dehydration</li>
+                    <li>Loss of appetite for more than 24 hours</li>
+                    <li>Lethargy or weakness</li>
+                    <li>Any concerning behavior changes</li>
+                </ul>
+            </div>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-5">Sample Daily Schedule</h2>
+            <p class="mb-5">Consistency is key to successful puppy raising. Here's a sample daily schedule for an 8-12 week old puppy:</p>
+
+            <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 my-6">
+                <h4 class="text-blue-800 font-semibold mb-4">📅 Sample Daily Schedule</h4>
+                <ul class="space-y-2 text-blue-700">
+                    <li><strong>6:00 AM:</strong> Wake up, potty break, breakfast</li>
+                    <li><strong>7:00 AM:</strong> Playtime and training</li>
+                    <li><strong>8:00 AM:</strong> Nap time</li>
+                    <li><strong>10:00 AM:</strong> Potty break, play</li>
+                    <li><strong>12:00 PM:</strong> Lunch and potty break</li>
+                    <li><strong>1:00 PM:</strong> Nap time</li>
+                    <li><strong>3:00 PM:</strong> Potty break and socialization</li>
+                    <li><strong>5:00 PM:</strong> Dinner and potty break</li>
+                    <li><strong>6:00 PM:</strong> Play and training</li>
+                    <li><strong>8:00 PM:</strong> Final potty break</li>
+                    <li><strong>9:00 PM:</strong> Quiet time and sleep</li>
+                </ul>
+            </div>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-green-500 pl-5">Conclusion</h2>
+            <p class="mb-5">Caring for a puppy requires dedication, consistency, and patience, but the rewards are immeasurable. The first few months of your puppy's life will set the foundation for their entire future. By providing proper nutrition, consistent care, and lots of love, you'll help your puppy grow into a healthy, happy, well-adjusted adult dog.</p>
+
+            <p class="mb-5">Remember that every puppy is unique, and what works for one may not work for another. Don't hesitate to consult with your veterinarian at MrigaAayuvets if you have questions or concerns about your puppy's development, feeding, or behavior.</p>
+
+            <p class="mb-5">At MrigaAayuvets, we're committed to supporting you and your puppy through this critical period and beyond. Our team of experienced veterinarians is available 24/7 for emergencies and always ready to provide guidance on puppy care, nutrition, and health.</p>
+
+            <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+                <h4 class="text-green-800 font-semibold mb-3">💡 Remember:</h4>
+                <p class="text-green-700">The investment you make in proper puppy care during these early months will pay dividends in the form of a healthier, happier companion for years to come. Every moment of care and attention you provide is building the foundation for a lifetime of love and companionship.</p>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <a href="{{ url_for('blogs') }}"
+           class="inline-block mt-8 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">
+          ← Back to Blogs
+        </a>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="lg:col-span-1 space-y-8">
+      <!-- Ask the Vet Card -->
+      <div class="bg-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200">
+        <h3 class="text-2xl font-bold text-green-700 mb-4 text-center">Ask Our Vet</h3>
+        <p class="text-gray-600 text-center mb-6">Have questions about your pet's health?</p>
+        <div class="text-center">
+          <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20have%20a%20question%20about%20my%20pet's%20health.%20Can%20you%20help?"
+             target="_blank"
+             class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+             💬 Chat with Vet
+          </a>
+        </div>
+      </div>
+
+      <!-- Related Articles -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
+        <div class="space-y-4">
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Pet Vaccination Guide</h4>
+            <p class="text-sm text-gray-500">Essential vaccines for your pet's health</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Senior Pet Care Tips</h4>
+            <p class="text-sm text-gray-500">Caring for your aging companion</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Emergency Pet Care</h4>
+            <p class="text-sm text-gray-500">What to do in pet emergencies</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="bg-blue-50 rounded-2xl p-6 shadow-lg border-2 border-blue-200">
+        <h3 class="text-xl font-bold text-blue-700 mb-4">Get Pet Care Tips</h3>
+        <p class="text-gray-600 mb-4">Subscribe to our newsletter for expert pet care advice</p>
+        <form class="space-y-3">
+          <input type="email" 
+                 placeholder="Your email address" 
+                 class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          <button type="submit" 
+                  class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+            📧 Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

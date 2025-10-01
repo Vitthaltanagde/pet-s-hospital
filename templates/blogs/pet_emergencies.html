@@ -1,0 +1,270 @@
+{% extends "layout.html" %}
+
+{% block title %}How to Handle Pet Emergencies: Complete First Aid Guide | MrigaAayuvets{% endblock %}
+
+{% block content %}
+
+<div class="container max-w-7xl mx-auto py-10 px-6">
+
+  <!-- Breadcrumb -->
+  <nav class="text-sm text-gray-500 mb-6">
+    <a href="{{ url_for('blogs') }}" class="text-green-600 hover:underline">← Back to Blogs</a> / Puppy Care Guide
+  </nav>
+
+  <!-- Main Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+    <!-- Left: Main Content -->
+    <div class="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">How to Handle Pet Emergencies: Complete First Aid Guide</h1>
+        
+        <div class="flex flex-wrap gap-6 text-gray-500 text-sm mb-6">
+            <span>📅 Published: March 20, 2025</span>
+            <span>⏱️ 10 min read</span>
+            <span>🏷️  Emergency, First Aid, Safety</span>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=800&h=400&fit=crop" 
+             alt="Adorable white puppy being fed" 
+             class="w-full h-96 object-cover rounded-xl mb-6">
+
+         <div class="prose prose-lg max-w-none space-y-6">
+          <p class="mb-5">Pet emergencies can happen without warning and knowing how to respond quickly and correctly can mean the difference between life and death for your beloved companion. This comprehensive guide will prepare you to handle the most common pet emergencies until you can reach professional veterinary care.</p>
+
+          <!-- Stats Box -->
+          <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 my-6 text-center">
+            <div class="text-5xl font-bold text-red-600 mb-3">65%</div>
+            <p class="text-gray-700">of pet emergencies occur outside regular veterinary hours, making first aid knowledge crucial for every pet owner.</p>
+          </div>
+
+          <!-- Emergency Contact -->
+          <div class="bg-blue-600 text-white rounded-xl p-6 my-6 text-center">
+            <h4 class="text-xl font-bold mb-2">🚨 EMERGENCY HOTLINE</h4>
+            <p class="text-2xl font-bold my-3">+91 98765 43210</p>
+            <p>Available 24/7 for immediate guidance</p>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-red-600 pl-5">Golden Rules of Pet Emergency Response</h2>
+          
+          <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6 my-6">
+            <h4 class="text-red-600 font-bold text-xl mb-4">Essential First Steps in ANY Emergency</h4>
+            <div class="space-y-3">
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">1</span><strong>Stay Calm:</strong> Your pet can sense your anxiety. Take deep breaths and think clearly.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">2</span><strong>Ensure Safety:</strong> Remove your pet from immediate danger without putting yourself at risk.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">3</span><strong>Assess Quickly:</strong> Check for consciousness, breathing, and obvious injuries.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">4</span><strong>Call for Help:</strong> Contact your veterinarian or emergency clinic immediately.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">5</span><strong>Transport Safely:</strong> Move injured pets carefully to avoid further harm.</p>
+            </div>
+          </div>
+
+          <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6 my-6">
+            <h4 class="font-bold text-red-800 text-lg mb-3">⚠️ CRITICAL WARNING</h4>
+            <p class="text-red-700"><strong>Injured animals may bite or scratch out of fear and pain, even if they're usually gentle.</strong> Approach cautiously and consider muzzling if necessary (but never muzzle if vomiting or having breathing difficulties).</p>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-red-600 pl-5">Life-Threatening Emergencies: Act NOW</h2>
+          
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">🫁 Choking Emergency</h3>
+          <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6 my-6">
+            <h4 class="text-red-600 font-bold text-lg mb-4">Immediate Actions for Choking</h4>
+            <div class="space-y-3">
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">1</span><strong>Open the mouth:</strong> Look for visible foreign objects. DO NOT use your fingers if you can't see the object clearly.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">2</span><strong>For Small Dogs (under 30 lbs):</strong></p>
+              <ul class="list-disc pl-12 ml-8 space-y-1">
+                <li>Hold upside down by hind legs</li>
+                <li>Give 5 sharp taps between shoulder blades</li>
+                <li>Check mouth for dislodged object</li>
+              </ul>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">3</span><strong>For Large Dogs:</strong></p>
+              <ul class="list-disc pl-12 ml-8 space-y-1">
+                <li>Lift hind legs (wheelbarrow position)</li>
+                <li>Push firmly upward on belly just below rib cage</li>
+                <li>Alternative: Lay dog on side and push firmly on belly</li>
+              </ul>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">4</span><strong>For Cats:</strong> Hold by hind legs, head down, and tap sharply between shoulder blades.</p>
+            </div>
+          </div>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+            <h4 class="text-green-800 font-semibold mb-3">🎯 Prevention Tip</h4>
+            <p class="text-green-700">Common choking hazards: small balls, bones, rawhide pieces, toys smaller than your pet's throat. Always supervise playtime and choose appropriately sized toys.</p>
+          </div>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">🩸 Severe Bleeding</h3>
+          <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6 my-6">
+            <h4 class="text-red-600 font-bold text-lg mb-4">Bleeding Control Steps</h4>
+            <div class="space-y-3">
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">1</span><strong>Apply Direct Pressure:</strong> Use clean cloth, gauze, or towel. Press firmly over the wound.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">2</span><strong>Do NOT Remove Saturated Bandages:</strong> Add more layers on top; removing bandages disrupts clotting.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">3</span><strong>Elevate if Possible:</strong> Raise injured limb above heart level if no fracture is suspected.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">4</span><strong>Pressure Points:</strong> For leg bleeding, apply pressure to pressure points on inner thigh (rear legs) or armpit area (front legs).</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">5</span><strong>Transport Immediately:</strong> Continue pressure during transport to veterinary clinic.</p>
+            </div>
+          </div>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">💖 Not Breathing/No Pulse</h3>
+          <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6 my-6">
+            <h4 class="text-red-600 font-bold text-lg mb-4">CPR for Pets (Cardiopulmonary Resuscitation)</h4>
+            <div class="space-y-3">
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">1</span><strong>Check Airway:</strong> Open mouth, extend neck, check for obstructions.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">2</span><strong>Rescue Breathing:</strong></p>
+              <ul class="list-disc pl-12 ml-8 space-y-1">
+                <li>Close pet's mouth, breathe into nose</li>
+                <li>Watch for chest rise</li>
+                <li>Give 1 breath every 3 seconds</li>
+              </ul>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">3</span><strong>Chest Compressions:</strong></p>
+              <ul class="list-disc pl-12 ml-8 space-y-1">
+                <li><strong>Small dogs/cats:</strong> One hand on each side of chest, compress 1/2 to 1 inch</li>
+                <li><strong>Large dogs:</strong> Lay on side, compress over widest part of chest 1-3 inches</li>
+                <li>Rate: 100-120 compressions per minute</li>
+                <li>Ratio: 30 compressions to 2 breaths</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-red-600 pl-5">Common Emergency Situations</h2>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">🤢 Poisoning</h3>
+          <div class="bg-orange-900 text-white rounded-xl p-6 my-6">
+            <h4 class="text-orange-200 font-bold text-lg mb-4">☠️ TOXIC SUBSTANCES - NEVER INDUCE VOMITING FOR:</h4>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Bleach, drain cleaners, toilet bowl cleaners</li>
+              <li>Gasoline, kerosene, motor oil</li>
+              <li>Sharp objects (bones, glass)</li>
+              <li>Unknown substances</li>
+            </ul>
+          </div>
+
+          <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6 my-6">
+            <h4 class="text-red-600 font-bold text-lg mb-4">Poisoning Response Protocol</h4>
+            <div class="space-y-3">
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">1</span><strong>Identify the Poison:</strong> Keep packaging/container for vet reference.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">2</span><strong>Call Poison Control:</strong> Contact vet immediately for guidance on whether to induce vomiting.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">3</span><strong>If Vomiting is Advised:</strong> Use 3% hydrogen peroxide (1 teaspoon per 5 lbs of body weight, maximum 3 tablespoons).</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">4</span><strong>Do NOT induce vomiting</strong> if your pet is unconscious, having seizures, or ingested corrosive chemicals.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">5</span><strong>Seek Veterinary Help Immediately:</strong> Poisoning is time-sensitive; every minute counts.</p>
+            </div>
+          </div>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+            <h4 class="text-green-800 font-semibold mb-3">💡 Prevention Tip</h4>
+            <p class="text-green-700">Keep all medications, cleaning products, and toxic foods (like chocolate, onions, grapes, xylitol) securely stored away from pets.</p>
+          </div>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">🌡️ Heatstroke</h3>
+          <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6 my-6">
+            <h4 class="text-red-600 font-bold text-lg mb-4">Signs & Emergency Actions</h4>
+            <ul class="list-disc pl-6 space-y-2 text-red-700">
+              <li>Excessive panting, drooling, collapse, red gums</li>
+              <li>Move pet to a cool area immediately</li>
+              <li>Apply cool (not ice-cold) water to body</li>
+              <li>Place wet towels around neck, under armpits, and between legs</li>
+              <li>Offer small amounts of cool water to drink</li>
+              <li>Transport to vet urgently</li>
+            </ul>
+          </div>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">⚡ Seizures</h3>
+          <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6 my-6">
+            <h4 class="text-red-600 font-bold text-lg mb-4">What to Do During a Seizure</h4>
+            <div class="space-y-3">
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">1</span>Keep pet away from stairs, furniture, and sharp objects.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">2</span>Do NOT put anything in the mouth – they cannot swallow their tongue.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">3</span>Time the seizure (most last 1–3 minutes).</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">4</span>After seizure, keep pet calm and warm until fully conscious.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">5</span>Call your vet if seizure lasts >5 minutes or repeats within 24 hours.</p>
+            </div>
+          </div>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mt-6 mb-3">🦴 Broken Bones / Fractures</h3>
+          <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6 my-6">
+            <h4 class="text-red-600 font-bold text-lg mb-4">Steps to Stabilize</h4>
+            <div class="space-y-3">
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">1</span>Do NOT try to reset the bone.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">2</span>Keep pet as still as possible.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">3</span>Gently place a rigid support (like a magazine or stick) beside the injured limb and loosely bandage to stabilize.</p>
+              <p class="flex items-start"><span class="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 mt-1">4</span>Transport to the vet immediately.</p>
+            </div>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-red-600 pl-5">Pet First Aid Kit Essentials</h2>
+          <ul class="list-disc pl-8 mb-6 space-y-2">
+            <li>Sterile gauze, bandages, adhesive tape</li>
+            <li>Antiseptic wipes, pet-safe wound cleaner</li>
+            <li>Hydrogen peroxide (3%)</li>
+            <li>Digital thermometer</li>
+            <li>Tweezers and blunt scissors</li>
+            <li>Muzzle or soft cloth (for restraint)</li>
+            <li>Instant cold packs</li>
+            <li>Emergency contact numbers</li>
+          </ul>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
+            <h4 class="text-green-800 font-semibold mb-3">🎒 Pro Tip</h4>
+            <p class="text-green-700">Keep a smaller first aid kit in your car for outdoor adventures – emergencies often happen away from home.</p>
+          </div>
+
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mt-8 mb-4 border-l-4 border-red-600 pl-5">Conclusion</h2>
+          <p class="mb-5">Being prepared for pet emergencies can save your pet's life. While first aid is never a substitute for veterinary care, knowing how to act quickly will stabilize your pet until professional help is available. Print this guide, keep it with your first aid kit, and review it regularly to stay confident in case of crisis.</p>
+        </div>
+     <!-- Back Button -->
+        <a href="{{ url_for('blogs') }}"
+           class="inline-block mt-8 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-200">
+          ← Back to Blogs
+        </a>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="lg:col-span-1 space-y-8">
+      <!-- Ask the Vet Card -->
+      <div class="bg-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200">
+        <h3 class="text-2xl font-bold text-green-700 mb-4 text-center">Ask Our Vet</h3>
+        <p class="text-gray-600 text-center mb-6">Have questions about your pet's health?</p>
+        <div class="text-center">
+          <a href="https://wa.me/918208657969?text=Hello%20Doctor,%20I%20have%20a%20question%20about%20my%20pet's%20health.%20Can%20you%20help?"
+             target="_blank"
+             class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+             💬 Chat with Vet
+          </a>
+        </div>
+      </div>
+
+      <!-- Related Articles -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Related Articles</h3>
+        <div class="space-y-4">
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Pet Vaccination Guide</h4>
+            <p class="text-sm text-gray-500">Essential vaccines for your pet's health</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Senior Pet Care Tips</h4>
+            <p class="text-sm text-gray-500">Caring for your aging companion</p>
+          </a>
+          <a href="#" class="block hover:bg-gray-50 p-3 rounded-lg transition">
+            <h4 class="font-semibold text-gray-700 mb-1">Emergency Pet Care</h4>
+            <p class="text-sm text-gray-500">What to do in pet emergencies</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="bg-blue-50 rounded-2xl p-6 shadow-lg border-2 border-blue-200">
+        <h3 class="text-xl font-bold text-blue-700 mb-4">Get Pet Care Tips</h3>
+        <p class="text-gray-600 mb-4">Subscribe to our newsletter for expert pet care advice</p>
+        <form class="space-y-3">
+          <input type="email" 
+                 placeholder="Your email address" 
+                 class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+          <button type="submit" 
+                  class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+            📧 Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
