@@ -1,0 +1,10 @@
+# Allow all search engines to crawl your site
+User-agent: *
+Disallow: /admin/         # Block the admin panel
+Disallow: /login/         # Block login page
+Disallow: /static/        # Optional: Block static files if not needed
+Allow: /
+
+# Link to your sitemap
+Sitemap: https://yourdomain.com/sitemap.xml
+
