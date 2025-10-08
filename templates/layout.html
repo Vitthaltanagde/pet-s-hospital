@@ -1,169 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}MrigaAayuvets{% endblock %}</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}MrigaAayuvets{% endblock %}</title>
+  <title>Best Pet Hospital in Mumbai | Happy Paws Clinic</title>
+  <meta name="description"
+    content="Happy Paws Pet Hospital in Mumbai offers vaccination, surgery, grooming, and 24/7 emergency care. Book your pet's appointment today!">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Best Pet Hospital in Mumbai | Happy Paws Clinic">
+  <meta property="og:description"
+    content="Happy Paws Pet Hospital in Mumbai offers vaccination, surgery, grooming, and 24/7 emergency care. Book your pet's appointment today!">
+  <meta property="og:image" content="https://yourdomain.com/static/images/hospital.jpg">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Best Pet Hospital in Mumbai | Happy Paws Clinic">
+  <meta name="twitter:description"
+    content="Happy Paws Pet Hospital in Mumbai offers vaccination, surgery, grooming, and 24/7 emergency care. Book your pet's appointment today!">
+  <meta name="twitter:image" content="https://yourdomain.com/static/images/hospital.jpg">
+
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
-    <!-- AOS Animations -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Nn3yD1TnZfj5NqZT5K2rAOnMppYlq4vG2Jgrs0vCayRNoMTYqSUpKQZ7s6Ck61O3S+E6mjz8jIhXlfzFOKVdBQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- AOS Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Nn3yD1TnZfj5NqZT5K2rAOnMppYlq4vG2Jgrs0vCayRNoMTYqSUpKQZ7s6Ck61O3S+E6mjz8jIhXlfzFOKVdBQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<style>
-    body { font-family: 'Poppins', sans-serif; }
-    
-    .logo-bounce { animation: gentleBounce 2s ease-in-out infinite; }
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "VeterinaryCare",
+    "name": "Happy Paws Pet Hospital"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "John Doe"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5",
+    "bestRating": "5"
+  },
+  "reviewBody": "Excellent service and caring staff for pets!"
+}
+</script>
+
+
+
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .logo-bounce {
+      animation: gentleBounce 2s ease-in-out infinite;
+    }
+
     @keyframes gentleBounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-5px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
     }
-    
-    .nav-link { position: relative; transition: all 0.3s ease; }
+
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
     .nav-link::after {
-        content: ''; position: absolute; bottom: -4px; left: 50%;
-        width: 0; height: 2px; background: #FCD34D;
-        transition: all 0.3s ease; transform: translateX(-50%);
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: #FCD34D;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
     }
-    .nav-link:hover::after { width: 100%; }
-    .nav-link:hover { transform: translateY(-2px); }
-    
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-link:hover {
+      transform: translateY(-2px);
+    }
+
     .mobile-menu {
-        max-height: 0; overflow: hidden;
-        transition: max-height 0.4s ease-in-out;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-in-out;
     }
-    .mobile-menu.active { max-height: 500px; }
-    
+
+    .mobile-menu.active {
+      max-height: 500px;
+    }
+
     .mobile-link {
-        opacity: 0; transform: translateX(-20px);
-        animation: slideIn 0.4s forwards;
+      opacity: 0;
+      transform: translateX(-20px);
+      animation: slideIn 0.4s forwards;
     }
+
     @keyframes slideIn {
-        to { opacity: 1; transform: translateX(0); }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
-    .mobile-link:nth-child(1) { animation-delay: 0.1s; }
-    .mobile-link:nth-child(2) { animation-delay: 0.15s; }
-    .mobile-link:nth-child(3) { animation-delay: 0.2s; }
-    .mobile-link:nth-child(4) { animation-delay: 0.25s; }
-    .mobile-link:nth-child(5) { animation-delay: 0.3s; }
-    .mobile-link:nth-child(6) { animation-delay: 0.35s; }
-    .mobile-link:nth-child(7) { animation-delay: 0.4s; }
-    
-    .hamburger { width: 28px; height: 20px; position: relative; cursor: pointer; display: inline-block; }
+
+    .mobile-link:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .mobile-link:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+
+    .mobile-link:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    .mobile-link:nth-child(4) {
+      animation-delay: 0.25s;
+    }
+
+    .mobile-link:nth-child(5) {
+      animation-delay: 0.3s;
+    }
+
+    .mobile-link:nth-child(6) {
+      animation-delay: 0.35s;
+    }
+
+    .mobile-link:nth-child(7) {
+      animation-delay: 0.4s;
+    }
+
+    .hamburger {
+      width: 28px;
+      height: 20px;
+      position: relative;
+      cursor: pointer;
+      display: inline-block;
+    }
+
     .hamburger span {
-        display: block; position: absolute; height: 3px; width: 100%;
-        background: white; border-radius: 3px; opacity: 1; left: 0;
-        transition: 0.3s ease-in-out;
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: white;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transition: 0.3s ease-in-out;
     }
-    .hamburger span:nth-child(1) { top: 0px; }
-    .hamburger span:nth-child(2) { top: 8px; }
-    .hamburger span:nth-child(3) { top: 16px; }
-    .hamburger.active span:nth-child(1) { top: 8px; transform: rotate(135deg); }
-    .hamburger.active span:nth-child(2) { opacity: 0; left: -60px; }
-    .hamburger.active span:nth-child(3) { top: 8px; transform: rotate(-135deg); }
-    
+
+    .hamburger span:nth-child(1) {
+      top: 0px;
+    }
+
+    .hamburger span:nth-child(2) {
+      top: 8px;
+    }
+
+    .hamburger span:nth-child(3) {
+      top: 16px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      top: 8px;
+      transform: rotate(135deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+      left: -60px;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      top: 8px;
+      transform: rotate(-135deg);
+    }
+
     @keyframes fadeInDown {
-        from { opacity: 0; transform: translateY(-20px); }
-        to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    header { animation: fadeInDown 0.6s ease-out; }
-</style>
 
-    
-    {% block head %}{% endblock %}
+    header {
+      animation: fadeInDown 0.6s ease-out;
+    }
+  </style>
+
+
+  {% block head %}{% endblock %}
 </head>
+
 <body class="bg-gray-50">
-<!-- Add this in your <head> section for Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Add this in your <head> section for Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-<!-- Header -->
-<header class="bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg sticky top-0 z-50">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg sticky top-0 z-50">
     <div class="container mx-auto px-4 py-4">
-        <div class="flex items-center justify-between">
-            <!-- Logo and Brand -->
-            <div class="flex items-center space-x-4">
-                <div class="logo-bounce">
-                    <img src="{{ url_for('static', filename='/images/logo2.jpg') }}" alt="Logo" class="h-13 w-16 rounded-full shadow-lg border-2 border-white">
-                </div>
-                <div>
-                    <h1 class="text-2xl font-bold tracking-tight">Veterinary Home Services</h1>
-                    <p class="text-xs text-green-100 font-medium">Caring for your pets with love</p>
-                </div>
-            </div>
-            
-            <!-- Desktop Navigation -->
-            <nav class="hidden lg:block">
-                <ul class="flex items-center space-x-8">
-                    <li><a href="{{ url_for('index') }}" class="nav-link text-sm font-semibold uppercase tracking-wide hover:text-yellow-300">Home</a></li>
-                    <li><a href="{{ url_for('gallery') }}" class="nav-link text-sm font-semibold uppercase tracking-wide hover:text-yellow-300">Gallery</a></li>
-                    <li><a href="{{ url_for('blogs') }}" class="nav-link text-sm font-semibold uppercase tracking-wide hover:text-yellow-300">Blogs</a></li>
-                    <li><a href="{{ url_for('services') }}" class="nav-link text-sm font-semibold uppercase tracking-wide hover:text-yellow-300">Services</a></li>
-                    <li><a href="{{ url_for('about') }}" class="nav-link text-sm font-semibold uppercase tracking-wide hover:text-yellow-300">About</a></li>
-                    <li><a href="{{ url_for('contact') }}" class="nav-link text-sm font-semibold uppercase tracking-wide hover:text-yellow-300">Contact</a></li>
-                    <!--<li><a href="{{ url_for('admin_login') }}" class="bg-yellow-400 text-green-800 px-5 py-2 rounded-full font-bold hover:bg-yellow-300 transition-all shadow-md hover:shadow-lg transform hover:scale-105">Admin</a></li> -->
-                </ul>
-            </nav>
-            
-            <!-- Mobile Menu Toggle -->
-            <div class="lg:hidden">
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+      <div class="flex items-center justify-between">
+        <!-- Logo and Brand -->
+        <div class="flex items-center space-x-4">
+          <div class="logo-bounce">
+            <img src="{{ url_for('static', filename='/images/logo2.jpg') }}" alt="Logo"
+              class="h-13 w-16 rounded-full shadow-lg border-2 border-white">
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold tracking-tight">Veterinary Home Services</h1>
+            <p class="text-xs text-green-100 font-medium">Mrigaayuvets caring for your pets with love</p>
+          </div>
         </div>
-        
-        <!-- Mobile Navigation -->
-        <div class="mobile-menu" id="mobileMenu">
-            <ul class="mt-4 space-y-1 pb-4">
-                <li class="mobile-link"><a href="{{ url_for('index') }}" class="block px-4 py-3 rounded-lg hover:bg-green-600 transition-all font-semibold">Home</a></li>
-                <li class="mobile-link"><a href="{{ url_for('gallery') }}" class="block px-4 py-3 rounded-lg hover:bg-green-600 transition-all font-semibold">Gallery</a></li>
-                <li class="mobile-link"><a href="{{ url_for('blogs') }}" class="block px-4 py-3 rounded-lg hover:bg-green-600 transition-all font-semibold">Blogs</a></li>
-                <li class="mobile-link"><a href="{{ url_for('services') }}" class="block px-4 py-3 rounded-lg hover:bg-green-600 transition-all font-semibold">Services</a></li>
-                <li class="mobile-link"><a href="{{ url_for('about') }}" class="block px-4 py-3 rounded-lg hover:bg-green-600 transition-all font-semibold">About</a></li>
-                <li class="mobile-link"><a href="{{ url_for('contact') }}" class="block px-4 py-3 rounded-lg hover:bg-green-600 transition-all font-semibold">Contact</a></li>
-                <!--<li class="mobile-link"><a href="{{ url_for('admin_login') }}" class="block px-4 py-3 bg-yellow-400 text-green-800 rounded-lg hover:bg-yellow-300 transition-all font-bold text-center">Admin Login</a></li> -->
-            </ul>
-        </div>
-    </div>
-</header>
 
-<!-- Add this JavaScript before closing </body> tag -->
-<script>
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:block">
+          <ul class="flex items-center space-x-8">
+            <li><a href="{{ url_for('index') }}"
+                class="nav-link text-sm font-semibold uppercase tracking-wide hover:text-yellow-300">Home</a></li>
+            <li><a href="{{ url_for('gallery') }}"
+                class="nav-link text-sm font-semibold uppercase tracking-wide hover:text-yellow-300">Gallery</a></li>
+            <li><a href="{{ url_for('blogs') }}"
+                class="nav-link text-sm font-semibold uppercase tracking-wide hover:text-yellow-300">Blogs</a></li>
+            <li><a href="{{ url_for('services') }}"
+                class="nav-link text-sm font-semibold uppercase tracking-wide hover:text-yellow-300">Services</a></li>
+            <li><a href="{{ url_for('about') }}"
+                class="nav-link text-sm font-semibold uppercase tracking-wide hover:text-yellow-300">About</a></li>
+            <li><a href="{{ url_for('contact') }}"
+                class="nav-link text-sm font-semibold uppercase tracking-wide hover:text-yellow-300">Contact</a></li>
+            <!--<li><a href="{{ url_for('admin_login') }}" class="bg-yellow-400 text-green-800 px-5 py-2 rounded-full font-bold hover:bg-yellow-300 transition-all shadow-md hover:shadow-lg transform hover:scale-105">Admin</a></li> -->
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="lg:hidden">
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-menu" id="mobileMenu">
+        <ul class="mt-4 space-y-1 pb-4">
+          <li class="mobile-link"><a href="{{ url_for('index') }}"
+              class="block px-4 py-3 rounded-lg hover:bg-green-600 transition-all font-semibold">Home</a></li>
+          <li class="mobile-link"><a href="{{ url_for('gallery') }}"
+              class="block px-4 py-3 rounded-lg hover:bg-green-600 transition-all font-semibold">Gallery</a></li>
+          <li class="mobile-link"><a href="{{ url_for('blogs') }}"
+              class="block px-4 py-3 rounded-lg hover:bg-green-600 transition-all font-semibold">Blogs</a></li>
+          <li class="mobile-link"><a href="{{ url_for('services') }}"
+              class="block px-4 py-3 rounded-lg hover:bg-green-600 transition-all font-semibold">Services</a></li>
+          <li class="mobile-link"><a href="{{ url_for('about') }}"
+              class="block px-4 py-3 rounded-lg hover:bg-green-600 transition-all font-semibold">About</a></li>
+          <li class="mobile-link"><a href="{{ url_for('contact') }}"
+              class="block px-4 py-3 rounded-lg hover:bg-green-600 transition-all font-semibold">Contact</a></li>
+          <!--<li class="mobile-link"><a href="{{ url_for('admin_login') }}" class="block px-4 py-3 bg-yellow-400 text-green-800 rounded-lg hover:bg-yellow-300 transition-all font-bold text-center">Admin Login</a></li> -->
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Add this JavaScript before closing </body> tag -->
+  <script>
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
-    
-    hamburger.addEventListener('click', function() {
-        this.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
+
+    hamburger.addEventListener('click', function () {
+      this.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
     });
-    
+
     // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        const isClickInside = hamburger.contains(event.target) || mobileMenu.contains(event.target);
-        if (!isClickInside && mobileMenu.classList.contains('active')) {
-            hamburger.classList.remove('active');
-            mobileMenu.classList.remove('active');
-        }
+    document.addEventListener('click', function (event) {
+      const isClickInside = hamburger.contains(event.target) || mobileMenu.contains(event.target);
+      if (!isClickInside && mobileMenu.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      }
     });
-</script>
+  </script>
 
   <div class="sticky top-0 z-40">
     <div class="backdrop-blur-md bg-gradient-to-r from-green-500/90 to-blue-600/90 text-white 
                 flex items-center justify-between px-4 sm:px-6 py-2 sm:py-3 shadow-lg">
-      
+
       <!-- Left Text -->
       <div class="flex items-center gap-2 sm:gap-3">
         <div class="bg-white/20 p-1.5 sm:p-2 rounded-full">
@@ -174,10 +346,10 @@
           <p class="text-sm sm:text-lg font-bold">Available 24/7</p>
         </div>
       </div>
-      
+
       <!-- Call Button -->
-      <a href="tel:+918208657969" 
-         class="bg-white text-green-600 font-bold px-3 sm:px-6 py-1.5 sm:py-2 rounded-full shadow-lg 
+      <a href="tel:+918208657969"
+        class="bg-white text-green-600 font-bold px-3 sm:px-6 py-1.5 sm:py-2 rounded-full shadow-lg 
                 hover:bg-gray-100 hover:scale-105 transition transform duration-300 text-xs sm:text-base whitespace-nowrap">
         📞 <span class="hidden xs:inline">+91 </span>8208657969
       </a>
@@ -185,101 +357,130 @@
   </div>
 
 
-<!-- Floating Call Button (mobile only)
+  <!-- Floating Call Button (mobile only)
  <a href="tel:+918208657969" 
    class="md:hidden fixed bottom-6 right-6 bg-green-600 text-white rounded-full shadow-lg 
           p-4 animate-bounce hover:bg-green-700 transition duration-300 z-50">
   <i class="fas fa-phone-alt text-2xl"></i>
 </a>  -->
 
-<!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 
 
-<main>
+  <main>
     {% block content %}{% endblock %}
-</main>
+  </main>
 
-<!-- Floating WhatsApp -->
-<div class="fixed bottom-5 right-5 z-50">
+  <!-- Floating WhatsApp -->
+  <div class="fixed bottom-5 right-5 z-50">
     <a href="https://wa.me/918208657969" target="_blank">
-        <img src="https://img.icons8.com/?size=100&id=16713&format=png&color=000000" 
-        alt="WhatsApp Icon" class="w-12 h-12 animate-bounce"/>
+      <img src="https://img.icons8.com/?size=100&id=16713&format=png&color=000000" alt="WhatsApp Icon"
+        class="w-12 h-12 animate-bounce" />
     </a>
-</div>
+  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
     AOS.init({ duration: 1000, once: true, easing: 'ease-out-cubic' });
 
     const menuToggle = document.getElementById('menu-toggle');
     const navbar = document.getElementById('navbar');
     menuToggle.addEventListener('click', () => {
-        navbar.classList.toggle('hidden');
+      navbar.classList.toggle('hidden');
     });
-</script>
-{% block scripts %}{% endblock %}
-<footer class="bg-blue-900 text-gray-200 py-10">
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-    
-    <!-- Logo & About -->
-    <div>
-  <h2 class="text-2xl font-bold text-white">VetCare+</h2>
-  <p class="mt-4 text-sm leading-relaxed">
-    Providing trusted veterinary & medical services with care, compassion, and professionalism.  
-    Your pets’ health and happiness are our priority.
-  </p>
-  <div class="flex gap-3 mt-4 text-xl">
-    <a href="https://facebook.com/yourpage" class="hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://twitter.com/yourpage" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
-    <a href="https://instagram.com/mrigaayuvets" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
-    <a href="https://linkedin.com/in/yourprofile" class="hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
-  </div>
-</div>
+  </script>
+  {% block scripts %}{% endblock %}
+  <footer class="bg-blue-900 text-gray-200 py-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Logo & About -->
+      <div>
+        <h2 class="text-2xl font-bold text-white">VetCare+</h2>
+        <p class="mt-4 text-sm leading-relaxed">
+          Providing trusted veterinary & medical services with care, compassion, and professionalism.
+          Your pets’ health and happiness are our priority.
+        </p>
+        <div class="flex gap-3 mt-4 text-xl">
+          <a href="https://facebook.com/yourpage" class="hover:text-white transition"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/yourpage" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/mrigaayuvets" class="hover:text-white transition"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/in/yourprofile" class="hover:text-white transition"><i
+              class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
 
 
-    <!-- Quick Links -->
-    <div>
-      <h3 class="text-xl font-semibold text-white">Quick Links</h3>
-      <ul class="mt-4 space-y-2">
-        <li><a href="/" class="hover:text-white">Home</a></li>
-        <li><a href="/about" class="hover:text-white">About Us</a></li>
-        <li><a href="/services" class="hover:text-white">Our Services</a></li>
-        <li><a href="/contact" class="hover:text-white">Contact</a></li>
-        <li><a href="/appointment" class="hover:text-white">Book Appointment</a></li>
-      </ul>
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-xl font-semibold text-white">Quick Links</h3>
+        <ul class="mt-4 space-y-2">
+          <li><a href="/" class="hover:text-white">Home</a></li>
+          <li><a href="/about" class="hover:text-white">About Us</a></li>
+          <li><a href="/services" class="hover:text-white">Our Services</a></li>
+          <li><a href="/contact" class="hover:text-white">Contact</a></li>
+          <li><a href="/appointment" class="hover:text-white">Book Appointment</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="text-xl font-semibold text-white">Our Services</h3>
+        <ul class="mt-4 space-y-2">
+          <li>Pet Vaccination</li>
+          <li>Surgery & Treatment</li>
+          <li>Pet Nutrition</li>
+          <li>Emergency Care</li>
+          <li>Wellness Checkups</li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-xl font-semibold text-white">Contact Us</h3>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><i class="fas fa-map-marker-alt mr-2"></i> Veterinary Mumbai, India</li>
+          <li><i class="fas fa-phone-alt mr-2"></i> +91 8208657969</li>
+          <li><i class="fas fa-envelope mr-2"></i> mrigaayuvets2025@gmail.com</li>
+          <li><i class="fas fa-clock mr-2"></i> Mon - Sun: 9am - 8pm</li>
+        </ul>
+      </div>
     </div>
 
-    <!-- Services -->
-    <div>
-      <h3 class="text-xl font-semibold text-white">Our Services</h3>
-      <ul class="mt-4 space-y-2">
-        <li>Pet Vaccination</li>
-        <li>Surgery & Treatment</li>
-        <li>Pet Nutrition</li>
-        <li>Emergency Care</li>
-        <li>Wellness Checkups</li>
-      </ul>
+    <!-- Bottom -->
+    <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+      <p>&copy; 2025 MrigaAayuvets+. All rights reserved. | Made by Tulipspot Marketing & Sales PVT. LTD.</p>
     </div>
-
-    <!-- Contact Info -->
-    <div>
-      <h3 class="text-xl font-semibold text-white">Contact Us</h3>
-      <ul class="mt-4 space-y-3 text-sm">
-        <li><i class="fas fa-map-marker-alt mr-2"></i> Veterinary Mumbai, India</li>
-        <li><i class="fas fa-phone-alt mr-2"></i> +91 8208657969</li>
-        <li><i class="fas fa-envelope mr-2"></i> mrigaayuvets2025@gmail.com</li>
-        <li><i class="fas fa-clock mr-2"></i> Mon - Sun: 9am - 8pm</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Bottom -->
-  <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-    <p>&copy; 2025 MrigaAayuvets+. All rights reserved. | Made by Tulipspot Marketing & Sales PVT. LTD.</p>
-  </div>
-</footer>
+  </footer>
 
 
 </body>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VeterinaryCare",
+  "name": "Happy Paws Pet Hospital",
+  "image": "https://yourdomain.com/static/images/hospital.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Marine Drive",
+    "addressLocality": "Mumbai",
+    "addressRegion": "MH",
+    "postalCode": "400001",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "19.0760",
+    "longitude": "72.8777"
+  },
+  "url": "https://yourdomain.com",
+  "telephone": "+91-",
+  "openingHours": "Mo-Su 08:00-20:00",
+  "priceRange": "$$"
+}
+</script>
+
 </html>

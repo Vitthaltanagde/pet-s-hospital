@@ -175,23 +175,22 @@
         }
     }
 </style>
-
 <!-- Hero Section with Enhanced Slider -->
 <section id="hero" class="relative h-[85vh] md:h-[80vh] lg:h-[85vh] overflow-hidden">
     <div class="absolute inset-0">
         <div class="hero-slider relative w-full h-full">
-            <!-- Slide 1 - Use your image or fallback -->
+            <!-- Slide 1 -->
             <div class="hero-slide active absolute inset-0" 
                  style="background-image: url('https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=1920&q=80')">
-                <div class="absolute inset-0 overlay-gradient"></div>
-                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 max-w-5xl mx-auto">
+                <div class="absolute inset-0 overlay-gradient" style="pointer-events: none;"></div>
+                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 max-w-5xl mx-auto" style="pointer-events: none;">
                     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in-down leading-tight">
                         Care for your pets,<br class="hidden sm:block"><span class="text-green-400"> like family</span>
                     </h1>
                     <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 animate-fade-in-up max-w-3xl px-4" style="animation-delay: 0.2s;">
                         Providing high-quality veterinary care for your furry friends with love and expertise
                     </p>
-                    <a href="{{ url_for('appointment') }}" class="cta-button bg-green-500 hover:bg-green-600 text-white font-bold text-sm sm:text-base md:text-lg py-3 px-6 md:py-4 md:px-10 rounded-full shadow-2xl transition-all duration-300 animate-scale-in inline-flex items-center gap-2" style="animation-delay: 0.4s;">
+                    <a href="/appointment" class="cta-button bg-green-500 hover:bg-green-600 text-white font-bold text-sm sm:text-base md:text-lg py-3 px-6 md:py-4 md:px-10 rounded-full shadow-2xl transition-all duration-300 animate-scale-in inline-flex items-center gap-2" style="animation-delay: 0.4s; pointer-events: auto; position: relative; z-index: 50;">
                         <span class="text-xl md:text-2xl">📅</span>
                         <span>Book Appointment</span>
                         <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -201,18 +200,18 @@
                 </div>
             </div>
             
-            <!-- Slide 2 - Expert Care -->
+            <!-- Slide 2 -->
             <div class="hero-slide absolute inset-0" 
                  style="background-image: url('https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=1920&q=80')">
-                <div class="absolute inset-0 overlay-gradient"></div>
-                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 max-w-5xl mx-auto">
+                <div class="absolute inset-0 overlay-gradient" style="pointer-events: none;"></div>
+                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 max-w-5xl mx-auto" style="pointer-events: none;">
                     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-slide-in-left leading-tight">
                         Expert <span class="text-blue-400">Veterinary Care</span>
                     </h1>
                     <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 animate-slide-in-right max-w-3xl px-4" style="animation-delay: 0.2s;">
                         Professional treatment at your doorstep with certified specialists
                     </p>
-                    <a href="#services" class="cta-button bg-blue-500 hover:bg-blue-600 text-white font-bold text-sm sm:text-base md:text-lg py-3 px-6 md:py-4 md:px-10 rounded-full shadow-2xl transition-all duration-300 animate-scale-in inline-flex items-center gap-2" style="animation-delay: 0.4s;">
+                    <a href="/services" class="cta-button bg-blue-500 hover:bg-blue-600 text-white font-bold text-sm sm:text-base md:text-lg py-3 px-6 md:py-4 md:px-10 rounded-full shadow-2xl transition-all duration-300 animate-scale-in inline-flex items-center gap-2" style="animation-delay: 0.4s; pointer-events: auto; position: relative; z-index: 50;">
                         <span class="text-xl md:text-2xl">🏥</span>
                         <span>Our Services</span>
                         <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -222,18 +221,18 @@
                 </div>
             </div>
             
-            <!-- Slide 3 - Emergency Care -->
+            <!-- Slide 3 -->
             <div class="hero-slide absolute inset-0" 
                  style="background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1920&q=80')">
-                <div class="absolute inset-0 overlay-gradient"></div>
-                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 max-w-5xl mx-auto">
+                <div class="absolute inset-0 overlay-gradient" style="pointer-events: none;"></div>
+                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 max-w-5xl mx-auto" style="pointer-events: none;">
                     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in-down leading-tight">
                         <span class="text-red-400">24/7</span> Emergency Care
                     </h1>
                     <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 animate-fade-in-up max-w-3xl px-4" style="animation-delay: 0.2s;">
                         Always here when you need us most - Day or night
                     </p>
-                    <a href="#contact" class="cta-button bg-red-500 hover:bg-red-600 text-white font-bold text-sm sm:text-base md:text-lg py-3 px-6 md:py-4 md:px-10 rounded-full shadow-2xl transition-all duration-300 animate-scale-in inline-flex items-center gap-2" style="animation-delay: 0.4s;">
+                    <a href="/contact" class="cta-button bg-red-500 hover:bg-red-600 text-white font-bold text-sm sm:text-base md:text-lg py-3 px-6 md:py-4 md:px-10 rounded-full shadow-2xl transition-all duration-300 animate-scale-in inline-flex items-center gap-2" style="animation-delay: 0.4s; pointer-events: auto; position: relative; z-index: 50;">
                         <span class="text-xl md:text-2xl">🚨</span>
                         <span>Emergency Contact</span>
                         <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -243,18 +242,18 @@
                 </div>
             </div>
             
-            <!-- Slide 4 - Home Visit -->
+            <!-- Slide 4 -->
             <div class="hero-slide absolute inset-0" 
                  style="background-image: url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1920&q=80')">
-                <div class="absolute inset-0 overlay-gradient"></div>
-                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 max-w-5xl mx-auto">
+                <div class="absolute inset-0 overlay-gradient" style="pointer-events: none;"></div>
+                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6 max-w-5xl mx-auto" style="pointer-events: none;">
                     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-slide-in-right leading-tight">
                         <span class="text-purple-400">Home Visit</span> Service
                     </h1>
                     <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 animate-slide-in-left max-w-3xl px-4" style="animation-delay: 0.2s;">
                         Stress-free care in your pet's comfort zone
                     </p>
-                    <a href="#about" class="cta-button bg-purple-500 hover:bg-purple-600 text-white font-bold text-sm sm:text-base md:text-lg py-3 px-6 md:py-4 md:px-10 rounded-full shadow-2xl transition-all duration-300 animate-scale-in inline-flex items-center gap-2" style="animation-delay: 0.4s;">
+                    <a href="/about" class="cta-button bg-purple-500 hover:bg-purple-600 text-white font-bold text-sm sm:text-base md:text-lg py-3 px-6 md:py-4 md:px-10 rounded-full shadow-2xl transition-all duration-300 animate-scale-in inline-flex items-center gap-2" style="animation-delay: 0.4s; pointer-events: auto; position: relative; z-index: 50;">
                         <span class="text-xl md:text-2xl">🏠</span>
                         <span>Learn More</span>
                         <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -267,134 +266,155 @@
     </div>
     
     <!-- Navigation Arrows -->
-    <button class="slider-prev slider-arrow absolute left-3 md:left-6 top-1/2 transform -translate-y-1/2 z-20 bg-white bg-opacity-20 hover:bg-opacity-35 text-white p-2.5 md:p-3 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg">
+    <button class="slider-prev slider-arrow absolute left-3 md:left-6 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-35 text-white p-2.5 md:p-3 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg" style="z-index: 100; cursor: pointer;">
         <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"></path>
         </svg>
     </button>
     
-    <button class="slider-next slider-arrow absolute right-3 md:right-6 top-1/2 transform -translate-y-1/2 z-20 bg-white bg-opacity-20 hover:bg-opacity-35 text-white p-2.5 md:p-3 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg">
+    <button class="slider-next slider-arrow absolute right-3 md:right-6 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-35 text-white p-2.5 md:p-3 rounded-full transition-all duration-300 backdrop-blur-md shadow-lg" style="z-index: 100; cursor: pointer;">
         <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"></path>
         </svg>
     </button>
     
     <!-- Dot Indicators -->
-    <div class="slider-dots absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2 md:space-x-3">
-        <button class="dot active h-2.5 md:h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300 cursor-pointer" data-slide="0"></button>
+    <div class="slider-dots absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 md:space-x-3" style="z-index: 100;">
+        <button class="dot active h-2.5 md:h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300 cursor-pointer" data-slide="0" style="width: 30px;"></button>
         <button class="dot w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300 cursor-pointer" data-slide="1"></button>
         <button class="dot w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300 cursor-pointer" data-slide="2"></button>
         <button class="dot w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all duration-300 cursor-pointer" data-slide="3"></button>
     </div>
 </section>
 
-<!-- Add this JavaScript before closing </body> tag -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const slides = document.querySelectorAll('.hero-slide');
-        const dots = document.querySelectorAll('.dot');
-        const prevBtn = document.querySelector('.slider-prev');
-        const nextBtn = document.querySelector('.slider-next');
-        let currentSlide = 0;
-        let slideInterval;
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.slider-prev');
+    const nextBtn = document.querySelector('.slider-next');
+    let currentSlide = 0;
+    let slideInterval;
+    
+    // Function to show slide
+    function showSlide(index) {
+        slides.forEach(slide => {
+            slide.classList.remove('active');
+            slide.style.opacity = '0';
+            slide.style.visibility = 'hidden';
+            slide.style.transition = 'opacity 0.5s ease-in-out';
+        });
         
-        // Function to show slide
-        function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            
-            slides[index].classList.add('active');
-            dots[index].classList.add('active');
-        }
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+            dot.style.width = '10px';
+        });
         
-        // Next slide
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
+        slides[index].classList.add('active');
+        slides[index].style.opacity = '1';
+        slides[index].style.visibility = 'visible';
+        
+        dots[index].classList.add('active');
+        dots[index].style.width = '30px';
+    }
+    
+    // Next slide
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+    
+    // Previous slide
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+    
+    // Auto play
+    function startSlider() {
+        slideInterval = setInterval(nextSlide, 6000);
+    }
+    
+    function stopSlider() {
+        clearInterval(slideInterval);
+    }
+    
+    // Event listeners
+    nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        nextSlide();
+        stopSlider();
+        startSlider();
+    });
+    
+    prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        prevSlide();
+        stopSlider();
+        startSlider();
+    });
+    
+    // Dot navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            currentSlide = index;
             showSlide(currentSlide);
-        }
-        
-        // Previous slide
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
-        
-        // Auto play
-        function startSlider() {
-            slideInterval = setInterval(nextSlide, 6000);
-        }
-        
-        function stopSlider() {
-            clearInterval(slideInterval);
-        }
-        
-        // Event listeners
-        nextBtn.addEventListener('click', () => {
-            nextSlide();
             stopSlider();
             startSlider();
         });
-        
-        prevBtn.addEventListener('click', () => {
+    });
+    
+    // Pause on hover
+    const heroSection = document.querySelector('#hero');
+    heroSection.addEventListener('mouseenter', stopSlider);
+    heroSection.addEventListener('mouseleave', startSlider);
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
             prevSlide();
             stopSlider();
             startSlider();
-        });
-        
-        // Dot navigation
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentSlide = index;
-                showSlide(currentSlide);
-                stopSlider();
-                startSlider();
-            });
-        });
-        
-        // Pause on hover
-        const heroSection = document.querySelector('#hero');
-        heroSection.addEventListener('mouseenter', stopSlider);
-        heroSection.addEventListener('mouseleave', startSlider);
-        
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                prevSlide();
-                stopSlider();
-                startSlider();
-            } else if (e.key === 'ArrowRight') {
-                nextSlide();
-                stopSlider();
-                startSlider();
-            }
-        });
-        
-        // Touch/Swipe support
-        let touchStartX = 0;
-        let touchEndX = 0;
-        
-        heroSection.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        });
-        
-        heroSection.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            const diff = touchStartX - touchEndX;
-            
-            if (Math.abs(diff) > 50) {
-                if (diff > 0) {
-                    nextSlide();
-                } else {
-                    prevSlide();
-                }
-                stopSlider();
-                startSlider();
-            }
-        });
-        
-        // Start slider
-        startSlider();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
+            stopSlider();
+            startSlider();
+        }
     });
+    
+    // Touch/Swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    heroSection.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    
+    heroSection.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+            stopSlider();
+            startSlider();
+        }
+    }, { passive: true });
+    
+    // Initialize first slide
+    showSlide(0);
+    
+    // Start slider
+    startSlider();
+});
 </script>
 
 <!-- IMPORTANT: To use your own images, replace the Unsplash URLs with:
@@ -434,171 +454,160 @@
 </section>
 
 <!-- Statistics Section (with data-target attributes for JS) -->
-<div id="stats" class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 sm:p-8 mb-12">
-  <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
-    <div class="stat-item">
-      <div class="stat-value text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 mb-2" data-target="500">500+</div>
-      <p class="text-gray-700 text-sm sm:text-base font-medium">Happy Pets Treated</p>
-    </div>
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <div id="stats" class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 sm:p-8 mb-12">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
+                <div class="stat-item">
+                    <div class="stat-value text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 mb-2" data-target="500">500+</div>
+                    <p class="text-gray-700 text-sm sm:text-base font-medium">Happy Pets Treated</p>
+                </div>
 
-    <div class="stat-item">
-      <div class="stat-value text-2xl sm:text-3xl lg:text-4xl font-bold text-green-600 mb-2" data-target="5">5+</div>
-      <p class="text-gray-700 text-sm sm:text-base font-medium">Years Experience</p>
-    </div>
+                <div class="stat-item">
+                    <div class="stat-value text-2xl sm:text-3xl lg:text-4xl font-bold text-green-600 mb-2" data-target="5">5+</div>
+                    <p class="text-gray-700 text-sm sm:text-base font-medium">Years Experience</p>
+                </div>
 
-    <div class="stat-item">
-      <!-- 24/7 has non-digit characters; we'll store numeric part 24 and keep '/7' -->
-      <div class="stat-value text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-600 mb-2" data-target="24">24/7</div>
-      <p class="text-gray-700 text-sm sm:text-base font-medium">Emergency Support</p>
-    </div>
+                <div class="stat-item">
+                    <div class="stat-value text-2xl sm:text-3xl lg:text-4xl font-bold text-purple-600 mb-2" data-target="24">24/7</div>
+                    <p class="text-gray-700 text-sm sm:text-base font-medium">Emergency Support</p>
+                </div>
 
-    <div class="stat-item">
-      <!-- 100%: numeric part 100, keep '%' suffix -->
-      <div class="stat-value text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-600 mb-2" data-target="100">100%</div>
-      <p class="text-gray-700 text-sm sm:text-base font-medium">Home Service</p>
-    </div>
-  </div>
-</div>
+                <div class="stat-item">
+                    <div class="stat-value text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-600 mb-2" data-target="100">100%</div>
+                    <p class="text-gray-700 text-sm sm:text-base font-medium">Home Service</p>
+                </div>
+            </div>
+        </div>
 
-<!-- JavaScript: animate when the stats block enters viewport -->
-<script>
-(function () {
-  // Easing function for nicer animation
-  function easeOutCubic(t) {
-    return 1 - Math.pow(1 - t, 3);
-  }
+        <!-- JavaScript: animate when the stats block enters viewport -->
+        <script>
+        (function () {
+            // Easing function for nicer animation
+            function easeOutCubic(t) {
+                return 1 - Math.pow(1 - t, 3);
+            }
 
-  // Animate a single numeric element from 0 to target
-  function animateCount(el, target, duration) {
-    const start = performance.now();
-    const initial = 0;
-    const isInteger = Number.isInteger(target);
+            // Animate a single numeric element from 0 to target
+            function animateCount(el, target, duration) {
+                const start = performance.now();
+                const initial = 0;
+                const isInteger = Number.isInteger(target);
 
-    function frame(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = easeOutCubic(progress);
-      const value = initial + (target - initial) * eased;
+                function frame(now) {
+                    const elapsed = now - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = easeOutCubic(progress);
+                    const value = initial + (target - initial) * eased;
 
-      // If target is integer, show integer; else show with 1 decimal
-      el.textContent = isInteger ? Math.round(value).toLocaleString() : value.toFixed(1);
+                    el.textContent = isInteger ? Math.round(value).toLocaleString() : value.toFixed(1);
 
-      if (progress < 1) {
-        requestAnimationFrame(frame);
-      } else {
-        // Ensure final value is exact
-        el.textContent = isInteger ? Math.round(target).toLocaleString() : target.toFixed(1);
-      }
-    }
+                    if (progress < 1) {
+                        requestAnimationFrame(frame);
+                    } else {
+                        el.textContent = isInteger ? Math.round(target).toLocaleString() : target.toFixed(1);
+                    }
+                }
 
-    requestAnimationFrame(frame);
-  }
+                requestAnimationFrame(frame);
+            }
 
-  // Parse displayed text to extract numeric part and suffix/prefix to preserve
-  function parseTextPreserve(str) {
-    // Find the first sequence of digits (and optionally decimal)
-    const numMatch = str.match(/[\d,.]+(?:\.\d+)?/);
-    if (!numMatch) return { raw: str, numeric: null, prefix: '', suffix: '' };
+            // Parse displayed text to extract numeric part and suffix/prefix to preserve
+            function parseTextPreserve(str) {
+                const numMatch = str.match(/[\d,.]+(?:\.\d+)?/);
+                if (!numMatch) return { raw: str, numeric: null, prefix: '', suffix: '' };
 
-    const numericText = numMatch[0];
-    const numericValue = Number(numericText.toString().replace(/,/g, ''));
-    const index = numMatch.index;
-    const prefix = str.slice(0, index);
-    const suffix = str.slice(index + numericText.length);
-    return { raw: str, numeric: numericValue, prefix, suffix };
-  }
+                const numericText = numMatch[0];
+                const numericValue = Number(numericText.toString().replace(/,/g, ''));
+                const index = numMatch.index;
+                const prefix = str.slice(0, index);
+                const suffix = str.slice(index + numericText.length);
+                return { raw: str, numeric: numericValue, prefix, suffix };
+            }
 
-  // Initialize all stat elements
-  function initStats() {
-    const statEls = document.querySelectorAll('#stats .stat-value');
-    const items = [];
+            // Initialize all stat elements
+            function initStats() {
+                const statEls = document.querySelectorAll('#stats .stat-value');
+                const items = [];
 
-    statEls.forEach(el => {
-      const dataTarget = el.getAttribute('data-target');
-      // Prefer explicit data-target (clean numeric string). If missing, try parsing displayed text.
-      let numericTarget = dataTarget ? Number(dataTarget) : null;
-      const parsed = parseTextPreserve(el.textContent);
+                statEls.forEach(el => {
+                    const dataTarget = el.getAttribute('data-target');
+                    let numericTarget = dataTarget ? Number(dataTarget) : null;
+                    const parsed = parseTextPreserve(el.textContent);
 
-      if (!numericTarget && parsed.numeric !== null) numericTarget = parsed.numeric;
+                    if (!numericTarget && parsed.numeric !== null) numericTarget = parsed.numeric;
 
-      // Save the parsed prefix/suffix so we can display them while animating
-      const { prefix, suffix } = parsed;
+                    const { prefix, suffix } = parsed;
 
-      // If no numeric target found, skip this element
-      if (numericTarget === null || Number.isNaN(numericTarget)) return;
+                    if (numericTarget === null || Number.isNaN(numericTarget)) return;
 
-      // We'll create a wrapper span for the numeric part so we can swap number while keeping suffix/prefix
-      // If the element already contains separate nodes, replace with standardized structure
-      el.innerHTML = ''; // clear
-      const pre = document.createElement('span');
-      pre.className = 'stat-prefix';
-      pre.textContent = prefix;
+                    el.innerHTML = '';
+                    const pre = document.createElement('span');
+                    pre.className = 'stat-prefix';
+                    pre.textContent = prefix;
 
-      const numSpan = document.createElement('span');
-      numSpan.className = 'stat-number';
-      numSpan.textContent = '0';
+                    const numSpan = document.createElement('span');
+                    numSpan.className = 'stat-number';
+                    numSpan.textContent = '0';
 
-      const suf = document.createElement('span');
-      suf.className = 'stat-suffix';
-      suf.textContent = suffix;
+                    const suf = document.createElement('span');
+                    suf.className = 'stat-suffix';
+                    suf.textContent = suffix;
 
-      el.appendChild(pre);
-      el.appendChild(numSpan);
-      el.appendChild(suf);
+                    el.appendChild(pre);
+                    el.appendChild(numSpan);
+                    el.appendChild(suf);
 
-      items.push({
-        containerEl: el,
-        numEl: numSpan,
-        target: numericTarget,
-        suffix: suffix,
-        prefix: prefix
-      });
-    });
+                    items.push({
+                        containerEl: el,
+                        numEl: numSpan,
+                        target: numericTarget,
+                        suffix: suffix,
+                        prefix: prefix
+                    });
+                });
 
-    return items;
-  }
+                return items;
+            }
 
-  // IntersectionObserver callback - start animations once
-  function observeAndAnimate(items, options) {
-    if (!('IntersectionObserver' in window)) {
-      // fallback: animate immediately
-      items.forEach(item => animateCount(item.numEl, item.target, 1600));
-      return;
-    }
+            // IntersectionObserver callback - start animations once
+            function observeAndAnimate(items, options) {
+                if (!('IntersectionObserver' in window)) {
+                    items.forEach(item => animateCount(item.numEl, item.target, 1600));
+                    return;
+                }
 
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Find which item corresponds to this element
-          const item = items.find(i => i.containerEl === entry.target);
-          if (item) {
-            // Choose duration based on size (optional): 1400-2000ms
-            animateCount(item.numEl, item.target, 1600);
-          }
-          // Stop observing this element so animation runs only once
-          obs.unobserve(entry.target);
-        }
-      });
-    }, options);
+                const observer = new IntersectionObserver((entries, obs) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const item = items.find(i => i.containerEl === entry.target);
+                            if (item) {
+                                animateCount(item.numEl, item.target, 1600);
+                            }
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, options);
 
-    items.forEach(item => observer.observe(item.containerEl));
-  }
+                items.forEach(item => observer.observe(item.containerEl));
+            }
 
-  // Run on DOMContentLoaded (or immediately if already loaded)
-  function run() {
-    const items = initStats();
-    if (!items.length) return;
-    observeAndAnimate(items, { threshold: 0.4 }); // start when ~40% visible
-  }
+            // Run on DOMContentLoaded (or immediately if already loaded)
+            function run() {
+                const items = initStats();
+                if (!items.length) return;
+                observeAndAnimate(items, { threshold: 0.4 });
+            }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', run);
-  } else {
-    run();
-  }
-})();
-</script>
-  <!-- Services Overview -->
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', run);
+            } else {
+                run();
+            }
+        })();
+        </script>
+
+        <!-- Services Overview -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 mb-12">
             <div>
                 <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6">Comprehensive Veterinary Services</h3>
@@ -667,11 +676,11 @@
             <h3 class="text-xl sm:text-2xl font-bold mb-4">Ready to Experience Quality Pet Care?</h3>
             <p class="text-blue-100 mb-6 text-sm sm:text-base">From preventative care to emergency treatments, we ensure your pet gets the best care possible.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="{{ url_for('appointment') }}" 
+                <a href="/appointment" 
                    class="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-6 sm:px-8 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 text-sm sm:text-base">
                     Book Appointment
                 </a>
-                <a href="{{ url_for('services') }}" 
+                <a href="/services" 
                    class="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-6 sm:px-8 rounded-lg transition duration-300 text-sm sm:text-base">
                     View Services
                 </a>
@@ -679,7 +688,6 @@
         </div>
     </div>
 </section>
-
 
 <!-- How It Works Section -->
 <section class="py-16 bg-gray-50">
@@ -707,167 +715,177 @@
 
 <!-- Enhanced Team Section with Slider -->
 <section class="py-16 bg-white">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold mb-4 text-blue-700">Meet Our Expert Team</h2>
-      <p class="text-gray-600 text-lg">Experienced veterinarians dedicated to your pet's health and well-being</p>
-    </div>
-    
-    <!-- Doctor Slider Container -->
-    <div class="relative">
-      <div class="doctor-slider-wrapper overflow-hidden">
-        <div class="doctor-slider-track flex transition-transform duration-500 ease-in-out">
-          
-          <!-- Doctor 1 -->
-          <div class="doctor-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 text-center h-full">
-              <div class="relative mb-6">
-                <img src="{{ url_for('static', filename='images/siddhu.png') }}" 
-                     alt="Dr. Siddheshwar Khonde" 
-                     class="rounded-full h-32 w-32 mx-auto object-cover border-4 border-white shadow-lg">
-              </div>
-              <h3 class="text-xl font-bold mb-2 text-gray-800">Dr. Siddheshwar Khonde</h3>
-              <p class="text-blue-600 font-semibold mb-3">Chief Veterinary Surgeon</p>
-              <p class="text-gray-600 text-sm mb-4">5+ years of experience in veterinary medicine with specialization in small animal surgery and emergency care.</p>
-            </div>
-          </div>
-
-          <!-- Doctor 2 -->
-          <div class="doctor-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 text-center h-full">
-              <div class="relative mb-6">
-                <img src="{{ url_for('static', filename='images/Ganesh.jpg') }}" 
-                     alt="Dr. Ganesh" 
-                     class="rounded-full h-32 w-32 mx-auto object-cover border-4 border-white shadow-lg">
-              </div>
-              <h3 class="text-xl font-bold mb-2 text-gray-800">Dr. Ganesh Jagtap</h3>
-              <p class="text-green-600 font-semibold mb-3">Internal Medicine Specialist</p>
-              <p class="text-gray-600 text-sm mb-4">5+ years specializing in pet internal medicine, cardiology, and preventive care for all breeds.</p>
-            </div>
-          </div>
-
-          <!-- Doctor 3 -->
-          <div class="doctor-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
-            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 text-center h-full">
-              <div class="relative mb-6">
-                <img src="{{ url_for('static', filename='images/Aniket.jpg') }}" 
-                     alt="Dr. Rahul Patel" 
-                     class="rounded-full h-32 w-32 mx-auto object-cover border-4 border-white shadow-lg">
-              </div>
-              <h3 class="text-xl font-bold mb-2 text-gray-800">Dr. Ankit Chavan</h3>
-              <p class="text-purple-600 font-semibold mb-3">Exotic & Small Animal Specialist</p>
-              <p class="text-gray-600 text-sm mb-4">3+ years treating exotic pets, birds, rabbits, and small mammals with specialized care protocols.</p>
-            </div>
-          </div>
-
-         
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4 text-blue-700">Meet Our Expert Team</h2>
+            <p class="text-gray-600 text-lg">Experienced veterinarians dedicated to your pet's health and well-being</p>
         </div>
-      </div>
-      
-      <!-- Slider Navigation -->
-      <button class="doctor-prev absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10 bg-white shadow-lg hover:shadow-xl text-gray-700 p-3 rounded-full transition duration-300 hover:bg-blue-50">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-        </svg>
-      </button>
-      
-      <button class="doctor-next absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 bg-white shadow-lg hover:shadow-xl text-gray-700 p-3 rounded-full transition duration-300 hover:bg-blue-50">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
-</section>
+        
+        <!-- Doctor Slider Container -->
+        <div class="relative">
+            <div class="doctor-slider-wrapper overflow-hidden">
+                <div class="doctor-slider-track flex transition-transform duration-500 ease-in-out">
+                    
+                    <!-- Doctor 1 -->
+                    <div class="doctor-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 text-center h-full">
+                            <div class="relative mb-6">
+                                <img src="{{ url_for('static', filename='images/siddhu.png') }}" 
+                                     alt="Dr. Siddheshwar Khonde" 
+                                     class="rounded-full h-32 w-32 mx-auto object-cover border-4 border-white shadow-lg">
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Dr. Siddheshwar Khonde</h3>
+                            <p class="text-blue-600 font-semibold mb-3">Chief Veterinary Surgeon</p>
+                            <p class="text-gray-600 text-sm mb-4">5+ years of experience in veterinary medicine with specialization in small animal surgery and emergency care.</p>
+                        </div>
+                    </div>
 
-<!-- JavaScript for Auto Slide -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const track = document.querySelector(".doctor-slider-track");
-  const slides = document.querySelectorAll(".doctor-slide");
-  const prevBtn = document.querySelector(".doctor-prev");
-  const nextBtn = document.querySelector(".doctor-next");
+                    <!-- Doctor 2 -->
+                    <div class="doctor-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 text-center h-full">
+                            <div class="relative mb-6">
+                                <img src="{{ url_for('static', filename='images/Ganesh.jpg') }}" 
+                                     alt="Dr. Ganesh" 
+                                     class="rounded-full h-32 w-32 mx-auto object-cover border-4 border-white shadow-lg">
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Dr. Ganesh Jagtap</h3>
+                            <p class="text-green-600 font-semibold mb-3">Internal Medicine Specialist</p>
+                            <p class="text-gray-600 text-sm mb-4">5+ years specializing in pet internal medicine, cardiology, and preventive care for all breeds.</p>
+                        </div>
+                    </div>
 
-  let currentIndex = 0;
-  const totalSlides = slides.length;
-  let autoSlideInterval;
-
-  function moveToSlide(index) {
-    const slideWidth = slides[0].offsetWidth;
-    track.style.transform = `translateX(-${index * slideWidth}px)`;
-    currentIndex = index;
-  }
-
-  function nextSlide() {
-    if (currentIndex < totalSlides - 1) {
-      moveToSlide(currentIndex + 1);
-    } else {
-      moveToSlide(0);
-    }
-  }
-
-  function prevSlide() {
-    if (currentIndex > 0) {
-      moveToSlide(currentIndex - 1);
-    } else {
-      moveToSlide(totalSlides - 1);
-    }
-  }
-
-  function startAutoSlide() {
-    autoSlideInterval = setInterval(nextSlide, 3000);
-  }
-
-  function stopAutoSlide() {
-    clearInterval(autoSlideInterval);
-  }
-
-  nextBtn.addEventListener("click", () => {
-    nextSlide();
-    stopAutoSlide();
-    startAutoSlide();
-  });
-
-  prevBtn.addEventListener("click", () => {
-    prevSlide();
-    stopAutoSlide();
-    startAutoSlide();
-  });
-
-  track.addEventListener("mouseenter", stopAutoSlide);
-  track.addEventListener("mouseleave", startAutoSlide);
-
-  startAutoSlide();
-
-  window.addEventListener("resize", () => {
-    moveToSlide(currentIndex);
-  });
-});
-</script>
-
+                    <!-- Doctor 3 -->
+                    <div class="doctor-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 text-center h-full">
+                            <div class="relative mb-6">
+                                <img src="{{ url_for('static', filename='images/Aniket.jpg') }}" 
+                                     alt="Dr. Ankit Chavan" 
+                                     class="rounded-full h-32 w-32 mx-auto object-cover border-4 border-white shadow-lg">
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Dr. Ankit Chavan</h3>
+                            <p class="text-purple-600 font-semibold mb-3">Exotic & Small Animal Specialist</p>
+                            <p class="text-gray-600 text-sm mb-4">3+ years treating exotic pets, birds, rabbits, and small mammals with specialized care protocols.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Navigation -->
+            <button class="doctor-prev absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 z-10 bg-white shadow-lg hover:shadow-xl text-gray-700 p-3 rounded-full transition duration-300 hover:bg-blue-50">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            
+            <button class="doctor-next absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 z-10 bg-white shadow-lg hover:shadow-xl text-gray-700 p-3 rounded-full transition duration-300 hover:bg-blue-50">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
 
         <!-- Slider Indicators -->
         <div class="flex justify-center mt-8 space-x-2">
             <button class="doctor-dot w-3 h-3 rounded-full bg-blue-200 hover:bg-blue-400 transition duration-300 active" data-slide="0"></button>
             <button class="doctor-dot w-3 h-3 rounded-full bg-blue-200 hover:bg-blue-400 transition duration-300" data-slide="1"></button>
             <button class="doctor-dot w-3 h-3 rounded-full bg-blue-200 hover:bg-blue-400 transition duration-300" data-slide="2"></button>
-            <button class="doctor-dot w-3 h-3 rounded-full bg-blue-200 hover:bg-blue-400 transition duration-300" data-slide="3"></button>
         </div>
         
         <!-- Call to Action -->
         <div class="text-center mt-12">
             <p class="text-gray-600 mb-6">Need to consult with a specific specialist?</p>
-            <a href="{{ url_for('appointment') }}" class="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform hover:-translate-y-1 transition duration-300">
+            <a href="/appointment" class="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transform hover:-translate-y-1 transition duration-300">
                 🩺 Book a Consultation
             </a>
         </div>
     </div>
 </section>
 
+<!-- JavaScript for Doctor Slider Auto Slide -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector(".doctor-slider-track");
+    const slides = document.querySelectorAll(".doctor-slide");
+    const prevBtn = document.querySelector(".doctor-prev");
+    const nextBtn = document.querySelector(".doctor-next");
+    const dots = document.querySelectorAll(".doctor-dot");
 
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    let autoSlideInterval;
 
+    function moveToSlide(index) {
+        const slideWidth = slides[0].offsetWidth;
+        track.style.transform = `translateX(-${index * slideWidth}px)`;
+        currentIndex = index;
+        
+        // Update dots
+        dots.forEach((dot, i) => {
+            if (i === index) {
+                dot.classList.add('active');
+                dot.style.backgroundColor = '#3b82f6';
+            } else {
+                dot.classList.remove('active');
+                dot.style.backgroundColor = '#bfdbfe';
+            }
+        });
+    }
 
-=
+    function nextSlide() {
+        if (currentIndex < totalSlides - 1) {
+            moveToSlide(currentIndex + 1);
+        } else {
+            moveToSlide(0);
+        }
+    }
+
+    function prevSlide() {
+        if (currentIndex > 0) {
+            moveToSlide(currentIndex - 1);
+        } else {
+            moveToSlide(totalSlides - 1);
+        }
+    }
+
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 4000);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+
+    nextBtn.addEventListener("click", () => {
+        nextSlide();
+        stopAutoSlide();
+        startAutoSlide();
+    });
+
+    prevBtn.addEventListener("click", () => {
+        prevSlide();
+        stopAutoSlide();
+        startAutoSlide();
+    });
+
+    // Dot navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            moveToSlide(index);
+            stopAutoSlide();
+            startAutoSlide();
+        });
+    });
+
+    track.addEventListener("mouseenter", stopAutoSlide);
+    track.addEventListener("mouseleave", startAutoSlide);
+
+    startAutoSlide();
+
+    window.addEventListener("resize", () => {
+        moveToSlide(currentIndex);
+    });
+});
+</script>
 
 <!-- Enhanced Contact Section with Database Integration -->
 <section id="contact" class="py-12 sm:py-16 bg-gray-50">
@@ -906,7 +924,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div>
                             <h4 class="font-semibold text-gray-800">Email</h4>
                             <p class="text-gray-600">mrigaayuvets@gmail.com</p>
-                            <a href="mailto:info@mrigaayuvets.com" class="text-blue-600 hover:underline text-sm">Send Email</a>
+                            <a href="mailto:mrigaayuvets@gmail.com" class="text-blue-600 hover:underline text-sm">Send Email</a>
                         </div>
                     </div>
 
@@ -954,7 +972,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition duration-300">
                 <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6 text-center">Send Us a Message</h3>
                 
-                <form method="POST" action="{{ url_for('contact') }}" id="homepageContactForm" class="space-y-4 sm:space-y-6">
+                <form method="POST" action="/contact_form_submit" id="homepageContactForm" class="space-y-4 sm:space-y-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
                             <label for="full_name" class="block text-gray-700 font-semibold text-sm mb-1">Full Name *</label>
@@ -1039,177 +1057,4 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 </section>
 
-
-{% endblock %}
-
-{% block extra_css %}
-<style>
-    /* Custom animations */
-    @keyframes fade-in-up {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
-    .animate-fade-in-up {
-        animation: fade-in-up 0.8s ease-out forwards;
-        opacity: 0;
-    }
-    
-    /* Active dot styling */
-    .dot.active {
-        background-color: white !important;
-        opacity: 1 !important;
-    }
-    
-    /* Smooth transitions for slides */
-    .hero-slide {
-        transition: opacity 1000ms ease-in-out;
-    }
-    
-    /* Smooth scrolling for anchor links */
-    html {
-        scroll-behavior: smooth;
-    }
-    .doctor-dot.active {
-    background-color: #3b82f6 !important;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .doctor-slide {
-        width: 100% !important;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .doctor-slide {
-        width: 50% !important;
-    }
-}
-
-@media (min-width: 1024px) {
-    .doctor-slide {
-        width: 33.333333% !important;
-    }
-}
-</style>
-{% endblock %}
-{% block extra_js %}
-<script>
-    <script src="https://kit.fontawesome.com/abc123xyz.js" crossorigin="anonymous"></script>
-
-/* ------------------ Hero Slider ------------------ */
-class HeroSlider {
-    constructor() {
-        this.slides = document.querySelectorAll('.hero-slide');
-        this.dots = document.querySelectorAll('.dot');
-        this.prevBtn = document.querySelector('.slider-prev');
-        this.nextBtn = document.querySelector('.slider-next');
-        this.currentSlide = 0;
-        this.autoPlayInterval = null;
-        
-        this.init();
-    }
-    
-    init() {
-        this.prevBtn.addEventListener('click', () => this.previousSlide());
-        this.nextBtn.addEventListener('click', () => this.nextSlide());
-        this.dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => this.goToSlide(index));
-        });
-
-        this.startAutoPlay(); // ✅ autoplay ON
-    }
-    
-    goToSlide(slideIndex) {
-        this.slides[this.currentSlide].style.opacity = '0';
-        this.dots[this.currentSlide].classList.remove('active');
-        this.currentSlide = slideIndex;
-        this.slides[this.currentSlide].style.opacity = '1';
-        this.dots[this.currentSlide].classList.add('active');
-    }
-    
-    nextSlide() {
-        const nextIndex = (this.currentSlide + 1) % this.slides.length;
-        this.goToSlide(nextIndex);
-    }
-    
-    previousSlide() {
-        const prevIndex = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
-        this.goToSlide(prevIndex);
-    }
-    
-    startAutoPlay() {
-        // ✅ change every 4s
-        this.autoPlayInterval = setInterval(() => this.nextSlide(), 4000);
-    }
-}
-
-/* ------------------ Doctor Slider ------------------ */
-class DoctorSlider {
-    constructor() {
-        this.track = document.querySelector('.doctor-slider-track');
-        this.slides = document.querySelectorAll('.doctor-slide');
-        this.prevBtn = document.querySelector('.doctor-prev');
-        this.nextBtn = document.querySelector('.doctor-next');
-        this.currentSlide = 0;
-        this.slidesToShow = 3; // number of cards visible at once
-        this.autoPlayInterval = null;
-
-        this.init();
-    }
-
-    init() {
-        this.prevBtn.addEventListener('click', () => this.previousSlide());
-        this.nextBtn.addEventListener('click', () => this.nextSlide());
-
-        this.updateSlider();
-        this.startAutoPlay();
-    }
-
-    updateSlider() {
-        const offset = -(this.currentSlide * (100 / this.slidesToShow));
-        this.track.style.transform = `translateX(${offset}%)`;
-    }
-
-    nextSlide() {
-        if (this.currentSlide < this.slides.length - this.slidesToShow) {
-            this.currentSlide++;
-        } else {
-            this.currentSlide = 0; // loop back
-        }
-        this.updateSlider();
-    }
-
-    previousSlide() {
-        if (this.currentSlide > 0) {
-            this.currentSlide--;
-        } else {
-            this.currentSlide = this.slides.length - this.slidesToShow;
-        }
-        this.updateSlider();
-    }
-
-    startAutoPlay() {
-        this.autoPlayInterval = setInterval(() => this.nextSlide(), 4000);
-    }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    new DoctorSlider();
-});
-
-
-/* ------------------ WhatsApp Form ------------------ */
-document.addEventListener('DOMContentLoaded', () => {
-    new HeroSlider();
-    new DoctorSlider();
-});
-</script>
 {% endblock %}
